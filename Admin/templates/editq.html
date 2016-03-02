@@ -1,0 +1,66 @@
+<div class="" style="padding:5px 15px; background:#ccc; color:#555"> <h2>Update Existing Question</h2></div>
+<form  ng-submit="edit(question)" >
+  <input type="hidden" name="q_id" value="" ng-model="qdata.id" />
+<div class="" style="padding:10px; background:#eee; color:#555">
+  <div><b>Select Question Category</b></div>
+    <span>
+      <select ng-model="question.question_data[2]" ng-options="option.c_id as option.c_name for option in categories" required >
+      </select>
+    </span>
+</div>
+<div class="" style="padding:10px; background:#bbb; color:#555">
+  <div><b>Select Question Type</b></div>
+    <div>
+      <select  ng-model="question.question_data[4]" ng-options="option.value as option.name for option in qtype" required >
+      </select>
+    </div>
+</div>
+<div class="" style="padding:10px; background:#eee; color:#555">
+  <div><b>Question Text</b></div>
+    <div>
+      <textarea required ng-model="question.question_data[1]"  cols="40" rows="5"></textarea>
+    </div>
+</div>
+<div class="" style="padding:10px; background:#bbb; color:#555">
+  <div><b>Response Options</b></div>
+    <div>
+      <textarea ng-model="question.question_data[5]"  cols="50" rows="8"></textarea>
+    </div>
+</div>
+<div class="" style="padding:10px; background:#eee; color:#555">
+  <div><b>Measuring Scale</b></div>
+    <div><select name="q_scale_opt" id="q_scale" class="seo">
+        <option  value="">Popular Scales</option>
+        <option  value="Not Important">Not Important</option>
+        <option  value="Important">Important</option>
+        <option  value="Very Important">Very Important</option>
+        <option  value="Not me at all">Not me at all</option>
+        <option  value="Slightly me">Slightly me</option>
+        <option  value="That’s exactly me">That’s exactly me</option>
+        <option  value="Almost"> Almost</option>
+        <option  value="Never">Never</option>
+        <option  value="Sometimes">Sometimes</option>
+        <option  value="Most times">Most times</option>
+        <option  value="Not interested">Not interested</option>
+        <option  value="Somewhat interested">Somewhat interested</option>
+        <option  value="Very interested">Very interested</option>
+        </select>
+    </div>
+    <div>
+      <textarea ng-model="question.question_data[6]"  cols="50" rows="8"></textarea>
+    </div>
+</div>
+<div class="" style="padding:10px; background:#bbb; color:#555">
+  <div><b>Min Response</b></div>
+    <div><input type="text" name="min_response" ng-model="question.question_data[7]"/></div>
+</div>
+<div class="" style="padding:10px; background:#eee; color:#555">
+  <div><b>Max Response</b></div>
+    <div><input type="text" name="max_response" ng-model="question.question_data[8]" ></div>
+</div>
+<div class="" style="padding:10px; background:#eee; color:#555">
+  <div><b>Question Weight</b></div>
+    <div><input type="text" name="q_weight"  ng-model="question.question_data[9]" ></div>
+</div>
+<div  style="padding:10px; " ><input type="submit" value="Update Question" name="AddQ" /></div>
+</form>
