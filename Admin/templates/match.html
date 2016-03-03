@@ -1,5 +1,6 @@
 <div class="" style="padding:5px 15px; background:#ccc; color:#555"> <h2>Adding Match Queries</h2></div>
-<div ng-repeat="match in matched">
+<form ng-submit="matcher()" >
+<div>
   <div class="" style="padding:10px; background:#bbb; color:#555">
     <div><b>Select Matching Type</b></div>
       <div>
@@ -64,4 +65,6 @@
       <div ng-show="m.loading=='waiting'" ng-bind="'Please wait...'"></div>
   </div>
   <div  style="padding:10px; " ><input type="submit" value="Add Match Query"/></div>
+
 </div>
+</form>
