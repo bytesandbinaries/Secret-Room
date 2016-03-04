@@ -23,32 +23,38 @@ else if ($_GET['action']=='editQ'){
   $rsu=mysqli_query($con, $sqlu) or die ("Error : could not Add new Question" . mysqli_error($con));
   if($rsu){ echo $_GET['callback'].'Question Updated'; }
   }
-else if(isset($_GET['AddC'])){
-  $t=time();
-  $sqlu="Insert into question_category values ( NULL, '".$_GET['c_title']."','".$_GET['c_desc']."', '', '".$t."', '".$t."')";
-  $rsu=mysqli_query($con, $sqlu) or die ("Error : could not Add new Category" . mysqli_error($con));
-  $c_id = mysqli_insert_id();
-  if($rsu){ echo $_GET['callback'].'Erro Deleting question';}
-}
-else if(isset($_GET['UpdateC'])){
-  $t=time();
-  $sqlu="Update question_category set category_title, category_description, category_update values ( '".$_GET['c_title']."','".$_GET['c_desc']."', '', '".$t."') where `category_id`=".$_GET['c_id'];
-  $rsu=mysqli_query($con, $sqlu) or die ("Error : could not Update Category" . mysqli_error($con));
-  $c_id = mysqli_insert_id();
-  if($rsu){ header("Location: index.php?action=viewC&c_id=".$c_id);}
-}
 else if($_GET['action'] =='deleteq'){
   $sqlu="Delete from question_bank  where `question_id`=".$data;
   $rsu=mysqli_query($con, $sqlu) or die ("Error : could not Update Category" . mysqli_error($con));
   if($rsu){echo $_GET['callback'].'Deleted';}
-  else{echo $_GET['callback'].'Erro Deleting question';}
+  else{echo $_GET['callback'].'Error Deleting question';}
+}
+else if($_GET['action'] =='addc'){
+  $t=time();
+  $sqlu="Insert into question_category values ( NULL, '".$data->title."','".$data->desc."', '', '".$t."', '".$t."')";
+  $rsu=mysqli_query($con, $sqlu) or die ("Error : could not Add new Category" . mysqli_error($con));
+  $c_id = mysqli_insert_id();
+  if($rsu){ echo $_GET['callback'].'Category Added';}
+}
+else if($_GET['action'] =='updatec'){
+  $t=time();
+  $sqlu="Update `question_category` set `category_title` ='$data->c_name', `category_description`='$data->c_desc', `category_updated`='$t' where `category_id`=".$data->c_id;
+  $rsu=mysqli_query($con, $sqlu) or die ("Error : could not Update Category" . mysqli_error($con));
+  $c_id = mysqli_insert_id();
+  if($rsu){}
+}
+else if($_GET['action'] =='deletec'){
+  $sqlu="Delete from question_category  where `category_id`=".$data;
+  $rsu=mysqli_query($con, $sqlu) or die ("Error : could not Update Category" . mysqli_error($con));
+  if($rsu){echo $_GET['callback'].'Deleted';}
+  else{echo $_GET['callback'].'Error Deleting category';}
 }
 elseif ($_GET['action']=='getallc') {
   $a_json[0]=array('c_id' => '', 'c_name'=>'Select a category' );
-  $sqlcheck = "SELECT category_id, category_title FROM `question_category` order by category_id ";
+  $sqlcheck = "SELECT category_id, category_title, category_description FROM `question_category` order by category_id ";
   $rescheck=mysqli_query($con, $sqlcheck) or die ("Error : could not Seect category" . mysqli_error($con));;
   while($info= mysqli_fetch_array($rescheck)){
-    $qobject = array('c_id' => $info[0], 'c_name'=>$info[1] );
+    $qobject = array('c_id' => $info[0], 'c_name'=>$info[1], 'c_desc'=>$info[2] );
     array_push($a_json, $qobject);
   }
   echo $_GET['callback'].json_encode($a_json);

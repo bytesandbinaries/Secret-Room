@@ -49,12 +49,24 @@ angular
         controllerAs: 'vmatch',
 		      access: { isFree: true  }
       })
-      .when('/viewC/:id', {
-        templateUrl: 'templates/questions.html',
-        controller: 'QuestionCtrl',
-        controllerAs: 'question',
-		access: { isFree: true }
+      .when('/viewallc', {
+        templateUrl: 'templates/viewC.html',
+        controller: 'categoryCtrl',
+        controllerAs: 'categoryView',
+		    access: { isFree: true }
       })
+      .when('/AddC', {
+        templateUrl: 'templates/addC.html',
+        controller: 'addcatCtrl',
+        controllerAs: 'addCC',
+		    access: { isFree: true }
+      })
+      .when('/editc/:cat', {
+          templateUrl: 'templates/editc.html',
+          controller: 'editCCtrl',
+          controllerAs: 'editC',
+  		      access: { isFree: true  }
+        })
       .otherwise({
         redirectTo: '/',
 		access: { isFree: true}

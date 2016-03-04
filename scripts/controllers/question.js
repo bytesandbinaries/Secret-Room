@@ -21,27 +21,27 @@ angular.module('secretRoom')
           }
     }
     $scope.moveattback= function(){        if($scope.attnum!=0) $scope.attnum-- }
-    
-    
+
+
     $scope.moveattforward= function(queAttr){
         if($scope.attnum != (queAttr.length)-1){ $scope.attnum++;}
         else{$scope.next();}
     }
-    
-    
+
+
     $scope.range_select=function(ques, ind){ques.value=ind;	$scope.next();  }
-    
+
     $scope.getNumber = function(num) {    return new Array(num);   }
-    
+
     $scope.next=function(){
     	var move=false;
     	var r=$scope.ques_data[$scope.currQ];
-    	$scope.q={id:r.q_no, cat_id:r.q_cat, type:r.q_type}    	
+    	$scope.q={id:r.q_no, cat_id:r.q_cat, type:r.q_type}
     	$scope.errorM="Oops!! you need to select an answer to move on";
     	if(r.q_type=='s'){
     		if((typeof r.value!='undefined') || r.value!="" ){
     			move=true;
-    			$scope.q.value=r.value;    			
+    			$scope.q.value=r.value;
     		}
     	}
     	else{
@@ -61,7 +61,7 @@ angular.module('secretRoom')
     				}
     			}
     		}
-    		
+
     	}
     	if(r.q_no==6){
     			if($scope.ques_data[0].value==$scope.ques_data[1].value){
@@ -71,7 +71,7 @@ angular.module('secretRoom')
     		}
     	}
     	if(r.q_no==19){
-    		
+
     		if($scope.ques_data[13].value.indexOf('kids')==-1){ $scope.currQ++;}
     	}
     	if(r.q_no==1){$scope.user.name=r.value	}
@@ -94,37 +94,37 @@ angular.module('secretRoom')
         	$scope.error=true;
         }
     }
-    
-    
+
+
     $scope.goback=function(){
         if($scope.currQ>0){
             $scope.currQ--;
         }
     }
-    
-    
+
+
     $scope.get_country=function(){
         $http.get("scripts/country.json").success(function(response) {$scope.selection = response;});
     }
-    
-    
+
+
     $scope.get_state=function(){
         $http.get("scripts/state_local.json").success(function(response) {$scope.selection = response;});
     }
-    
-    
+
+
     $scope.get_age=function(){
         $scope.selection=[{'name':'Select Age', 'value':''},{'name':'18-25 years', 'value':'18-25'},{'name':'26-30 years', 'value':'26-30'},{'name':'31-35 years', 'value':'31-35'},{'name':'36-40 years', 'value':'36-40'},
         {'name':'41-45 years', 'value':'41-45'},{'name':'46-50 years', 'value':'46-50'}, {'name':'Above 50 years', 'value':'Above 50'}
     ]
     }
-    
-    
+
+
     $scope.get_height=function(){
         $scope.selection=[{'name':'Select Height', 'value':''},{'name':'3-4 Feet', 'value':'3-4 feet'},{'name':'4-5 Feet', 'value':'4-5 feet'},{'name':'5-6 Feet', 'value':'5-6 feet'},{'name':'6-7 Feet', 'value':'6-7 feet'}]
     }
-    
-    
+
+
     $scope.get_youfrom=function(){
         $scope.localgov= $scope.ques_data[$scope.currQ-1].resp[0].value.trim().split('|')
         $scope.selection=[{name:'Select your Local Government', value:''}]

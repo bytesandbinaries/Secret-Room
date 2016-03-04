@@ -7,6 +7,44 @@ angular.module('Admin')
       console.log('error this '.error)
     });
   }])
+  .controller('categoryCtrl', ['$scope','appService', function ($scope, appService) {
+    appService.request_data('getallc','').then(function(response){
+      $scope.categories=response;
+      $scope.categories.shift();
+    },
+    function(error){
+      console.log('error this '.error)
+    });
+    $scope.delete=function(id){
+      appService.request_data('deletec',id).then(function(response){
+
+      },
+      function(error){
+        console.log('error this '.error)
+      });
+    }
+  }])
+  .controller('addcatCtrl', ['$scope','appService', function ($scope, appService) {
+    $scope.cat={};
+    $scope.addc=function(){
+      appService.request_data('addc',$scope.cat).then(function(response){
+      },
+      function(error){
+        console.log('error this '.error)
+      });
+    }
+  }])
+  .controller('editCCtrl', ['$scope','appService', '$routeParams', '$location', function ($scope, appService, $routeParams, $location) {
+    $scope.cat=JSON.parse($routeParams.cat);
+    $scope.editc=function(){
+      appService.request_data('updatec',$scope.cat).then(function(response){
+        $location.path('/viewallc')
+      },
+      function(error){
+        console.log('error this '.error)
+      });
+    }
+  }])
   .controller('viewQCtrl', ['$scope', '$routeParams', 'appService','$location',  function ($scope, $routeParams, appService, $location) {
     var id=$routeParams.id;
     appService.request_data('viewQ', id).then(function(response){
