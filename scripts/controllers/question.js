@@ -9,18 +9,15 @@ angular.module('secretRoom')
     else{$scope.question_status='getQuestions';}
     $scope.currentlevel=$scope.user.currentlevel;
     $scope.get_category=function(){
-        $http({url:'server/get_c.php?category='+$scope.currentlevel, method:'GET'}).
-          success(function(responseData, status, headers, config) {
-              $scope.cat_data=responseData;
-              console.log( responseData);
-
-              //etManager(true);
-          }),
-          function(err) {
+        $http({url:'server/get_c.php', method:'GET'}).
+        success(function(responseData, status, headers, config) {
+            $scope.que_data=responseData;
+        }),
+        function(err) {
             $scope.message="An Error occured Please Check your internet connection and try again..."
-          }
+        }
     }
-    $scope.moveattback= function(){        if($scope.attnum!=0) $scope.attnum-- }
+    $scope.moveattback= function(){  if($scope.attnum!=0) $scope.attnum-- }
 
 
     $scope.moveattforward= function(queAttr){
@@ -48,8 +45,8 @@ angular.module('secretRoom')
     		for($h=0; $h<r.resp.length; $h++){
     			if(r.q_type !='sm'){
     				if(r.value!=''){move=true; $scope.q.value=r.value;}
-    				else if(r.resp[$h].value==''){ move=false}
-    				else{move=true; $scope.q.value=r.resp;}
+    				else if(r.resp[$h].value!=''){ move=true; }
+    				//else{move=true; $scope.q.value=r.resp;}
     			}
     			if(r.q_type=='sm'){
     				if($h==0){ $scope.q.value=[];}
@@ -85,9 +82,9 @@ angular.module('secretRoom')
 	                }
 	        }
 	        else{
-	            $scope.currentlevel++;
+	            $scope.user.currentlevel++;
 	            $scope.question_status='startNewcategory';
-	            $scope.get_category();
+	            $scope.get_questions($scope.user.currentlevel);
 	        }
         }
         else{
@@ -118,7 +115,6 @@ angular.module('secretRoom')
         {'name':'41-45 years', 'value':'41-45'},{'name':'46-50 years', 'value':'46-50'}, {'name':'Above 50 years', 'value':'Above 50'}
     ]
     }
-
 
     $scope.get_height=function(){
         $scope.selection=[{'name':'Select Height', 'value':''},{'name':'3-4 Feet', 'value':'3-4 feet'},{'name':'4-5 Feet', 'value':'4-5 feet'},{'name':'5-6 Feet', 'value':'5-6 feet'},{'name':'6-7 Feet', 'value':'6-7 feet'}]
@@ -170,34 +166,42 @@ angular.module('secretRoom')
         }
         console.log(que.resp);
     }
-    $scope.get_questions=function(){
-        $scope.currQ=0;
-        $scope.question_status='getQuestions';
-        $http({url:'server/get_q.php?category='+$scope.currentlevel, method:'GET'}).
-          success(function(responseData, status, headers, config) {
-              $scope.ques_data=responseData;
-              console.log( $scope.ques_data);
-              $scope.breakoptions($scope.ques_data[$scope.currQ])
-          }),
-          function(err) {
-            $scope.message="An Error occured Please Check your internet connection and try again..."
-          }
+    $scope.get_questions=function(level){
+        if(level<$scope.que_data.length){
+            $scope.currQ=0;
+            $scope.question_status='getQuestions';
+            $scope.ques_data=$scope.que_data[level].all_questions;
+            $scope.breakoptions($scope.ques_data[$scope.currQ])
+        }
+        else{
+            $scope.saving_response();
+        }
+
+        // $http({url:'server/get_q.php?category='+$scope.currentlevel, method:'GET'}).
+        //   success(function(responseData, status, headers, config) {
+        //       $scope.ques_data=responseData;
+        //       console.log( $scope.ques_data);
+        //       $scope.breakoptions($scope.ques_data[$scope.currQ])
+        //   }),
+        //   function(err) {
+        //     $scope.message="An Error occured Please Check your internet connection and try again..."
+        //   }
      }
-     $scope.saving_response=function(){
-     	$scope.question_status='save'
-     	if($scope.saved==true){ $scope.save_response();}
-     }
-     $scope.save_response=function(){
-     	var datap={user:$scope.user, response:$scope.qresponse}
+    $scope.saving_response=function(){
+    	$scope.question_status='save'
+    	if($scope.saved==true){ $scope.save_response();}
+    }
+    $scope.save_response=function(){
+    	var datap={user:$scope.user, response:$scope.qresponse}
         $http({method:'Post', url:'server/add_response.php', data:datap}).
-          success(function(responseData, status, headers, config) {
-          	$scope.user.id=responseData;
-             	$scope.saved=true;
-             	$scope.qresponse=[];
-          }),
-          function(err) {
+        success(function(responseData, status, headers, config) {
+            $scope.user.id=responseData;
+            $scope.saved=true;
+            $scope.qresponse=[];
+        }),
+        function(err) {
             $scope.message="An Error occured Please Check your internet connection and try again..."
-          }
+        }
      }
      $scope.changefromsave=function(){     $scope.question_status='getQuestions';     }
 }])
