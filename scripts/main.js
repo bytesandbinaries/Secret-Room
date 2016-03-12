@@ -1,7 +1,7 @@
 var main= angular.module('secretRoom');
   main.controller('AppCtrl',['$scope','userData', '$location', function($scope,userData, $location){
 	  $scope.user=userData.data();
-      /*
+  /*
       $scope.logout = function() {
 	  FB.logout(function(response) {
 		 $scope.user.status="";

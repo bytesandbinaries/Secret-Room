@@ -39,8 +39,8 @@ angular
   })
   .run(['$rootScope',  '$location', 'userData', function(root, $location, userData) {
       root.$on('$routeChangeSuccess', function(scope, currView, prevView) {
-          var user= userData.data()
-          try{if (!currView.access.isFree && (user.status=="")) { $location.path('/');  }}
+          var user= userData.data();
+          try{if (!currView.access.isFree && (user.status==="")) { $location.path('/');  }}
           catch(e){}
       });
   }])

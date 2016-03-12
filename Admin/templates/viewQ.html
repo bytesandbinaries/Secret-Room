@@ -1,0 +1,41 @@
+<div class="" style="padding:5px 15px; background:#ccc; color:#555"><h2>Question View</h2></div>
+      <div class="" style="padding:10px; background:#eee; color:#555">
+          <div><b>Selected Question Category</b></div>
+          <div ng-bind="question.category_name"></div>
+      </div>
+      <div class="" style="padding:10px; background:#bbb; color:#555">
+          <div><b>Selected Question Type</b></div>
+          <div ng-bind="qtype"></div>
+      </div>
+      <div class="" style="padding:10px; background:#eee; color:#555">
+          <div><b>Question Text</b></div>
+          <span ng-bind="question.question_data[1]">   </span>
+      </div>
+
+      <div ng-show="question.question_data[5]!=''" class="" style="padding:10px; background:#bbb; color:#555">
+          <div><b>Response Options</b></div>
+          <div ng-bind="question.question_data[5]">   </div>
+      </div>
+
+      <div ng-show="question.question_data[6]!=''"  class="" style="padding:10px; background:#eee; color:#555">
+          <div><b>Measuring Scale</b></div>
+          <div ng-bind="question.question_data[6]"> </div>
+      </div>
+      <div class="" style="padding:10px; background:#bbb; color:#555">
+          <div><b>Min Response</b></div>
+          <div ng-bind="question.question_data[7]"></div>
+      </div>
+      <div class="" style="padding:10px; background:#eee; color:#555">
+          <div><b>Max Response</b></div>
+          <div ng-bind="question.question_data[8]"></div>
+      </div>
+      <div class="" style="padding:10px; background:#bbb; color:#555">
+          <div><b>Question Weight</b></div>
+          <div  ng-bind="question.question_data[9]"></div>
+      </div>
+      <span  style="padding:10px; " ><b>Last Updated:</b> <span ng-bind=" question.question_data[10]"></span><br/>
+      <span  style="padding:10px; " ><b>Date Created:</b> <span ng-bind=" question.question_data[11]"></span></span><br/>
+      <span  style="padding:10px; " ><a href="#/addnewq">Add New Question</a></span>
+      <span  style="padding:10px; " ><a href="#/editQ/{{question.question_data[0]}}">Edit this Question</a></span>
+      <span  style="padding:10px; cursor:pointer; text-decoration: line-through;" ><a  ng-click="delete(question.question_data[0])">Delete Question</a></span>
+      <span  style="padding:10px; " ><a href="#/viewallQ">View all Questions</a></span>
