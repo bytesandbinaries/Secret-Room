@@ -1,0 +1,731 @@
+// Foundation for Apps
+// by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
+//@import url(http://fonts.googleapis.com/css?family=Delius+Swash+Caps|Coming+Soon|Arimo:400,700,400italic);
+
+@import 'foundation';
+@import 'settings';
+@import 'motion-ui';
+
+$foundation-version: '1.2.0';
+
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// Libraries (let's make Normalize an external dependency eventually)
+@import
+  "vendor/normalize";
+
+// Helpers
+@import
+  "helpers/functions",
+  "helpers/mixins",
+  "helpers/breakpoints",
+  "helpers/images";
+
+// Global styles
+@import
+  "global";
+
+// Components
+@import
+  "components/iconic",
+  "components/action-sheet",
+  "components/block-list",
+  "components/button",
+  "components/button-group",
+  "components/card",
+  "components/extras",
+  "components/forms",
+  "components/grid",
+  "components/title-bar",
+  "components/label",
+  "components/list",
+	"components/menu-bar",
+	"components/modal",
+  "components/motion",
+  "components/notification",
+  "components/off-canvas",
+  "components/popup",
+  "components/switch",
+  "components/tabs",
+  "components/accordion",
+  "components/typography",
+  "components/utilities";
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+
+
+////----------------------------------------------------------
+////---------------------------------------------------APP CSS
+////__________________________________________________________
+//
+//
+
+.po-button{
+    @extend %button;
+    @include button-style($primary-color,darken($primary-color,10),#fff, solid);
+    border-radius: $global-rounded;
+}
+
+.po-app-wrapper{
+    width:600px;
+    margin:0 auto;
+    font-family: $body-font-family;
+    font-size: 0.8rem;
+}
+
+.po-app-container{
+    @include grid-block(
+        $size:expand,
+        $orientation:vertical
+        );
+    background-color: $gray;
+}
+
+
+//---------------------------------------------------------Header Area
+
+.po-app-header{
+    @include grid-block(
+        $size:expand
+        );
+    background-color: $primary-color;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    height:5rem;
+}
+
+.po-logo-area{
+    @extend .noscroll;
+    @include grid-content(
+        $size:3
+        );
+}
+
+
+.po-logo{
+    position: absolute;
+    z-index: 1000;
+    margin-top: 1rem;
+    width: 100px;
+}
+
+.po-login-area{
+    @include grid-content(
+        $size:5,
+        $offset:7
+        );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-btn{
+    float:right;
+    padding-left: 30px;
+    padding-right:30px;
+    border-radius: $global-rounded;
+    margin: 0;
+}
+
+.po-login-btn{
+    @extend %button;
+    @include button-style($info-color,$info-color,#fff, hollow);
+    @extend .login-btn;
+}
+
+.po-logout-btn{
+    @extend %button;
+    @include button-style($info-color,darken($info-color,10),#fff, solid);
+    @extend .login-btn;
+}
+
+.po-slide-area{
+    @include grid-block(
+        $size:expand
+        );
+        overflow: hidden;
+}
+
+.po-slider-container{
+    overflow: hidden;
+    @include grid-content(
+        $size:8,
+        $offset:2
+        );
+    
+}
+
+.po-slider{
+    overflow: hidden;
+    color: $secondary-color;
+    height: 3.2rem;
+    padding-top: 7px;
+    h2{
+        color:$primary-color;
+        font-weight: bold;
+        line-height:0.8;
+        margin-bottom: 0.1rem;
+        text-align: center;
+    }
+    p{
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+//-----------------------------------------------------------------------------------------------------------//
+//--------------------------------------------------Product Area---------------------------------------------//
+//-----------------------------------------------------------------------------------------------------------//
+
+.po-product-area{
+    @include grid-block(
+        $size:expand
+        );
+    background-color:$primary-color;
+}
+
+.po-product-cat{
+    @include grid-block;
+    @include grid-layout(3);
+    @include breakpoint(medium){
+        @include grid-layout(3);
+    }
+    margin-left:0;
+    margin-bottom: 0;
+//    position: relative;
+    height:500px;
+    overflow: hidden;
+    
+}
+
+.po-product:nth-child(n){
+    background-color: #0c581a;
+}
+
+.po-product:nth-child(2n){
+    background-color: #0a6b1c;
+}
+
+.po-product:nth-child(3n){
+    background-color: #0a7d20;
+}
+
+.po-product{
+    @include grid-content(
+        $size:expand
+        );
+    position: relative;
+    overflow: hidden;
+}
+
+.po-product-img{
+    position: absolute;
+    width:600px;
+    bottom: 0;
+    left: 0;
+}
+
+
+.po-add-qty-area{
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 15px;
+    bottom: 20px;
+}
+
+.po-sub-qty{
+    @extend %button;
+    @include button-style(#fff,darken($info-color,10),#fff, hollow);
+    border-radius: $global-rounded;
+    background-image: url(../images/remove.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: 0;
+}
+
+.po-sub-qty:hover{
+    background-color: $secondary-color;
+    background-image: url(../images/remove.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.po-add-qty{
+    @extend %button;
+    @include button-style($primary-color,darken($primary-color,10),#fff, solid);
+    border: 2px $primary-color #fff;
+    border-radius: $global-rounded;
+    background-image: url(../images/add.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin: 0;
+}
+
+.po-add-qty:hover{
+    background-image: url(../images/add.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.po-confirm-qty{
+    position:absolute;
+    z-index: 1100;
+    bottom: -18px;
+    width:70.5px;
+    height: 105;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.po-product-qty{
+    display: block;
+    width:50px;
+    height: 50px;
+    line-height: 50px;
+//    padding: 0.4rem;
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+//    vertical-align: middle;
+    background-color: $info-color;
+    border-radius: $global-rounded;
+}
+
+.po-confirm-btn{
+//    display: inline-block;
+    @extend %button;
+    @include button-style(#fff,darken($info-color,10),#fff, hollow);
+    border-top-left-radius: $global-rounded;
+    border-top-right-radius: $global-rounded;
+    padding: 8px 8px 20px 8px;
+    background-color: $primary-color;
+}
+
+.po-cost-area{
+    @include grid-content(
+        $size:4
+        );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p{
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-align: right;
+        line-height: 1;
+        color:$dark-color;
+        margin: 0;
+    }
+}
+
+.po-checkout-footer{
+    @include grid-block(
+        $size:expand
+        );
+    min-height:80px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+
+.po-cart-area{
+    @include grid-content(
+        $size:4
+        );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p{
+        font-size: 0.8rem;
+        font-weight: bold;
+//        text-align: right;
+        color:$dark-color;
+        line-height: 1;
+        margin-bottom: 5px;
+    }
+}
+
+.po-money{
+    color: $primary-color;
+    font-size: 1.8rem;
+    
+//    font-size: smaller;
+}
+
+.po-superscript{
+//    color: $primary-color;
+    vertical-align: super;
+    font-size: 0.7rem;
+}
+
+.po-checkout-btn-area{
+    @include grid-content(
+        $size:4
+        );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right:0;
+}
+
+.po-checkout-btn{
+    @extend %button;
+    @include button-size(
+    $size: medium,
+    $expand: true
+    );
+    @include button-style($primary-color,darken($primary-color,10),#fff, solid);
+    border-top-left-radius: $global-rounded;
+    border-bottom-left-radius: $global-rounded;
+    position: relative;
+    right: -20;
+    background-image: url(../images/basket-icon.png);
+    background-size: 1.8rem;
+    background-position: 10px 50%;
+    background-repeat:no-repeat;
+}
+
+.po-checkout-btn:hover{
+    background-image: url(../images/basket-icon.png);
+    background-size: 1.9rem;
+    background-position: 10px 50%;
+    background-repeat:no-repeat;
+}
+
+.po-product-type{
+    margin-top: 10px;
+    font-weight: bold;
+    color: $info-color;
+}
+
+.po-product-details{
+    position: relative;
+    top:-50px;
+    width:60px;
+    border: 1px solid $info-color;
+    padding-top:40px;
+    float: right;
+//    margin-left: auto;
+//    margin-right: auto;
+    border-bottom-left-radius: $global-rounded;
+    border-bottom-right-radius: $global-rounded;
+    text-align: center;
+    color: $info-color;
+
+}
+
+.po-product-price-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50px;
+    height:50px;
+    background-color: $info-color;
+    border-radius: $global-rounded;
+    margin:5px auto;
+    p{
+        text-align: center;
+        color:#fff;
+        font-weight: bold;
+        margin: 0;
+    }
+}
+
+
+//----------------------------Footer Styles-----------------------------//
+
+.po-app-footer{
+    @include grid-block();
+    background-color:$gray-dark;
+}
+
+.po-footer-logo-area{
+    @include grid-content();
+    background-color:$primary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.po-footer-logo{
+    width:6rem;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    
+}
+
+.po-footer-links-area{
+    @include grid-content();
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.po-footer-links{
+    margin: 0;
+    list-style-type: none;
+    li{
+        display:inline-block;
+        font-size: 0.8rem;
+        margin-right: 10px;
+        a{             
+        color: $dark-color;
+        }
+    }
+    li::last-child{
+        margin-right: 0;
+    }
+    li a:hover{
+        color: $primary-color;
+    }
+}
+
+.po-footer-btn-area{
+    @include grid-content();
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.po-acct-btn{
+    @extend %button;
+    @include button-style(darken($gray,50), darken($gray,70), #fff, solid);
+    border-radius:$global-rounded;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+//    align-self: flex-end;
+}
+
+
+
+
+//----------------------------------------------------------------------//
+//-----------------------CHECKOUT VIEW----------------------------------//
+//----------------------------------------------------------------------//
+
+.po-checkout-form-container{
+    @include grid-content(
+        $size:expand
+        );
+    background-color:$gray-light;
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+
+.po-billing-address{
+    margin-bottom: 60px;
+}
+
+
+.po-form-element{
+    @extend .inline-label;
+}
+
+.po-label{
+    @extend .form-label;
+    width:150px;
+}
+
+.po-default-loc{
+   float: right; 
+}
+
+.po-table{
+    display: table;
+    width:100%;
+    box-sizing: border-box;
+}
+
+.po-table-header{
+    display: table-caption;
+}
+
+.po-tr{
+    display: table-row;
+    background-color: #fff;
+}
+ 
+.po-th{
+    display: table-cell;
+//    column-width: 80px;
+    padding: 12px 15px;
+    box-sizing: border-box;
+}
+
+.po-td{
+    display: table-cell;
+    padding: 6px 15px;
+    box-sizing: border-box;
+}
+
+.po-pay-btn{
+    @extend .po-button;
+    width: 230px;
+    margin: 30px auto;
+    float: right;
+}
+
+.po-remove{
+    display: inline-block;
+    background-color: $secondary-color;
+    color: #fff;
+    border-radius: $global-rounded;
+//    padding: 3px;
+    height: 15px;
+    width:15px;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1;
+}
+
+.po-heading-row{
+    @extend .po-tr;
+    background-color: $gray-dark!important;
+}
+
+.po-body-row{
+    @extend .po-tr;
+}
+
+.po-body-row:nth-child(even){
+    background-color: $gray-light;
+}
+
+.po-footer-row{
+    @extend .po-tr;
+    background-color:$gray-light;
+}
+
+.po-has-number{
+    text-align: right;
+}
+
+.po-coupon-code{
+    color: $warning-color;
+    font-weight: bold;
+}
+
+
+//----------------------------------------------------------------------//
+//-----------------------ACCOUNT VIEW----------------------------------//
+//----------------------------------------------------------------------//
+
+.po-acct-area{
+    @include grid-block(
+        $size:expand,
+        $orientation:vertical
+        );
+    
+}
+
+.po-acct-header{
+    @include grid-block(
+        $size:expand
+        );
+    background-color: $gray-dark;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+.po-acct-img-area{
+    @include grid-content(
+        $size:2
+        );
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.po-acct-img{
+    width:60px;
+    border-radius: $global-rounded;
+}
+
+.po-acct-grtn-area{
+    @include grid-content(
+        $size:4,
+        $offset:6
+        );
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+}
+
+.po-acct-body{
+    @include grid-block(
+        $size:expand
+        );
+}
+
+.po-acct-menus{
+    @include grid-content(
+        $size:4
+        );
+    background-color:lighten($gray,5);
+    ul{
+        list-style-type:none;
+        margin:0;
+        li{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $gray-dark;
+            :after{
+                content: url(../images/arrow.png);
+                position: relative;
+                float: right;
+            }
+        }
+        a{
+            display: block;
+            color: $dark-color;
+            font-size:0.8rem;
+            font-weight: bold;
+        }
+    }
+}
+
+.po-acct-content{
+    @include grid-content(
+        $size:8
+    );
+    min-height: 400px;
+}
+
+.po-acct-trans, .po-acct-vouch{
+        @extend .po-table;
+    ul{
+        @extend .po-table;
+        margin: 0;
+        list-style-type: none;
+        li{
+            @extend .po-th;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+    }
+}
