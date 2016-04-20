@@ -15,19 +15,19 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
     .when('/', {
-      templateUrl: 'templates/home.html',
+      templateUrl: 'views/home.html',
      // controller: 'MainCtrl',
       //controllerAs: 'main',
     access: { isFree: true  }
     })
       .when('/intro', {
-        templateUrl: 'templates/intro.html',
+        templateUrl: 'views/intro.html',
         controller: 'MainCtrl',
         controllerAs: 'main',
 		access: { isFree: true  }
       })
       .when('/questions', {
-        templateUrl: 'templates/questions.html',
+        templateUrl: 'views/questions.html',
         controller: 'QuestionCtrl',
         controllerAs: 'question',
 		access: { isFree: true }
