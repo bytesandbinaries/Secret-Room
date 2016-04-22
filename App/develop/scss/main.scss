@@ -111,7 +111,6 @@ body{
 }
 
 .sr-app-frame{
-    position: relative;
     width: 100%;
     min-height: 760px;
     background: $color-black;
@@ -119,42 +118,47 @@ body{
     
 }
 .sr-app-wrap{
-//    position: relative;
-    box-sizing: border-box;
-    z-index: $z3;
-    width:100%;
-//    padding-left:30px;
-//    padding-right:30px;
+    @include grid-block(
+        $size:12,
+        $orientation:vertical
+        );
+    min-height: 600px;
     @include breakpoint(medium){
-//        width:70%;
-//        margin:0 auto;
     }
 }  
 .sr-header-wrap{
-    position: absolute;
+    align-self: flex-start;
+//    position: absolute;
     width:100%;
     z-index: $z4;
 }
 .sr-top-bar{
+    display: flex;
     @extend .float-content;
     width:100%;
     padding-top: 20px;
 }
 .sr-logo-area{
+    align-self: flex-start;
         width:30%;
         float:left;
 }
 .sr-login-area{
     padding-top:10px;
+    width:30%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
     @include breakpoint(large){
-        width:30%;
-        float:right;
+       
         }
 }
 .sr-login-button{
     @extend %button;
     @include button-style($color-green,darken($color-green,10),#fff, solid);
     border-radius: $global-rounded;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 .sr-ui-wrap{
     z-index: $z3;
@@ -162,7 +166,8 @@ body{
     min-height: 400px;
 }
 .sr-footer-wrap{
-    position: absolute;
+    align-self: flex-end;
+//    position: absolute;
     z-index: $z3;
     width:100%;
 }
@@ -192,18 +197,22 @@ body{
 //-----------------Home view-----------------//
 
 .sr-home-view-container{
-    top: 60px;
+    background: url(../images/Figure.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+//    background-size: contain;
+    top: -80px;
     position: relative;
-    min-height: 400px;
+    min-height: 800px;
 //    overflow: hidden;
 }
-.sr-front-image{
-    display: block;
-    margin: 0 auto;
-//    width:70%;
-//    position:relative;
-    z-index:$z2;
-}
+//.sr-front-image{
+//    display: block;
+//    margin: 0 auto;
+////    width:70%;
+////    position:relative;
+//    z-index:$z2;
+//}
 .sr-welcome{
     width: 100%;
     position: absolute;
@@ -212,7 +221,7 @@ body{
     color: $color-green;
 }
 .sr-enter-button{
-    position: absolute;
+    position:absolute;
     bottom: 150px;
     left: -125px;
     width: 250px;

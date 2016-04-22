@@ -6934,41 +6934,58 @@ body {
   background: #030101; }
 
 .sr-app-frame {
-  position: relative;
   width: 100%;
   min-height: 760px;
   background: #030101;
   color: #e7e7e7; }
 
 .sr-app-wrap {
-  box-sizing: border-box;
-  z-index: 30;
-  width: 100%; }
+  display: flex;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  backface-visibility: hidden;
+  flex: 0 0 100%;
+  max-width: 100%;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  order: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  min-height: 600px; }
 
 .sr-header-wrap {
-  position: absolute;
+  align-self: flex-start;
   width: 100%;
   z-index: 40; }
 
 .sr-top-bar {
+  display: flex;
   width: 100%;
   padding-top: 20px; }
 
 .sr-logo-area {
+  align-self: flex-start;
   width: 30%;
   float: left; }
 
 .sr-login-area {
-  padding-top: 10px; }
-  @media only screen and (min-width: 75em) {
-    .sr-login-area {
-      width: 30%;
-      float: right; } }
+  padding-top: 10px;
+  width: 30%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end; }
 
 .sr-login-button {
   background: #0eb78d;
   color: #fff;
-  border-radius: 1000px; }
+  border-radius: 1000px;
+  padding-left: 40px;
+  padding-right: 40px; }
   .sr-login-button:hover, .sr-login-button:focus {
     background: #0a8868;
     color: #fff; }
@@ -6985,7 +7002,7 @@ body {
   min-height: 400px; }
 
 .sr-footer-wrap {
-  position: absolute;
+  align-self: flex-end;
   z-index: 30;
   width: 100%; }
 
@@ -7009,14 +7026,12 @@ body {
       float: right; } }
 
 .sr-home-view-container {
-  top: 60px;
+  background: url(../images/Figure.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  top: -80px;
   position: relative;
-  min-height: 400px; }
-
-.sr-front-image {
-  display: block;
-  margin: 0 auto;
-  z-index: 20; }
+  min-height: 800px; }
 
 .sr-welcome {
   width: 100%;
