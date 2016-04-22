@@ -119,7 +119,7 @@ body{
 }
 .sr-app-wrap{
     @include grid-block(
-        $size:12,
+        $size:expand,
         $orientation:vertical
         );
     min-height: 600px;
@@ -127,29 +127,27 @@ body{
     }
 }  
 .sr-header-wrap{
-    align-self: flex-start;
-//    position: absolute;
-    width:100%;
+    @include grid-block(
+        $size:expand
+        );
     z-index: $z4;
 }
 .sr-top-bar{
-    display: flex;
-    @extend .float-content;
-    width:100%;
+    @include grid-block(
+        $size:expand
+        );
     padding-top: 20px;
 }
 .sr-logo-area{
-    align-self: flex-start;
-        width:30%;
-        float:left;
+    @include grid-content(
+        $size:4
+        );
 }
 .sr-login-area{
-    padding-top:10px;
-    width:30%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    @include breakpoint(large){
+    @include grid-content(
+        $size:4
+        );
+     @include breakpoint(large){
        
         }
 }
