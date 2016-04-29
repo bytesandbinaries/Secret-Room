@@ -17,7 +17,7 @@
 
                     <div class="sr-progress-bar">
                        <progress value="{{currQ+1}}" max="{{ques_data.length}}"></progress>
-                       <span class="sr-progress-1" ng-bind="currQ+1"></span> of <span class="sr-progress-2" ng-bind="ques_data.length"></span>
+<!--                       <span class="sr-progress-1" ng-bind="currQ+1"></span> of <span class="sr-progress-2" ng-bind="ques_data.length"></span>-->
                     </div>
 
                     <h3 class="sr-quest" ng-bind="ques_data[currQ].q_text"></h3>
@@ -101,34 +101,32 @@
 
                 </div><!--sr-quest-control-->
 		<div ng-switch-when="save">
-			<div ng-show="!saved">
-				<h3 class="sr-quest">Save your progress</h3>
-				<h4 class="sr-sub-quest" >Account Details</h4>
-				<div class="sr-quest-type-text sr-quest-opt">
-	                           <form ng-submit="save_response()">
-	                               <input type="text" ng-model="user.email" placeholder="Type Email address" required />
-	                               <input type="password" ng-model="user.password" placeholder="Type Password" required />
-	                               <input type="submit" value="Submit"/>
-	                           </form>
-	                        </div>
-                        </div>
-                        <div ng-show="saved">
-                        	<div ng-show="ques_data[currQ].q_no==63">
-	                        	<h3 class="sr-quest">We have your data</h3>
-					<h4 class="sr-sub-quest" >Now we can find a possible match for you </h4>
+			<div class="sr-save-progress" ng-show="!saved">
+				<h3 class="sr-">Save your progress</h3>
+				<h4 class="sr-" >Account Details</h4>
+                <form ng-submit="save_response()">
+                   <input type="text" ng-model="user.email" placeholder="Type Email address" required />
+                   <input type="password" ng-model="user.password" placeholder="Type Password" required />
+                   <input type="submit" value="Submit"/>
+                </form>
+            </div>
+            <div ng-show="saved">
+                <div ng-show="ques_data[currQ].q_no==63">
+	                <h3 class="">We have your data</h3>
+					<h4 class="" >Now we can find a possible match for you </h4>
 				</div>
 				<div ng-show="ques_data[currQ].q_no<63">
-	                        	<h3 class="sr-quest">Progress Saved</h3>
-					<h4 class="sr-sub-quest" >You have to finish the questions to get a match</h4>
-					<a ui-sref="" class="sr-category-button" ng-click="changefromsave()">Continue</a>
-					<a href="/#" class="sr-category-button">Exit</a>
+	                <h3 class="">Progress Saved</h3>
+					<h4 class="" >You have to finish the questions to get a match</h4>
+					<a  class="sr-go-button" ng-click="changefromsave()">Continue</a>
+					<a href="/#" class="sr-exit-button">Exit</a>
 				</div>
-                        </div>
+            </div>
 		</div>
                 <div class="sr-quest-nav">
-                    <a ui-sref="" ng-click="goback()" class="sr-back"><img src="../assets/img/sr-nav-back.png"></a>
-                    <a ui-sref="" class="sr-save"  ng-click="saving_response()" ><img src="../assets/img/sr-nav-out.png"></a>
-                    <a ui-sref="" ng-click="next()" class="sr-forward"><img src="../assets/img/sr-nav-fwd.png"></a>
+                    <a  ng-click="goback()" class="sr-back">Back</a>
+                    <a  class="sr-save"  ng-click="saving_response()" >Save</a>
+                    <a ng-click="next()" class="sr-forward">Next</a>
                 </div><!--sr-quest-nav-->
 
 

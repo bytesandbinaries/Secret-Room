@@ -67,34 +67,16 @@ $foundation-version: '1.2.0';
 //
 //
 
-//----Type Scales------//
-$type-default:1rem;
-$type-up1:1.2rem;
-$type-up2:1.4rem;
-$type-up3:1.6rem;
-$type-down1:0.8rem;
-$type-down2:0.7rem;
-$type-down3:0.6rem;
-
-//-----Z-index scale-----//
-
-$z1: 10;
-$z2: 20;
-$z3: 30;//---app main components like menu and footer----//
-$z4: 40;
-$z5: 50;
-
-//-----Color Scale-------//
-
-$color-black:rgba(3, 1, 1, 1);
-$color-red: rgba(188, 12, 70, 1);
-$color-green: rgba(14, 183, 141, 1);
-$color-grey:rgba(62, 58, 59, 1);
-$color-white:rgba(231, 231, 231, 1);
 
 
 //------ Utility Class-----//
 
+a{
+    color: $color-green;
+}
+a:hover{
+    color: $color-green-tint2;
+}
 .float-content{
    height: auto; 
 }
@@ -108,6 +90,8 @@ $color-white:rgba(231, 231, 231, 1);
 //--------App Scafold--------//
 body{
     background: $color-black;
+    color: $color-white-shade2;
+
 }
 
 .sr-app-frame{
@@ -118,47 +102,93 @@ body{
     
 }
 .sr-app-wrap{
-    @include grid-block(
-        $size:12,
-        $orientation:vertical
-        );
-    min-height: 600px;
-    @include breakpoint(medium){
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    min-height: 760px;
+    @include breakpoint(large){
     }
 }  
 .sr-header-wrap{
+    display: flex;
+    justify-content: center;
     align-self: flex-start;
-//    position: absolute;
     width:100%;
     z-index: $z4;
 }
 .sr-top-bar{
     display: flex;
-    @extend .float-content;
+    justify-content: space-between;
+//    @extend .float-content;
     width:100%;
-    padding-top: 20px;
+    padding: 15px 30px 0;
+    @include breakpoint(large){
+        width:80%;
+    }
 }
 .sr-logo-area{
     align-self: flex-start;
         width:30%;
         float:left;
 }
+.sr-main-logo img{
+    width: 60px;
+}
 .sr-login-area{
-    padding-top:10px;
-    width:30%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
+    align-items: center;
+    padding-top:10px;
+    width:30%;
+    color: $color-white-shade2;
     @include breakpoint(large){
        
         }
 }
+.sr-login-call{
+    display: none;
+    @include breakpoint(large){
+        display: inline-block;
+    }
+}
 .sr-login-button{
     @extend %button;
-    @include button-style($color-green,darken($color-green,10),#fff, solid);
+    @include button-style(
+        $background:$color-green,
+        $background-hover:$color-green-shade2,
+        $color:#fff,
+        $style:solid
+        );
+     @include button-size(
+        $size:small,
+        $expand:false
+        );
+    padding-left: 25px;
+    padding-right: 25px;
     border-radius: $global-rounded;
-    padding-left: 40px;
-    padding-right: 40px;
+    margin: 0;
+    @include breakpoint(medium){
+        @include button-size(
+        $size:medium,
+        $expand:false
+        );
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+.sr-login-form-btn{
+    @extend %button;
+    @include button-style(
+        $background:$color-green,
+        $background-hover:$color-green-shade2,
+        $color:#fff,
+        $style:solid
+        );
+    @include button-size(
+        $size:medium,
+        $expand:true
+        );
 }
 .sr-ui-wrap{
     z-index: $z3;
@@ -166,18 +196,30 @@ body{
     min-height: 400px;
 }
 .sr-footer-wrap{
+    display: flex;
     align-self: flex-end;
-//    position: absolute;
+    justify-content: center;
     z-index: $z3;
     width:100%;
+    background: $color-gray-shade3;
+    color: $color-white-shade2;
+    border-top: 8px solid $color-green-shade2;
 }
 .sr-footer-bar{
-    @extend .float-content;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    @include breakpoint(large){
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 80%;
+    }
 }
 .sr-footer-menu{
     margin:0;
     @include breakpoint(large){
-        float:left;
             }
 }
 .sr-footer-menu li{
@@ -187,10 +229,22 @@ body{
 .sr-footer-menu li:last-child{
     padding-right:0;
 }
-.sr-copyright, .sr-credit{
+.sr-copyright{
     text-align:center;
+    margin-bottom: 5px;
     @include breakpoint(large){
-        float:right;
+        display: inline-block;
+        margin-right:15px;
+
+    }
+}
+.sr-credit{
+    display: none;
+    @include breakpoint(large){
+        display: inline-block;
+        text-align:center;
+        margin-bottom: 5px;
+
     } 
 }
 
@@ -200,36 +254,35 @@ body{
     background: url(../images/Figure.jpg);
     background-repeat: no-repeat;
     background-position: center top;
-//    background-size: contain;
-    top: -80px;
     position: relative;
     min-height: 800px;
-//    overflow: hidden;
+    @include breakpoint(){}
 }
-//.sr-front-image{
-//    display: block;
-//    margin: 0 auto;
-////    width:70%;
-////    position:relative;
-//    z-index:$z2;
-//}
 .sr-welcome{
     width: 100%;
     position: absolute;
-    top:50px;
+    top:30px;
     text-align: center;
     color: $color-green;
 }
 .sr-enter-button{
     position:absolute;
-    bottom: 150px;
+    bottom: 160px;
     left: -125px;
     width: 250px;
     padding-left: 30px;
     padding-right: 30px;
     margin-left: 50%;
     @extend %button;
-    @include button-style($color-green,$color-green,$color-green, hollow);
+    @include button-style(
+        $background:$color-green,
+        $background-hover:$color-white,
+        $color:$color-green,
+        $style:hollow
+        );
+    @include button-size(
+        $size:large
+        );
     background-image: url(../images/icon-door.png);
     background-repeat: no-repeat;
     background-position: 15px center;
@@ -237,8 +290,249 @@ body{
 }
 .sr-enter-button:hover{
 //    @include button-style($color-white,$color-white,$color-white, hollow);
-    background-image: url(../images/icon-door-hover.png);
+    background-image: url(../images/icon-door.png);
     background-repeat: no-repeat;
     background-position: 15px center;
     
+}
+
+//-------------------------------Intro View-------------------------//
+.sr-intro-view-wrap{
+    width: 100%;
+//    background: $color-gray-tint1;
+    margin-bottom: 60px;
+    margin-top: 30px;
+//    border-radius: $global-radius;
+}
+.sr-intro-view-content{
+    box-sizing: border-box;
+    margin: 40px 30px;
+    border: 2px solid $color-green;
+    padding: 30px 15px;
+    @include breakpoint(large){
+        width: 60%;
+        margin: 0 auto;
+        padding: 30px;
+    }
+}
+.sr-intro-head{
+    color: $color-green;
+    font-size:$font-up2;
+}
+.sr-intro-info{
+    color: $color-white-shade2;
+    font-size: $font-up1;
+}
+.sr-go-button{
+    @extend %button;
+    @include button-style(
+        $background:$color-green,
+        $background-hover:$color-green-shade2,
+        $color:#fff,
+        $style:solid
+        );
+    @include button-size(
+        $size:large,
+        $expand:true
+        );
+    padding-left: 40px;
+    padding-right: 40px;
+    @include breakpoint(large){
+        @include button-size(
+            $size:large,
+            $expand:false
+        );
+        margin:0 auto;
+    }
+}
+
+//-----------Question View--------------------//
+
+.sr-quest-view-wrap{
+    color: $color-gray;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+.sr-quest-content{
+    box-sizing: border-box;
+    margin: 40px 30px;
+    border: 8px solid $color-gray-tint2;
+    padding: 30px 15px;
+    background: $color-white;
+    border-radius: $global-radius;
+    @include breakpoint(large){
+        width: 60%;
+        margin: 0 auto;
+        padding: 30px;
+    }
+}
+.sr-quest-icon{
+    display: block;
+    width:150px;
+    margin:0 auto;
+}
+.sr-quest-status{}
+.sr-category-control{}
+.sr-category-heading, .sr-category-description{
+    text-align: center;
+}
+.sr-category-description{
+}
+.sr-category-button{
+    @extend %button;
+    @include button-style(
+        $background:$color-green,
+        $background-hover:$color-green-shade2,
+        $color:#fff,
+        $style:solid
+        );
+    @include button-size(
+        $size:large,
+        $expand:false
+        );
+    padding-left: 40px;
+    padding-right: 40px;
+    @include breakpoint(large){
+        @include button-size(
+            $size:large,
+            $expand:false
+        );
+    }
+    display: block;
+    margin:0 auto;
+}
+.sr-quest-control{}
+.sr-progress-bar{
+    margin-top: 30px;
+    color: $color-gray;
+    font-size: $font-down2;
+}
+.sr-progress-1{
+    font-size: $font-down3;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: $color-gray-tint2;
+    color: #fff;
+}
+.sr-progress-2{
+    font-size: 0.6rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: $color-gray-tint2;
+    color: #fff;
+}
+.sr-progress-bar > progress{
+    margin: 0;
+}
+.sr-quest{}
+.sr-quest-type-text{}
+.sr-quest-opt{}
+.sr-form-field{}
+.sr-quest-type-selection{}
+.sr-single-select-type{}
+.sr-single-select-block{}
+.sr-radio-select-button{}
+.sr-select-box{}
+.sr-select-options{}
+.sr-multi-select-type{}
+.sr-multi-select-field{}
+.sr-checkbox-block{}
+.sr-multi-select-button{}
+.sr-quest-type-range{}
+.sr-range{}
+.sr-sub-quest{}
+figure{}
+figcaption{}
+.sr-error-message{}
+.sr-save-progress{}
+.sr-save-progress
+.sr-exit-button{
+    @extend %button;
+    @include button-style(
+        $background:$color-green,
+        $background-hover:$color-green-shade2,
+        $color:#fff,
+        $style:hollow
+        );
+    @include button-size(
+        $size:large,
+        $expand:true
+        );
+    padding-left: 40px;
+    padding-right: 40px;
+    @include breakpoint(large){
+        @include button-size(
+            $size:large,
+            $expand:false
+        );
+        margin:0 auto;
+    }
+}
+.sr-quest-nav{
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    width: 100%;
+    margin-top: 30px;
+
+}
+.sr-back{
+    padding: 15px 10px 15px 55px;
+    color: $color-green;
+    background: $color-gray;
+    text-align: right;
+    border-bottom-left-radius: $global-rounded;
+    border-top-left-radius: $global-rounded;
+    border-bottom-right-radius: $global-radius;
+    border-top-right-radius: $global-radius;
+    background-image: url(../images/sr-nav-back.png);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size: 30px;
+}
+.sr-save{
+    padding: 15px 10px 15px 55px;
+    color: $color-green;
+    background: $color-gray;
+    text-align: right;
+    border-radius: $global-rounded;
+    background-image: url(../images/sr-nav-out.png);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size: 30px;
+}
+.sr-forward{
+    padding: 15px 55px 15px 10px;
+    color: $color-green;
+    background: $color-gray;
+    text-align: left;
+    border-bottom-left-radius: $global-radius;
+    border-top-left-radius: $global-radius;
+    border-bottom-right-radius: $global-rounded;
+    border-top-right-radius: $global-rounded;
+    background-image: url(../images/sr-nav-fwd.png);
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: 30px;
+}
+.sr-back:hover, .sr-save:hover, .sr-forward:hover {
+  background: $color-gray-tint1;
+    color:$color-white;
+}
+input[type="text"], input[type="password"],
+input[type="date"], input[type="datetime"],
+input[type="datetime-local"], input[type="month"],
+input[type="week"], input[type="email"],
+input[type="number"], input[type="search"],
+input[type="tel"], input[type="time"], input[type="url"],
+input[type="color"], textarea, select {
+    border-radius: $global-radius;
+}
+input[type="radio"] + label, input[type="checkbox"] + label {
+  margin-left: 0.8rem;
+  margin-right: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
 }

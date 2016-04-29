@@ -2,7 +2,7 @@
 require_once 'fun_connect2.php';
 require_once 'JSON.php';
 //error_reporting(E_ALL);
-//ini_set('display_errors', 1);
+ini_set('display_errors', 0);
 
 $a_json = array();
 $a_json_row = array();

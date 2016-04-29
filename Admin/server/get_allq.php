@@ -2,9 +2,9 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 0);
 $host = "localhost";
-$username = "wwwbytes_secretr";
-$password = "secretroom1@";
-$database = "wwwbytes_secretroom";
+$username = "root";
+$password = "";
+$database = "secretroom";
 $con=mysqli_connect($host,$username,$password, $database);
 $a_json = array();
 if(isset($_GET['data'])){$data=json_decode($_GET['data']);}

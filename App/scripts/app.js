@@ -16,8 +16,8 @@ angular
     $routeProvider
     .when('/', {
       templateUrl: 'views/home.html',
-     // controller: 'MainCtrl',
-      //controllerAs: 'main',
+      controller: 'AppCtrl',
+      controllerAs: 'app',
     access: { isFree: true  }
     })
       .when('/intro', {
