@@ -31,58 +31,39 @@
 
 @import "helpers/functions";
 
-//----Type Scales------//
-$font-default:1rem;
-$font-up1:1.2rem;
-$font-up2:1.4rem;
-$font-up3:1.6rem;
-$font-down1:0.8rem;
-$font-down2:0.7rem;
-$font-down3:0.6rem;
-
-//-----Z-index scale-----//
-
-$z1: 10;
-$z2: 20;
-$z3: 30;//---app main components like menu and footer----//
-$z4: 40;
-$z5: 50;
-
-
-
 // 1. CSS Exports
 // - - - - - - - - - - - - - - -
 
 // Change any value in this map from "true" to "false" to disable that component's CSS class output. You'll still be able to use the component's mixins, but none of our pre-written classes will be in your CSS.
 
- $include-css: (
-   accordion: flase,
-   action-sheet: flase,
-   block-list: flase,
-   button: flase,
-   button-group: false,
-   card: false,
-   coloring: false,
-   extras: false,
-   forms: false,
-   grid: false,
-   iconic: false,
-   label: false,
-   badge: false,
-   list: false,
-   menu-bar: false,
-   modal: false,
-   motion: false,
-   notification: false,
-   off-canvas: false,
-   panel: false,
-   popup: false,
-   switch: false,
-   tabs: false,
-   title-bar: fasle,
-   typography: false,
-   utilities: false,
- );
+// $include-css: (
+//   accordion: true,
+//   action-sheet: true,
+//   block-list: true,
+//   button: true,
+//   button-group: true,
+//   card: true,
+//   coloring: true,
+//   extras: true,
+//   forms: true,
+//   grid: true,
+//   iconic: true,
+//   label: true,
+//   badge: true,
+//   list: true,
+//   menu-bar: true,
+//   modal: true,
+//   motion: true,
+//   notification: true,
+//   off-canvas: true,
+//   panel: true,
+//   popup: true,
+//   switch: true,
+//   tabs: true,
+//   title-bar: true,
+//   typography: true,
+//   utilities: true,
+// );
 
 // 2. Global Styles
 // - - - - - - - - - - - - - - -
@@ -105,68 +86,36 @@ $z5: 50;
 // $headers: "h1,h2,h3,h4,h5,h6";
 
 // We use these to define default font weights
- $font-weight-normal: 400;
- $font-weight-bold: 700;
+// $font-weight-normal: normal;
+// $font-weight-bold: bold;
 
 // We use these to control various global styles
 // $body-background: #fff;
 // $body-font-color: #222;
- $body-font-family: "Proxima Nova", Helvetica Neue, Helvetica, Arial, sans-serif;
- $body-font-weight: 400;
+// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 // $body-antialiased: true;
 
 // Application Colors
-//-----Color Scale-------//
-
-$color-black:rgba(3, 1, 1, 1);
-$color-red: rgba(188, 12, 70, 1);
-$color-green: rgba(14, 183, 141, 1);
-$color-gray:rgba(62, 58, 59, 1);
-$color-white:rgba(231, 231, 231, 1);
-
-//tints $ Shade------------------//
-
-$color-red-tint1: lighten($color-red,8);
-$color-red-tint2: lighten($color-red,12);
-$color-red-tint3: lighten($color-red,16);
-$color-red-shade1: darken($color-red,8);
-$color-red-shade2: darken($color-red,12);
-$color-red-shade3: darken($color-red,16);
-
-$color-green-tint1: lighten($color-green,8);
-$color-green-tint2: lighten($color-green,12);
-$color-green-shade1: darken($color-green,8);
-$color-green-shade2: darken($color-green,12);
-
-$color-gray-tint1: lighten($color-gray,8);
-$color-gray-tint2: lighten($color-gray,12);
-$color-gray-shade1: darken($color-gray,8);
-$color-gray-shade2: darken($color-gray,12);
-$color-gray-shade3: darken($color-gray,18);
-
-
-$color-white-shade1: darken($color-white,18);
-$color-white-shade2: darken($color-white,35);
-
- $primary-color: rgba(14, 183, 141, 1);
- $secondary-color: rgba(188, 12, 70, 1);
- $alert-color:rgba(188, 12, 70, 1) ;
- $info-color: rgba(14, 183, 141, 1);
- $success-color: rgba(14, 183, 141, 1);
- $warning-color: rgba(188, 12, 70, 1);
- $dark-color: rgba(62, 58, 59, 1);;
- $gray: rgba(231, 231, 231, 1);
- $gray-dark: darken($gray, 8);
- $gray-light: lighten($gray, 8);
+// $primary-color: #00558b;
+// $secondary-color: #f1f1f1;
+// $alert-color: #F04124;
+// $info-color: #A0D3E8;
+// $success-color: #43AC6A;
+// $warning-color: #F08A24;
+// $dark-color: #232323;
+// $gray: #dfdfdf;
+// $gray-dark: darken($gray, 8);
+// $gray-light: lighten($gray, 8);
 
 // We use these to make sure border radius matches unless we want it different.
- $global-radius: 4px;
- $global-rounded: 1000px;
+// $global-radius: 4px;
+// $global-rounded: 1000px;
 
 // We use this for default spacing
 // $global-padding: 1rem;
-// $global-spacing: rem-calc(15); 
+// $global-spacing: rem-calc(15);
 
 // 3. Breakpoints
 // - - - - - - - - - - - - - - -
@@ -181,14 +130,14 @@ $color-white-shade2: darken($color-white,35);
 // );
 
 // All of the names in this list will be output as classes in your CSS, like small-12, medium-6, and so on.
-// $breakpoint-classes: (small medium large); 
+// $breakpoint-classes: (small medium large);
 
 // 4. Typography
 // - - - - - - - - - - - - - - -
 
 // We use these to control header font styles
 // $header-font-family: $body-font-family;
- $header-font-weight: $font-weight-bold;
+// $header-font-weight: $font-weight-normal;
 // $header-font-style: $font-weight-normal;
 // $header-font-color: #222;
 // $header-line-height: 1.4;
@@ -226,7 +175,7 @@ $color-white-shade2: darken($color-white,35);
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
- $paragraph-font-size: 0.8rem;
+// $paragraph-font-size: 1rem;
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
@@ -245,10 +194,10 @@ $color-white-shade2: darken($color-white,35);
 // $code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
 
 // We use these to style anchors
- $anchor-text-decoration: none;
- $anchor-text-decoration-hover: none;
- $anchor-font-color: $primary-color;
- $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
+// $anchor-text-decoration: none;
+// $anchor-text-decoration-hover: none;
+// $anchor-font-color: $primary-color;
+// $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -279,7 +228,7 @@ $color-white-shade2: darken($color-white,35);
 // $blockquote-cite-link-color: $blockquote-cite-font-color;
 
 // Acronym styles
-// $acronym-underline: 1px dotted #ddd; 
+// $acronym-underline: 1px dotted #ddd;
 
 // 5. Grid
 // - - - - - - - - - - - - - - -
@@ -287,7 +236,7 @@ $color-white-shade2: darken($color-white,35);
 // $container-width: rem-calc(900);
 // $block-padding: $global-padding;
 // $total-columns: 12;
-// $block-grid-max-size: 6; 
+// $block-grid-max-size: 6;
 
 // 6. Button
 // - - - - - - - - - - - - - - -
@@ -298,16 +247,16 @@ $color-white-shade2: darken($color-white,35);
 // $button-background: $primary-color;
 // $button-background-hover: scale-color($button-background, $lightness: -15%);
 // $button-color: auto;
- $button-radius: $global-rounded;
+// $button-radius: 0;
 // $button-sizes: (
 //   tiny: 0.7,
 //   small: 0.8,
 //   medium: 1,
 //   large: 1.3,
 // );
- $button-font-size: 1rem;
+// $button-font-size: 0.9rem;
 // $button-opacity-disabled: 0.5;
-// $button-tag-selector: false; 
+// $button-tag-selector: false;
 
 // 7. Accordion
 // - - - - - - - - - - - - - - -
@@ -321,7 +270,7 @@ $color-white-shade2: darken($color-white,35);
 // $accordion-title-color-active: isitlight($accordion-title-background);
 
 // $accordion-title-padding: $global-padding;
-// $accordion-content-padding: $global-padding; 
+// $accordion-content-padding: $global-padding;
 
 // 8. Action Sheet
 // - - - - - - - - - - - - - - -
@@ -339,7 +288,7 @@ $color-white-shade2: darken($color-white,35);
 // $actionsheet-popup-shadow: 0 0 10px rgba(black, 0.25);
 
 // $actionsheet-link-color: #000;
-// $actionsheet-link-background-hover: smartscale($actionsheet-background); 
+// $actionsheet-link-background-hover: smartscale($actionsheet-background);
 
 // 9. Block List
 // - - - - - - - - - - - - - - -
@@ -361,14 +310,14 @@ $color-white-shade2: darken($color-white,35);
 // $blocklist-header-color: smartscale($blocklist-item-color, 40%);
 // $blocklist-header-uppercase: true;
 
-// $blocklist-check-icons: true; 
+// $blocklist-check-icons: true;
 
 // 10. Button Group
 // - - - - - - - - - - - - - - -
 
 // $btngroup-background: $primary-color;
 // $btngroup-color: #fff;
-// $btngroup-radius: $button-radius; 
+// $btngroup-radius: $button-radius;
 
 // 11. Card
 // - - - - - - - - - - - - - - -
@@ -381,7 +330,7 @@ $color-white-shade2: darken($color-white,35);
 // $card-padding: $global-padding;
 // $card-margin: 0.5rem;
 
-// $card-divider-background: smartscale($card-background, 7%); 
+// $card-divider-background: smartscale($card-background, 7%);
 
 // 12. Extras
 // - - - - - - - - - - - - - - -
@@ -393,61 +342,61 @@ $color-white-shade2: darken($color-white,35);
 // $closebutton-color-hover: #333;
 
 // $thumbnail-padding: 0.5rem;
-// $thumbnail-shadow: 0 3px 15px rgba(black, 0.25); 
+// $thumbnail-shadow: 0 3px 15px rgba(black, 0.25);
 
 // 13. Forms
 // - - - - - - - - - - - - - - -
 
 // Basic form variables
- $form-fontsize: 1rem;
- $form-padding: 0.8rem;
+// $form-fontsize: 1rem;
+// $form-padding: 0.5rem;
 
 // Text fields
- $input-color: $color-green-shade1;
- $input-color-hover: $input-color;
- $input-color-focus: $input-color;
- $input-background: $color-white;
- $input-background-hover: $input-background;
- $input-background-focus: $input-background;
- $input-background-disabled: smartscale($input-background);
- $input-border: 1px solid $color-green;
- $input-border-hover: 1px solid $color-green-shade1;
- $input-border-focus: 1px solid $color-green-shade2;
- $input-cursor-disabled: not-allowed;
+// $input-color: #000;
+// $input-color-hover: $input-color;
+// $input-color-focus: $input-color;
+// $input-background: #fff;
+// $input-background-hover: $input-background;
+// $input-background-focus: $input-background;
+// $input-background-disabled: smartscale($input-background);
+// $input-border: 1px solid #ccc;
+// $input-border-hover: 1px solid #bbb;
+// $input-border-focus: 1px solid #999;
+// $input-cursor-disabled: not-allowed;
 
 // Select menus
- $select-color: $color-green-shade1;
- $select-background: $color-white;
- $select-background-hover: smartscale($select-background, 4%);
- $select-arrow: true;
- $select-arrow-color: $select-color;
+// $select-color: #000;
+// $select-background: #fafafa;
+// $select-background-hover: smartscale($select-background, 4%);
+// $select-arrow: true;
+// $select-arrow-color: $select-color;
 
 // Labels
- $form-label-fontsize: 1rem;
- $form-label-margin: 0.8rem;
- $form-label-color: $color-green;
+// $form-label-fontsize: 0.9rem;
+// $form-label-margin: 0.5rem;
+// $form-label-color: #333;
 
 // Inline labels
- $inlinelabel-color: $color-green;
- $inlinelabel-background: $color-white-shade1;
- $inlinelabel-border: $input-border;
+// $inlinelabel-color: #333;
+// $inlinelabel-background: #eee;
+// $inlinelabel-border: $input-border;
 
 // Range slider
- $slider-background: #ddd;
- $slider-height: 1rem;
- $slider-radius: 0px;
- $slider-thumb-height: 1.5rem;
- $slider-thumb-color: $primary-color;
- $slider-thumb-radius: 0px;
+// $slider-background: #ddd;
+// $slider-height: 1rem;
+// $slider-radius: 0px;
+// $slider-thumb-height: 1.5rem;
+// $slider-thumb-color: $primary-color;
+// $slider-thumb-radius: 0px;
 
 // Progress and meter
- $meter-height: 3rem;
- $meter-background: #fff;
- $meter-fill: rgba(14, 183, 141, 1);
- $meter-fill-high: $success-color;
- $meter-fill-medium: $primary-color;
- $meter-fill-low: $alert-color;
- $meter-radius: $global-rounded;
+// $meter-height: 1.5rem;
+// $meter-background: #ccc;
+// $meter-fill: $primary-color;
+// $meter-fill-high: $success-color;
+// $meter-fill-medium: #e7cf00;
+// $meter-fill-low: $alert-color;
+// $meter-radius: 0;
 
 // 14. Iconic
 // - - - - - - - - - - - - - - -
@@ -455,7 +404,7 @@ $color-white-shade2: darken($color-white,35);
 // $iconic-primary-fill: $primary-color;
 // $iconic-primary-stroke: $primary-color;
 // $iconic-accent-fill: $iconic-primary-fill;
-// $iconic-accent-stroke: $iconic-accent-fill; 
+// $iconic-accent-stroke: $iconic-accent-fill;
 
 // 15. Label
 // - - - - - - - - - - - - - - -
@@ -469,7 +418,7 @@ $color-white-shade2: darken($color-white,35);
 // $badge-fontsize: 0.8em;
 // $badge-diameter: 1.5rem;
 // $badge-background: $primary-color;
-// $badge-color: #fff; 
+// $badge-color: #fff;
 
 // 16. Menu Bar
 // - - - - - - - - - - - - - - -
@@ -484,7 +433,7 @@ $color-white-shade2: darken($color-white,35);
 
 // $menubar-item-padding: $global-padding;
 // $menubar-icon-size: 25px;
-// $menubar-icon-spacing: $menubar-item-padding; 
+// $menubar-icon-spacing: $menubar-item-padding;
 
 // 17. Modal
 // - - - - - - - - - - - - - - -
@@ -502,7 +451,7 @@ $color-white-shade2: darken($color-white,35);
 // );
 
 // $modal-overlay-class: 'modal-overlay';
-// $modal-overlay-background: rgba(#333, 0.7); 
+// $modal-overlay-background: rgba(#333, 0.7);
 
 // 18. Motion UI
 // - - - - - - - - - - - - - - -
@@ -565,7 +514,7 @@ $color-white-shade2: darken($color-white,35);
 // $motion-delay-default: 0;
 // Short and long delay modifiers
 // $motion-delay-short: 300ms;
-// $motion-delay-long: 700ms; 
+// $motion-delay-long: 700ms;
 
 // 19. Notification
 // - - - - - - - - - - - - - - -
@@ -582,7 +531,7 @@ $color-white-shade2: darken($color-white,35);
 // $notification-icon-size: 60px;
 // $notification-icon-margin: $global-padding;
 // $notification-icon-align: top;
- 
+
 
 // 20. Off-canvas
 // - - - - - - - - - - - - - - -
@@ -596,7 +545,7 @@ $color-white-shade2: darken($color-white,35);
 // $offcanvas-shadow: 3px 0 10px rgba(black, 0.25);
 // $offcanvas-animation-speed: 0.25s;
 
-// $offcanvas-frame-selector: '.grid-frame'; 
+// $offcanvas-frame-selector: '.grid-frame';
 
 // 21. Panel
 // - - - - - - - - - - - - - - -
@@ -609,7 +558,7 @@ $color-white-shade2: darken($color-white,35);
 // $panel-shadow: 3px 0 10px rgba(black, 0.25);
 
 // DEPRECATED: these variables will be removed in a future version.
-// $panel-animation-speed: 0.25s; 
+// $panel-animation-speed: 0.25s;
 
 // 22. Popup
 // - - - - - - - - - - - - - - -
@@ -618,7 +567,7 @@ $color-white-shade2: darken($color-white,35);
 // $popup-background: #fff;
 // $popup-border: 0;
 // $popup-radius: 0;
-// $popup-shadow: 0 0 10px rgba(#000, 0.25); 
+// $popup-shadow: 0 0 10px rgba(#000, 0.25);
 
 // 23. Switch
 // - - - - - - - - - - - - - - -
@@ -632,7 +581,7 @@ $color-white-shade2: darken($color-white,35);
 // $switch-animation-speed: 0.15s;
 
 // $switch-paddle-color: white;
-// $switch-paddle-offset: 4px; 
+// $switch-paddle-offset: 4px;
 
 // 24. Tabs
 // - - - - - - - - - - - - - - -
@@ -646,7 +595,7 @@ $color-white-shade2: darken($color-white,35);
 // $tab-title-color-active: $tab-title-color;
 
 // $tab-title-padding: $global-padding;
-// $tab-content-padding: $global-padding; 
+// $tab-content-padding: $global-padding;
 
 // 25. Title Bar
 // - - - - - - - - - - - - - - -
@@ -662,4 +611,4 @@ $color-white-shade2: darken($color-white,35);
 //   left: 'left',
 //   right: 'right',
 //   title: 'title',
-// ); 
+// );

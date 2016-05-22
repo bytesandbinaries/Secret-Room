@@ -48,7 +48,7 @@ module.exports = function (grunt) {
             options: {
                 sourcemap: 'none',
                 style: 'nested',
-//                compass:true
+                compass:true
             },
             files: [{
                 expand: true,
@@ -117,7 +117,7 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'karma']
       },
         
-    sass: {
+      sass: {
 		files: "<%= yeoman.app %>/develop/scss/**/*.scss",
 		tasks: ["buildCss"]
 	  },

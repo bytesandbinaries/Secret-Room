@@ -64,12 +64,12 @@ $foundation-version: '1.2.0';
 ////----------------------------------------------------------
 ////---------------------------------------------------APP CSS
 ////__________________________________________________________
-//
-//
-
 
 
 //------ Utility Class-----//
+
+$sr-shadow: 2px 2px 3px $color-white-shade2;
+
 
 a{
     color: $color-green;
@@ -80,7 +80,6 @@ a:hover{
 .float-content{
    height: auto; 
 }
-
 .float-content:after{
     content: "";
     display: table;
@@ -93,13 +92,11 @@ body{
     color: $color-white-shade2;
 
 }
-
 .sr-app-frame{
     width: 100%;
     min-height: 760px;
     background: $color-black;
     color: $color-white;
-    
 }
 .sr-app-wrap{
     display: flex;
@@ -204,6 +201,7 @@ body{
     background: $color-gray-shade3;
     color: $color-white-shade2;
     border-top: 8px solid $color-green-shade2;
+    min-height: 120px;
 }
 .sr-footer-bar{
     display: flex;
@@ -299,20 +297,22 @@ body{
 //-------------------------------Intro View-------------------------//
 .sr-intro-view-wrap{
     width: 100%;
-//    background: $color-gray-tint1;
-    margin-bottom: 60px;
-    margin-top: 30px;
+    background: $color-white;
+    border-top: 8px solid $color-gray;
+//    margin-bottom: 60px;
+//    margin-top: 30px;
 //    border-radius: $global-radius;
 }
 .sr-intro-view-content{
     box-sizing: border-box;
     margin: 40px 30px;
-    border: 2px solid $color-green;
-    padding: 30px 15px;
+//    border: 2px solid $color-green;
+    padding: 60px 15px;
     @include breakpoint(large){
-        width: 60%;
+        width: 40%;
         margin: 0 auto;
-        padding: 30px;
+        padding: 60px;
+        min-height: 400px;
     }
 }
 .sr-intro-head{
@@ -358,23 +358,30 @@ body{
 .sr-quest-content{
     box-sizing: border-box;
     margin: 40px 30px;
-    border: 8px solid $color-gray-tint2;
-    padding: 30px 15px;
-    background: $color-white;
+//    border: 8px solid $color-gray-tint2;
+//    padding: 30px 15px;
+//    background: $color-white;
     border-radius: $global-radius;
     @include breakpoint(large){
         width: 60%;
         margin: 0 auto;
-        padding: 30px;
+//        padding: 30px;
     }
 }
-.sr-quest-icon{
+.sr-cat-control,.sr-quest-control{}
+.sr-cat-control{
+    padding: 30px;
+    background: $color-white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.sr-quest-control{}
+.sr-cat-icon{
     display: block;
     width:150px;
     margin:0 auto;
 }
 .sr-quest-status{}
-.sr-category-control{}
 .sr-category-heading, .sr-category-description{
     text-align: center;
 }
@@ -403,9 +410,32 @@ body{
     display: block;
     margin:0 auto;
 }
-.sr-quest-control{}
+.sr-progress-meta{
+    background: $color-white-shade1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+//    padding-top: 10px;
+//    height: 80px;
+}
+.sr-cat-icon-area{
+//    height:60px;
+    width:100%;
+    padding: 15px 30px;
+//    display: inline-block;
+}
+.sr-cat-prog-icon{
+    position: relative;
+//    top: -20px;
+    width: 80px;
+//    float: left;
+}
 .sr-progress-bar{
-    margin-top: 30px;
+    box-sizing: border-box;
+//    height: 60px;
+    width:100%;
+//    display: inline-block;
+    margin-top: 0;
+//    padding-left: 30px;
     color: $color-gray;
     font-size: $font-down2;
 }
@@ -423,29 +453,217 @@ body{
     background: $color-gray-tint2;
     color: #fff;
 }
-.sr-progress-bar > progress{
+progress, meter{
+    display: block;
     margin: 0;
+    height: 1rem;
+    color: $color-red-shade2;
+//    border-radius: $global-rounded;
+    background: #fff;
+    transition: all 0.8s ease;
 }
-.sr-quest{}
-.sr-quest-type-text{}
-.sr-quest-opt{}
-.sr-form-field{}
-.sr-quest-type-selection{}
-.sr-single-select-type{}
+progress::-webkit-progress-bar {
+    display: block;
+  background: #fff;
+//  border-radius: $global-rounded;
+}
+progress::-webkit-progress-value {
+  background: $color-red-shade2;
+//  border-top-left-radius:$global-rounded; ;
+//  border-bottom-left-radius:$global-rounded;
+  transition: all 0.8s ease;
+}
+progress::-moz-progress-bar {
+  background: $color-red-shade2;
+  border-radius: $global-rounded;
+  transition: all 0.8s ease;
+}
+
+.sr-quest{
+    background:$color-white ;
+    color: $color-gray-tint2;
+    margin: 0;
+    padding:15px 30px ;
+    font-size: $font-up3;
+}
+.sr-sub-quest{
+    background:$color-white-shade1 ;
+    padding:15px 30px ;
+}
+.sr-sub-quest span{
+    position: relative;
+    display: inline-block;
+    background:#fff;
+    color: $color-red;
+//    margin: 30px;
+    padding:15px 30px ;
+    font-size: $font-up2;
+//    border: 1px solid $color-white-shade2;
+    border-radius: 8px;
+    box-shadow: $sr-shadow;
+}
+.sr-sub-quest span:before{
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    margin-left:-17.5px;
+    content: url('../images/bubble-arrow.png');
+    display: block;
+}
+.sr-quest-type-text{
+    height: auto;
+//    min-height: 120px;
+    transition: height 0.8s ease;
+}
+.sr-quest-opt{
+    background:$color-white-shade1 ;
+    color: $color-gray;
+    margin: 0;
+    padding:15px 30px ;
+    font-size: $font-default;
+    height: auto;
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    transition: height 0.8s ease;
+}
+.sr-form-field{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+//    @include grid-layout(6);
+}
+.sr-radio-select-button, .sr-checkbox-block{
+//    @include grid-block();
+    margin: 7.5px;
+    padding: 7.5px;
+    background: #fff;
+    border-radius: $global-radius;
+    height: 100%;
+    box-shadow: $sr-shadow;
+}
+.sr-radio-select-button label, .sr-checkbox-block label{
+    color: $color-red;
+}
+.sr-single-select-type{
+//    color: $color-white;
+}
+//  Range Styles
+.sr-range {
+  position: relative;
+  list-style-type: none;
+  margin: 0 auto;
+  width: 90%;
+}
+.sr-range:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+  .sr-range li {
+    float: left;
+    width: 14.285%; }
+
+.sr-range li figure:hover, .sr-range li figure:checked, .sr-range-selected {
+  background: $color-green !important; }
+
+.sr-range li figure {
+  width: 25px;
+  height: 25px;
+  border: 5px solid $color-white;
+  margin: auto;
+  cursor: pointer;
+  border-radius: $global-radius; }
+  @media only screen and (min-width: 40em) {
+    .sr-range li figure {
+      width: 60px;
+      height: 60px;
+      border: 8px solid $color-white;
+      margin: auto;
+      cursor: pointer;
+      border-radius: 1000px; } }
+
+.sr-range :last-child figure {
+  background: $color-red-shade3; }
+
+.sr-range li:nth-of-type(6) figure {
+  background: $color-red-shade2; }
+
+.sr-range li:nth-of-type(5) figure {
+  background: $color-red-shade1; }
+
+.sr-range li:nth-of-type(4) figure {
+  background: $color-red; }
+
+.sr-range li:nth-of-type(3) figure {
+  background: $color-red-tint1; }
+
+.sr-range li:nth-of-type(2) figure {
+  background: $color-red-tint2; }
+
+.sr-range :first-child figure {
+  background: $color-red-tint3; }
+
+.sr-range li:nth-of-type(2) figcaption,
+.sr-range li:nth-of-type(3) figcaption,
+.sr-range li:nth-of-type(5) figcaption,
+.sr-range li:nth-of-type(6) figcaption {
+  visibility: hidden; }
+
+.sr-range figcaption {
+  font-size: 0.6rem;
+  line-height: 0.7rem; }
 .sr-single-select-block{}
 .sr-radio-select-button{}
 .sr-select-box{}
 .sr-select-options{}
-.sr-multi-select-type{}
-.sr-multi-select-field{}
-.sr-checkbox-block{}
+.sr-multi-select-type{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.sr-multi-select-field{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+}
+//.sr-checkbox-block{
+//    margin: 7.5px;
+//    padding: 7.5px;
+//    background: #fff;
+//    border-radius: $global-radius;
+////    height: 100%;
+//}
+//.sr-checkbox-block{
+//    margin: 7.5px;
+//    padding: 7.5px;
+//    background: #fff;
+//    border-radius: $global-radius;
+////    height: 100%;
+//}
 .sr-multi-select-button{}
 .sr-quest-type-range{}
 .sr-range{}
-.sr-sub-quest{}
+
 figure{}
 figcaption{}
-.sr-error-message{}
+.sr-error-message{
+    background: $color-white-shade1;
+    padding: 5px 30px 50px 30px;
+    color: $color-red;
+    font-size: 1.3rem;
+}
+.sr-error-message span{
+    display: inline-block;
+    background: $color-white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 1px solid $color-red;
+    max-width: 80%;
+}
 .sr-save-progress{}
 .sr-save-progress
 .sr-exit-button{
@@ -472,53 +690,57 @@ figcaption{}
 }
 .sr-quest-nav{
     display: flex;
+    background: $color-green-shade1;
     justify-content: space-between;
     align-self: flex-end;
     width: 100%;
-    margin-top: 30px;
+    border-bottom-left-radius:8px;
+    border-bottom-right-radius:8px;
+
+//    margin-top: 30px;
 
 }
 .sr-back{
-    padding: 15px 10px 15px 55px;
-    color: $color-green;
-    background: $color-gray;
+    padding: 25px 10px 25px 55px;
+    color: $color-white;
+//    background: $color-gray;
     text-align: right;
-    border-bottom-left-radius: $global-rounded;
-    border-top-left-radius: $global-rounded;
-    border-bottom-right-radius: $global-radius;
-    border-top-right-radius: $global-radius;
+//    border-bottom-left-radius: $global-rounded;
+//    border-top-left-radius: $global-rounded;
+//    border-bottom-right-radius: $global-radius;
+//    border-top-right-radius: $global-radius;
     background-image: url(../images/sr-nav-back.png);
     background-repeat: no-repeat;
-    background-position: 5px center;
+    background-position: 15px center;
     background-size: 30px;
 }
 .sr-save{
-    padding: 15px 10px 15px 55px;
-    color: $color-green;
-    background: $color-gray;
+    padding: 25px 10px 25px 55px;
+    color: $color-white;
+//    background: $color-;
     text-align: right;
     border-radius: $global-rounded;
     background-image: url(../images/sr-nav-out.png);
     background-repeat: no-repeat;
-    background-position: 5px center;
+    background-position: 15px center;
     background-size: 30px;
 }
 .sr-forward{
-    padding: 15px 55px 15px 10px;
-    color: $color-green;
-    background: $color-gray;
+    padding: 25px 55px 25px 10px;
+    color: $color-white;
+//    background: $color-gray;
     text-align: left;
-    border-bottom-left-radius: $global-radius;
-    border-top-left-radius: $global-radius;
-    border-bottom-right-radius: $global-rounded;
-    border-top-right-radius: $global-rounded;
+//    border-bottom-left-radius: $global-radius;
+//    border-top-left-radius: $global-radius;
+//    border-bottom-right-radius: $global-rounded;
+//    border-top-right-radius: $global-rounded;
     background-image: url(../images/sr-nav-fwd.png);
     background-repeat: no-repeat;
-    background-position: 90% center;
+    background-position: 80% center;
     background-size: 30px;
 }
 .sr-back:hover, .sr-save:hover, .sr-forward:hover {
-  background: $color-gray-tint1;
+//  background: $color-gray-tint1;
     color:$color-white;
 }
 input[type="text"], input[type="password"],
@@ -529,6 +751,13 @@ input[type="number"], input[type="search"],
 input[type="tel"], input[type="time"], input[type="url"],
 input[type="color"], textarea, select {
     border-radius: $global-radius;
+    border: 1px solid $color-green;
+    font-size: 1.3rem;
+    padding: 12px;
+    min-height: 50px;
+    color: $color-green-shade1;
+    line-height: 1.2;
+    min-width: 200px;
 }
 input[type="radio"] + label, input[type="checkbox"] + label {
   margin-left: 0.8rem;
