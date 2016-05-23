@@ -333,7 +333,29 @@ body{
         );
     @include button-size(
         $size:large,
-        $expand:true
+        $expand:false
+        );
+    padding-left: 40px;
+    padding-right: 40px;
+    @include breakpoint(large){
+        @include button-size(
+            $size:large,
+            $expand:false
+        );
+        margin:0 auto;
+    }
+}
+.sr-stop-button{
+    @extend %button;
+    @include button-style(
+        $background:$color-red,
+        $background-hover:$color-red-shade2,
+        $color:#fff,
+        $style:solid
+        );
+    @include button-size(
+        $size:large,
+        $expand:false
         );
     padding-left: 40px;
     padding-right: 40px;
@@ -368,7 +390,6 @@ body{
 //        padding: 30px;
     }
 }
-.sr-cat-control,.sr-quest-control{}
 .sr-cat-control{
     padding: 30px;
     background: $color-white;
@@ -381,7 +402,6 @@ body{
     width:150px;
     margin:0 auto;
 }
-.sr-quest-status{}
 .sr-category-heading, .sr-category-description{
     text-align: center;
 }
@@ -533,22 +553,28 @@ progress::-moz-progress-bar {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
 //    @include grid-layout(6);
 }
-.sr-radio-select-button, .sr-checkbox-block{
+.sr-opt-block{
+    width: 25%;
+    margin: 0 7.5px;
+    height: 100%;
+}
+.sr-radio-select, .sr-checkbox-select{
 //    @include grid-block();
     margin: 7.5px;
     padding: 7.5px;
     background: #fff;
     border-radius: $global-radius;
     height: 100%;
+    width: 100%;
     box-shadow: $sr-shadow;
 }
-.sr-radio-select-button label, .sr-checkbox-block label{
+.sr-opt-block label{
     color: $color-red;
-}
-.sr-single-select-type{
-//    color: $color-white;
 }
 //  Range Styles
 .sr-range {

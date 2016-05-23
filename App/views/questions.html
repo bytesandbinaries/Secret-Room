@@ -32,41 +32,39 @@
 
 
                 <div class="sr-quest-type-text sr-quest-opt" ng-if="ques_data[currQ].q_type=='tb'" ng-repeat="rep in getNumber(ques_data[currQ].q_responseMax)">
-                   <form class="sr-form-field">
+<!--                   <form class="sr-form-field">-->
                        <input type="text" ng-model="ques_data[currQ].resp[$index].value" />
-                   </form>
+<!--                   </form>-->
                </div>
 
 
                 <div class="sr-quest-type-selection" ng-if="ques_data[currQ].q_type=='mp'" ng-init="breakoptions(ques_data[currQ])">
 
                     <div class="sr-quest-opt" ng-if="ques_data[currQ].q_responseMax==1" >
-                       <form class="sr-form-field">
-                           <div class="sr-single-select-type" ng-repeat="opt in ques_data[currQ].resp">
+                       <ul class="sr-form-field">
+                           <li class="sr-opt-block" ng-repeat="opt in ques_data[currQ].resp">
 
-                                <div class="sr-single-select-block" ng-if="(opt.item.indexOf('()')===-1)">
-                                       <div class="sr-radio-select-button">
-                                           <input type="radio"  name="{{ques_data[currQ].q_no}}" ng-model="ques_data[currQ].value" value="{{opt.item}}" id="radio-{{ques_data[currQ].q_no}}"/>
-                                            <label ng-bind="opt.item" for="radio-{{ques_data[currQ].q_no}}"></label>
-                                        </div>
+                                <div class="sr-radio-select" ng-if="(opt.item.indexOf('()')===-1)">
+                                           <input type="radio"  name="{{ques_data[currQ].q_no}}" ng-model="ques_data[currQ].value" value="{{opt.item}}" id="radio-{{opt.item}}"/>
+                                            <label ng-bind="opt.item" for="radio-{{opt.item}}"></label>
                                 </div>
 
-                                <div class="sr-select-box" ng-if="!(opt.item.indexOf('()')===-1)">
+                                <div class="sr-dropdown-select" ng-if="!(opt.item.indexOf('()')===-1)">
                                     <select class="sr-select-options" ng-model="opt.value" ng-options="option.value as option.name for option in selection">
                                     </select>
                                 </div>
 
-                            </div>
-                        </form>
+                            </li>
+                        </ul>
                      </div><!--sr-single-select-type-->
 
-                     <div class="sr-multi-select-type sr-quest-opt" ng-if="ques_data[currQ].q_responseMax==0 || ques_data[currQ].q_responseMax>1 ">
-                        <ul class="sr-multi-select-field">
-                           <li class="sr-checkbox-block" ng-repeat="opt in ques_data[currQ].resp">
-                                <span class="sr-multi-select-button">
-                                    <input type="checkbox"  name="{{ques_data[currQ].q_no}}" ng-model="opt.value" value="{{opt.item}}" id="check-{{ques_data[currQ].q_no}}"/>
-                                   <label ng-bind="opt.item" for="check-{{ques_data[currQ].q_no}}"></label>
-                               </span>
+                     <div class="sr-quest-opt" ng-if="ques_data[currQ].q_responseMax==0 || ques_data[currQ].q_responseMax>1 ">
+                        <ul class="sr-form-field">
+                           <li class="sr-opt-block" ng-repeat="opt in ques_data[currQ].resp">
+                                <div class="sr-checkbox-select">
+                                    <input type="checkbox"  name="{{ques_data[currQ].q_no}}" ng-model="opt.value" value="{{opt.item}}" id="check-{{opt.item}}"/>
+                                   <label ng-bind="opt.item" for="check-{{opt.item}}"></label>
+                               </div>
                            </li>
                         </ul>
                      </div><!--sr-multi-select-type-->
@@ -108,14 +106,14 @@
                 <div ng-show="error" class="sr-error-message"><span  ng-bind="errorM"></span></div>
 
         </div><!--sr-quest-control-->
-		<div ng-switch-when="save" class="sr-quest-control">
+		<div ng-switch-when="save" class="sr-cat-control">
 			<div ng-show="!saved" class="sr-save-progress">
 				<h3 class="sr-">Save your progress</h3>
 				<h4 class="sr-" >Account Details</h4>
                 <form ng-submit="save_response()">
                    <input type="text" ng-model="user.email" placeholder="Type Email address" required />
                    <input type="password" ng-model="user.password" placeholder="Type Password" required />
-                   <input type="submit" value="Submit"/>
+                   <input type="submit" value="Submit" class="sr-go-button"/>
                 </form>
             </div>
             <div ng-show="saved" class="sr-save-progress">
@@ -127,7 +125,7 @@
 	                <h3 class="">Progress Saved</h3>
 					<h4 class="" >You have to finish the questions to get a match</h4>
 					<a  class="sr-go-button" ng-click="changefromsave()">Continue</a>
-					<a href="/#" class="sr-exit-button">Exit</a>
+					<a href="/#" class="sr-stop-button">Exit</a>
 				</div>
             </div>
 		</div>
