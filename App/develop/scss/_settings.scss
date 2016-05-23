@@ -48,13 +48,12 @@ $z3: 30;//---app main components like menu and footer----//
 $z4: 40;
 $z5: 50;
 
-
-
 // 1. CSS Exports
 // - - - - - - - - - - - - - - -
 
 // Change any value in this map from "true" to "false" to disable that component's CSS class output. You'll still be able to use the component's mixins, but none of our pre-written classes will be in your CSS.
 
+<<<<<<< HEAD
  $include-css: (
    accordion: flase,
    action-sheet: flase,
@@ -245,6 +244,7 @@ $color-white-shade2: darken($color-white,35);
 // $code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
 
 // We use these to style anchors
+
  $anchor-text-decoration: none;
  $anchor-text-decoration-hover: none;
  $anchor-font-color: $primary-color;
@@ -298,6 +298,7 @@ $color-white-shade2: darken($color-white,35);
 // $button-background: $primary-color;
 // $button-background-hover: scale-color($button-background, $lightness: -15%);
 // $button-color: auto;
+
  $button-radius: $global-rounded;
 // $button-sizes: (
 //   tiny: 0.7,
@@ -305,6 +306,7 @@ $color-white-shade2: darken($color-white,35);
 //   medium: 1,
 //   large: 1.3,
 // );
+
  $button-font-size: 1rem;
 // $button-opacity-disabled: 0.5;
 // $button-tag-selector: false; 
@@ -399,6 +401,7 @@ $color-white-shade2: darken($color-white,35);
 // - - - - - - - - - - - - - - -
 
 // Basic form variables
+<<<<<<< HEAD
  $form-fontsize: 1rem;
  $form-padding: 0.8rem;
 

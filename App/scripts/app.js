@@ -12,13 +12,13 @@ angular
     'foundation.dynamicRouting.animations'
   ])
 
-  .config(function ($routeProvider) {
+  .config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
     $routeProvider
     .when('/', {
       templateUrl: 'views/home.html',
       controller: 'AppCtrl',
       controllerAs: 'app',
-    access: { isFree: true  }
+      access: { isFree: true  }
     })
       .when('/intro', {
         templateUrl: 'views/intro.html',
@@ -36,7 +36,11 @@ angular
         redirectTo: '/',
 		access: { isFree: true}
       });
-  })
+
+      $httpProvider.defaults.useXDomain = true;
+      delete $httpProvider.defaults.headers.common['X-Requested-With'];
+  }])
+
   .run(['$rootScope',  '$location', 'userData', function(root, $location, userData) {
       root.$on('$routeChangeSuccess', function(scope, currView, prevView) {
           var user= userData.data()

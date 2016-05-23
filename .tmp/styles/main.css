@@ -912,8 +912,12 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
         margin-left: 0.8rem;
         float: none; }
 
+<<<<<<< HEAD
 .button, .button-group > li > a, .button-group > li > label, .button-group > li > button, .sr-login-button, .sr-login-form-btn, .sr-enter-button, .sr-go-button, .sr-stop-button, .sr-category-button, .sr-save-progress
 .sr-exit-button {
+=======
+.button, .button-group > li > a, .button-group > li > label, .button-group > li > button, .sr-login-button, .sr-enter-button {
+>>>>>>> Code
   display: inline-block;
   border: 0;
   text-align: center;
@@ -6160,8 +6164,12 @@ meta.foundation-mq {
 /*
   Styles for the action sheet container. Action sheets pin to the top or bottom of the screen.
 */
+<<<<<<< HEAD
 .button, .button-group > li > a, .button-group > li > label, .button-group > li > button, .sr-login-button, .sr-login-form-btn, .sr-enter-button, .sr-go-button, .sr-stop-button, .sr-category-button, .sr-save-progress
 .sr-exit-button {
+=======
+.button, .button-group > li > a, .button-group > li > label, .button-group > li > button, .sr-login-button, .sr-enter-button {
+>>>>>>> Code
   display: inline-block;
   border: 0;
   text-align: center;
@@ -6173,8 +6181,13 @@ meta.foundation-mq {
   vertical-align: middle;
   padding: 0.85em 1em;
   margin: 0 1rem 1rem 0;
+<<<<<<< HEAD
   font-size: 1rem;
   border-radius: 1000px; }
+=======
+  font-size: 0.9rem;
+  border-radius: 4px; }
+>>>>>>> Code
 
 .button-group {
   margin: 0;
@@ -6183,7 +6196,11 @@ meta.foundation-mq {
   display: inline-flex;
   border-radius: 0;
   overflow: hidden;
+<<<<<<< HEAD
   font-size: 1rem; }
+=======
+  font-size: 0.9rem; }
+>>>>>>> Code
   .button-group > li {
     flex: 0 0 auto; }
     .button-group > li > a, .button-group > li > label, .button-group > li > button {
@@ -6195,9 +6212,21 @@ meta.foundation-mq {
       margin-left: 0; }
     .button-group > li:not(:last-child) > a, .button-group > li:not(:last-child) > label, .button-group > li:not(:last-child) > button {
       border-right: 1px solid #004068; }
+<<<<<<< HEAD
 
 .button-group.segmented, .button-group.segmented.secondary, .button-group.segmented.success, .button-group.segmented.warning, .button-group.segmented.alert {
   border: 1px solid #0eb78d;
+=======
+  .button-group .iconic {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    margin-right: 0.25em;
+    margin-top: -2px; }
+
+.button-group.segmented, .button-group.segmented.secondary, .button-group.segmented.success, .button-group.segmented.warning, .button-group.segmented.alert {
+  border: 1px solid #0a6b1c;
+>>>>>>> Code
   transition-property: background color; }
   .button-group.segmented > li > input[type="radio"] {
     position: absolute;
@@ -6918,6 +6947,7 @@ meta.foundation-mq {
 .long-delay {
   animation-delay: 700ms !important; }
 
+<<<<<<< HEAD
 a {
   color: #0eb78d; }
 
@@ -6928,13 +6958,23 @@ a:hover {
   height: auto; }
 
 .float-content:after {
+=======
+.float-content, .sr-footer-bar {
+  height: auto; }
+
+.float-content:after, .sr-footer-bar:after {
+>>>>>>> Code
   content: "";
   display: table;
   clear: both; }
 
 body {
+<<<<<<< HEAD
   background: #030101;
   color: #8e8e8e; }
+=======
+  background: #030101; }
+>>>>>>> Code
 
 .sr-app-frame {
   width: 100%;
@@ -6944,6 +6984,7 @@ body {
 
 .sr-app-wrap {
   display: flex;
+<<<<<<< HEAD
   flex-flow: column wrap;
   justify-content: space-between;
   min-height: 760px; }
@@ -6953,10 +6994,44 @@ body {
   justify-content: center;
   align-self: flex-start;
   width: 100%;
+=======
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  backface-visibility: hidden;
+  flex: 1 1 auto;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  order: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  min-height: 600px; }
+
+.sr-header-wrap {
+  display: flex;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  backface-visibility: hidden;
+  flex: 1 1 auto;
+  flex-flow: row wrap;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  order: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+>>>>>>> Code
   z-index: 40; }
 
 .sr-top-bar {
   display: flex;
+<<<<<<< HEAD
   justify-content: space-between;
   width: 100%;
   padding: 15px 30px 0; }
@@ -6986,10 +7061,45 @@ body {
   @media only screen and (min-width: 75em) {
     .sr-login-call {
       display: inline-block; } }
+=======
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  backface-visibility: hidden;
+  flex: 1 1 auto;
+  flex-flow: row wrap;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  order: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  padding-top: 20px; }
+
+.sr-logo-area {
+  display: block;
+  padding: 0 1rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%; }
+
+.sr-login-area {
+  display: block;
+  padding: 0 1rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%; }
+>>>>>>> Code
 
 .sr-login-button {
   background: #0eb78d;
   color: #fff;
+<<<<<<< HEAD
   font-size: 0.8rem;
   padding-left: 25px;
   padding-right: 25px;
@@ -7015,6 +7125,20 @@ body {
   .sr-login-form-btn:hover, .sr-login-form-btn:focus {
     background: #0a7e61;
     color: #fff; }
+=======
+  border-radius: 1000px;
+  padding-left: 40px;
+  padding-right: 40px; }
+  .sr-login-button:hover, .sr-login-button:focus {
+    background: #0a8868;
+    color: #fff; }
+  .sr-login-button .iconic * {
+    fill: #fff;
+    stroke: #fff; }
+    .sr-login-button .iconic *.iconic-property-accent {
+      fill: #fff;
+      stroke: #fff; }
+>>>>>>> Code
 
 .sr-ui-wrap {
   z-index: 30;
@@ -7022,6 +7146,7 @@ body {
   min-height: 400px; }
 
 .sr-footer-wrap {
+<<<<<<< HEAD
   display: flex;
   align-self: flex-end;
   justify-content: center;
@@ -7046,6 +7171,17 @@ body {
 
 .sr-footer-menu {
   margin: 0; }
+=======
+  align-self: flex-end;
+  z-index: 30;
+  width: 100%; }
+
+.sr-footer-menu {
+  margin: 0; }
+  @media only screen and (min-width: 75em) {
+    .sr-footer-menu {
+      float: left; } }
+>>>>>>> Code
 
 .sr-footer-menu li {
   display: inline-block;
@@ -7054,6 +7190,7 @@ body {
 .sr-footer-menu li:last-child {
   padding-right: 0; }
 
+<<<<<<< HEAD
 .sr-copyright {
   text-align: center;
   margin-bottom: 5px; }
@@ -7069,24 +7206,43 @@ body {
       display: inline-block;
       text-align: center;
       margin-bottom: 5px; } }
+=======
+.sr-copyright, .sr-credit {
+  text-align: center; }
+  @media only screen and (min-width: 75em) {
+    .sr-copyright, .sr-credit {
+      float: right; } }
+>>>>>>> Code
 
 .sr-home-view-container {
   background: url(../images/Figure.jpg);
   background-repeat: no-repeat;
   background-position: center top;
+<<<<<<< HEAD
+=======
+  top: -80px;
+>>>>>>> Code
   position: relative;
   min-height: 800px; }
 
 .sr-welcome {
   width: 100%;
   position: absolute;
+<<<<<<< HEAD
   top: 30px;
+=======
+  top: 50px;
+>>>>>>> Code
   text-align: center;
   color: #0eb78d; }
 
 .sr-enter-button {
   position: absolute;
+<<<<<<< HEAD
   bottom: 160px;
+=======
+  bottom: 150px;
+>>>>>>> Code
   left: -125px;
   width: 250px;
   padding-left: 30px;
@@ -7095,7 +7251,10 @@ body {
   border: 1px solid #0eb78d;
   background: transparent;
   color: #0eb78d;
+<<<<<<< HEAD
   font-size: 1.3rem;
+=======
+>>>>>>> Code
   background-image: url(../images/icon-door.png);
   background-repeat: no-repeat;
   background-position: 15px center;
@@ -7104,6 +7263,7 @@ body {
     border-color: #25eebc;
     background: transparent;
     color: #25eebc; }
+<<<<<<< HEAD
 
 .sr-enter-button:hover {
   background-image: url(../images/icon-door.png);
@@ -7509,3 +7669,22 @@ input[type="radio"] + label, input[type="checkbox"] + label {
   margin-right: 0;
   margin-bottom: 0;
   vertical-align: middle; }
+=======
+  .sr-enter-button .iconic * {
+    fill: #0eb78d;
+    stroke: #0eb78d; }
+    .sr-enter-button .iconic *.iconic-property-accent {
+      fill: #0eb78d;
+      stroke: #0eb78d; }
+  .sr-enter-button:hover .iconic * {
+    fill: #25eebc;
+    stroke: #25eebc; }
+    .sr-enter-button:hover .iconic *.iconic-property-accent {
+      fill: #25eebc;
+      stroke: #25eebc; }
+
+.sr-enter-button:hover {
+  background-image: url(../images/icon-door-hover.png);
+  background-repeat: no-repeat;
+  background-position: 15px center; }
+>>>>>>> Code

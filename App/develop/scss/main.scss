@@ -65,7 +65,6 @@ $foundation-version: '1.2.0';
 ////---------------------------------------------------APP CSS
 ////__________________________________________________________
 
-
 //------ Utility Class-----//
 
 $sr-shadow: 2px 2px 3px $color-white-shade2;
@@ -80,6 +79,7 @@ a:hover{
 .float-content{
    height: auto; 
 }
+
 .float-content:after{
     content: "";
     display: table;
@@ -92,6 +92,7 @@ body{
     color: $color-white-shade2;
 
 }
+
 .sr-app-frame{
     width: 100%;
     min-height: 760px;
@@ -218,6 +219,7 @@ body{
 .sr-footer-menu{
     margin:0;
     @include breakpoint(large){
+
             }
 }
 .sr-footer-menu li{
@@ -242,7 +244,6 @@ body{
         display: inline-block;
         text-align:center;
         margin-bottom: 5px;
-
     } 
 }
 
