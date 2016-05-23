@@ -25,7 +25,7 @@
 
                         <div class="sr-quest-type-text sr-quest-opt" ng-if="ques_data[currQ].q_type=='tb'" ng-repeat="rep in getNumber(ques_data[currQ].q_responseMax)">
                            <form class="sr-form-field">
-                               <input type="text" ng-model="ques_data[currQ].resp[$index].value" />
+                               <input type="text" ng-model="ques_data[currQ].value" />
                            </form>
                        </div>
 
@@ -44,7 +44,7 @@
                                         </div>
 
                                         <div class="sr-select-box" ng-if="!(opt.item.indexOf('()')===-1)">
-                                            <select class="sr-select-options" ng-model="opt.value" ng-options="option.value as option.name for option in selection">
+                                            <select class="sr-select-options" ng-model="ques_data[currQ].value" ng-options="option.value as option.name for option in selection">
                                             </select>
                                         </div>
 
@@ -64,8 +64,6 @@
                              </div><!--sr-multi-select-type-->
 
                         </div><!--sr-quest-type-selection-->
-
-
                         <div class="sr-quest-type-range" ng-if="ques_data[currQ].q_type=='s'" ng-init="breakoptions(ques_data[currQ])">
                             <div class="sr-quest-opt">
                                <ul class="sr-range">
@@ -77,14 +75,12 @@
                                </ul>
                            </div>
                         </div><!--sr-quest-type-range]-->
-
-
                         <div class="sr-quest-range-type" ng-if="ques_data[currQ].q_type=='sm'" ng-init="breakoptions(ques_data[currQ])">
                             <h4 class="sr-sub-quest"  ng-bind="ques_data[currQ].resp[attnum].item"></h4>
                             <span ng-click="moveattback()"></span>
                             <div class="sr-quest-opt">
                                <ul class="sr-range">
-                                   <li ng-click="moveattforward(ques_data[currQ].resp)" ng-repeat="rang in    getNumber((ques_data[currQ].resp[attnum].respScale.length*3)-2) track by $index" >
+                                   <li ng-click="moveattforward(ques_data[currQ].resp)" ng-repeat="rang in  getNumber((ques_data[currQ].resp[attnum].respScale.length*3)-2) track by $index" >
                                        <figure ng-click="ques_data[currQ].resp[attnum].respScale.value=$index"></figure>
                                        <figcaption ng-if="((4+$index) % 3 == 1)" ng-bind="ques_data[currQ].resp[attnum].respScale[($index/3)].item"></figcaption>
                                        <figcaption ng-if="!((4+$index) % 3 == 1)"> range{{((ques_data[currQ].resp[attnum].respScale.length*3)-2)-$index}}
@@ -94,11 +90,7 @@
                            </div>
 
                         </div><!--sr-quest-type-range[with sub quest]-->
-
-
-
                         <div class="sr-error-message" ng-show="error" ng-bind="errorM"></div>
-
                 </div><!--sr-quest-control-->
 		<div ng-switch-when="save">
 			<div ng-show="!saved">
@@ -130,11 +122,6 @@
                     <a ui-sref="" class="sr-save"  ng-click="saving_response()" ><img src="../assets/img/sr-nav-out.png"></a>
                     <a ui-sref="" ng-click="next()" class="sr-forward"><img src="../assets/img/sr-nav-fwd.png"></a>
                 </div><!--sr-quest-nav-->
-
-
             </div><!--sr-quest-status-->
-
     </div><!--sr-quest-content-->
-
-
 </div><!--sr-quest-view-wrap-->

@@ -63,7 +63,7 @@ angular.module('Admin')
       })
     }
   }])
-  .controller('viewallQCtrl', ['$scope','appService', '$location', function ($scope, appService, $location) {
+  .controller('viewallQCtrl', ['$scope','appService', '$location', '$route', function ($scope, appService, $location, $route) {
     appService.request_data('viewallQ','').then(function(response){
       $scope.categories=response;
     },
@@ -71,6 +71,17 @@ angular.module('Admin')
       console.log('error this '.error)
     });
 
+    $scope.shift_question=function(qid, cid, func){
+        var data= {question_id:qid, category_id:cid, func:func}
+        appService.request_data('shift_question',data).then(function(response){
+          if(response=='Question reordered'){
+            $route.reload();
+          }
+        },
+        function(error){
+          console.log('error this '.error)
+        });
+    }
   }])
   .controller('editQCtrl', ['$scope','appService', '$location','$routeParams', function ($scope, appService, $location, $routeParams) {
     var id=$routeParams.id;

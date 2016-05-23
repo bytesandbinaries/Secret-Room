@@ -83,7 +83,7 @@ appServices.service('AuthService', ['userData','$q','$http','USER_ROLES','$locat
 		$http({url:'server/register_user.php?', method:'GET', params:regprams}).
               success(function(responseData, status, headers, config) {
                   data=responseData;
-      			  loading=false;
+    			  loading=false;
                   userCred(data, 'newp')
               },
               function(err) {

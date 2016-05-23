@@ -2,9 +2,12 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 0);
 $host = "localhost";
-$username = "wwwbytes_secretr";
-$password = "secretroom1@";
-$database = "wwwbytes_secretroom";
+$username = "root";
+$password = "root";
+$database = "secretroom";
+// $username = "wwwbytes_secretr";
+// $password = "secretroom1@";
+// $database = "wwwbytes_secretroom";
 $con=mysqli_connect($host,$username,$password, $database);
 $a_json = array();
 if(isset($_GET['data'])){$data=json_decode($_GET['data']);}
@@ -79,6 +82,7 @@ else if($_GET['action']=='viewallQ'){
   $resCAT=mysqli_query($con, $sqlCAT) or die ("Error : could not Select Categories" . mysqli_error($con));
   while($infoCAT= mysqli_fetch_array($resCAT)){
     $a_sub_json['categoryname']= $infoCAT[1];
+    $a_sub_json['categoryid']= $infoCAT[0];
     $a_sub_json['questions']=array();
     //select the question with the category_id//
     $sqlAQ = "SELECT * FROM `question_bank` where `question_category` = '$infoCAT[0]' order by `question_order` asc";
@@ -130,6 +134,37 @@ elseif($_GET['action']=='getallm'){
     array_push($a_json, $aa_json);
   }
   echo $_GET['callback'].json_encode($a_json);
+}
+elseif($_GET['action']=='shift_question'){
+    $sql="Select question_order From question_bank where question_id='".$data->question_id."'";
+    $res=mysqli_query($con, $sql);
+    $info=mysqli_fetch_array($res);
+    if($data->func=='move_up'){
+        $sql="Update question_bank
+            Set question_order=question_order+1 Where question_category='".$data->category_id."' AND question_order=".($info[0]-1);
+        $res=mysqli_query($con, $sql) or die ("Error : could not shift question up " . mysqli_error($con));
+        if($res){
+            $sql="Update question_bank    Set question_order=question_order-1  Where question_id='".$data->question_id."'";
+            $res=mysqli_query($con, $sql) or die ("Error : could not update mode question" . mysqli_error($con));;
+            if($res){echo $_GET['callback'].'Question reordered';}
+        }
+    }
+    else{
+        $sql="Update question_bank
+            Set question_order=question_order-1 Where question_category='".$data->category_id."' AND question_order=".($info[0]+1);
+        $res=mysqli_query($con, $sql) or die ("Error : could not shift question up " . mysqli_error($con));
+        if($res){
+            $sql="Update question_bank    Set question_order=question_order+1  Where question_id='".$data->question_id."'";
+            $res=mysqli_query($con, $sql) or die ("Error : could not update mode question" . mysqli_error($con));;
+            if($res){echo $_GET['callback'].'Question reordered';}
+        }
+    }
+  // $t=time();$srange=0; $scaleqid=0; $scalecat=0;
+  // if(isset($data->scale_range) && isset($data->scale_id)){$srange=$data->scale_range; $scaleqid=$data->scale_id; $scalecat=$data->scale_cat;}
+  // $sqlu="Insert into `match` values ( NULL, '".$data->mtype."', $data->fcat , $data->fq_id , $data->scat , $data->sq_id , $scalecat, $scaleqid , $srange, '".$t."', '".$t."')";
+  // $rsu=mysqli_query($con, $sqlu) or die ("Error : could not Add match" . mysqli_error($con));
+  // $q_id = mysqli_insert_id($con);
+  // echo $_GET['callback'].json_encode($q_id);
 }
 else{
   $sql='Select * from question_bank  order by question_updated Desc';

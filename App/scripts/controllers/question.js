@@ -44,8 +44,12 @@ angular.module('secretRoom')
     	else{
     		for($h=0; $h<r.resp.length; $h++){
     			if(r.q_type !='sm'){
+                    if($h==0 && (typeof r.resp!='undefined')){$scope.q.value=[]; }
     				if(r.value!=''){move=true; $scope.q.value=r.value;}
-    				else if(r.resp[$h].value!=''){ move=true; }
+    				else if(r.resp[$h].value!=''){
+                        move=true;
+
+                        $scope.q.value.push({item:r.resp[$h].item, value:r.resp[$h].value}) }
     				//else{move=true; $scope.q.value=r.resp;}
     			}
     			if(r.q_type=='sm'){
@@ -58,7 +62,6 @@ angular.module('secretRoom')
     				}
     			}
     		}
-
     	}
     	if(r.q_no==6){
     			if($scope.ques_data[0].value==$scope.ques_data[1].value){
@@ -75,6 +78,7 @@ angular.module('secretRoom')
     	if(move==true){
     		$scope.error=false;
     		$scope.qresponse.push($scope.q);
+            console.log($scope.q);
 	        if($scope.currQ<($scope.ques_data.length -1)) {   $scope.currQ++;
 	            var qtype=$scope.ques_data[$scope.currQ].q_type
 	                if(qtype=='mp' || qtype=='s' || qtype=='sm' || qtype=='tb'){
@@ -91,15 +95,11 @@ angular.module('secretRoom')
         	$scope.error=true;
         }
     }
-
-
     $scope.goback=function(){
         if($scope.currQ>0){
             $scope.currQ--;
         }
     }
-
-
     $scope.get_country=function(){
         $http.get("scripts/country.json").success(function(response) {$scope.selection = response;});
     }
@@ -119,8 +119,6 @@ angular.module('secretRoom')
     $scope.get_height=function(){
         $scope.selection=[{'name':'Select Height', 'value':''},{'name':'3-4 Feet', 'value':'3-4 feet'},{'name':'4-5 Feet', 'value':'4-5 feet'},{'name':'5-6 Feet', 'value':'5-6 feet'},{'name':'6-7 Feet', 'value':'6-7 feet'}]
     }
-
-
     $scope.get_youfrom=function(){
         $scope.localgov= $scope.ques_data[$scope.currQ-1].resp[0].value.trim().split('|')
         $scope.selection=[{name:'Select your Local Government', value:''}]
@@ -176,16 +174,6 @@ angular.module('secretRoom')
         else{
             $scope.saving_response();
         }
-
-        // $http({url:'server/get_q.php?category='+$scope.currentlevel, method:'GET'}).
-        //   success(function(responseData, status, headers, config) {
-        //       $scope.ques_data=responseData;
-        //       console.log( $scope.ques_data);
-        //       $scope.breakoptions($scope.ques_data[$scope.currQ])
-        //   }),
-        //   function(err) {
-        //     $scope.message="An Error occured Please Check your internet connection and try again..."
-        //   }
      }
     $scope.saving_response=function(){
     	$scope.question_status='save'
@@ -193,7 +181,10 @@ angular.module('secretRoom')
     }
     $scope.save_response=function(){
     	var datap={user:$scope.user, response:$scope.qresponse}
-        $http({method:'Post', url:'server/add_response.php', data:datap}).
+        $http({method:'Post', url:'http://localhost:8888/secret-room/App/server/add_response.php', data:datap,
+            headers : {
+                'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+            }}).
         success(function(responseData, status, headers, config) {
             $scope.user.id=responseData;
             $scope.saved=true;

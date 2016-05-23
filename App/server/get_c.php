@@ -15,7 +15,7 @@ while($row = mysqli_fetch_array($rs)) {
 	$a_json_row["all_questions"]=array();
 	$q=array();
 
-	$sqlq = "SELECT * FROM `question_bank` where `question_category`='".$row[0]."'";
+	$sqlq = "SELECT * FROM `question_bank` where `question_category`='".$row[0]."' order by question_order asc";
 	$rsq = mysqli_query($con, $sqlq);
 	while($row = mysqli_fetch_array($rsq)) {
 		$q["q_no"]=$row[0];
