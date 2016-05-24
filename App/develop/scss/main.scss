@@ -68,6 +68,7 @@ $foundation-version: '1.2.0';
 //------ Utility Class-----//
 
 $sr-shadow: 2px 2px 3px $color-white-shade2;
+$sr-shadow-down: 1px 1px -2px $color-white-shade2;
 
 
 a{
@@ -119,7 +120,7 @@ body{
     justify-content: space-between;
 //    @extend .float-content;
     width:100%;
-    padding: 15px 30px 0;
+    padding: 15px 30px;
     @include breakpoint(large){
         width:80%;
     }
@@ -137,7 +138,7 @@ body{
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
-    padding-top:10px;
+//    padding-top:10px;
     width:30%;
     color: $color-white-shade2;
     @include breakpoint(large){
@@ -202,15 +203,15 @@ body{
     background: $color-gray-shade3;
     color: $color-white-shade2;
     border-top: 8px solid $color-green-shade2;
-    min-height: 120px;
+//    min-height: 120px;
 }
 .sr-footer-bar{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    @include breakpoint(large){
+    padding-bottom: 45px;
+    padding-top: 45px;    
+        @include breakpoint(large){
         flex-flow: row wrap;
         justify-content: space-between;
         width: 80%;
@@ -223,6 +224,10 @@ body{
             }
 }
 .sr-footer-menu li{
+    font-size: $font-down2;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    font-weight: 700;
     display:inline-block;
     padding-right:8px;
 }
@@ -232,6 +237,8 @@ body{
 .sr-copyright{
     text-align:center;
     margin-bottom: 5px;
+    font-size: $font-down1;
+    letter-spacing: .1rem;
     @include breakpoint(large){
         display: inline-block;
         margin-right:15px;
@@ -240,6 +247,8 @@ body{
 }
 .sr-credit{
     display: none;
+    font-size: $font-down1;
+    letter-spacing: .1rem;
     @include breakpoint(large){
         display: inline-block;
         text-align:center;
@@ -296,32 +305,61 @@ body{
 }
 
 //-------------------------------Intro View-------------------------//
-.sr-intro-view-wrap{
-    width: 100%;
+.sr-view-wrap{
+    @include grid-block(
+        $size:expand
+        );
+//    width: 100%;
     background: $color-white;
     border-top: 8px solid $color-gray;
 //    margin-bottom: 60px;
 //    margin-top: 30px;
 //    border-radius: $global-radius;
 }
-.sr-intro-view-content{
+.sr-view-content{
+    @include grid-block(
+        $orientation:vertical
+        );
     box-sizing: border-box;
     margin: 40px 30px;
-//    border: 2px solid $color-green;
+    color: $color-gray-tint1;
     padding: 60px 15px;
     @include breakpoint(large){
-        width: 40%;
+        @include grid-size(6);
         margin: 0 auto;
         padding: 60px;
         min-height: 400px;
     }
 }
-.sr-intro-head{
+.sr-head-block{
+    @include grid-content(12);
     color: $color-green;
     font-size:$font-up2;
 }
-.sr-intro-info{
-    color: $color-white-shade2;
+.sr-info-block{
+    color: $color-gray-tint1;
+    font-size: $font-up1;
+}
+.sr-info-group{
+    @include grid-block(
+        $size:expand,
+        $wrap: true
+        );
+}
+.sr-info-group > p{
+    @include grid-content(
+        $size:12
+        );
+}
+.sr-info-group div{
+    @include grid-content(
+        $size:6
+        );
+}
+.sr-info-group div p{
+    font-size: $font-down1
+}
+.sr-info-group div h3{
     font-size: $font-up1;
 }
 .sr-go-button{
@@ -503,6 +541,7 @@ progress::-moz-progress-bar {
 .sr-quest{
     background:$color-white ;
     color: $color-gray-tint2;
+    border-bottom: 1px solid $color-white-shade2;
     margin: 0;
     padding:15px 30px ;
     font-size: $font-up3;
@@ -560,22 +599,61 @@ progress::-moz-progress-bar {
 //    @include grid-layout(6);
 }
 .sr-opt-block{
-    width: 25%;
-    margin: 0 7.5px;
-    height: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 7.5px;
+    @include breakpoint(medium){
+        box-sizing: border-box;
+        width: 25%;
+        margin: 7.5px;
+    }
+//    background: #fff;
+//    box-shadow: $sr-shadow;
+//    height: 100%;
 }
 .sr-radio-select, .sr-checkbox-select{
 //    @include grid-block();
-    margin: 7.5px;
-    padding: 7.5px;
-    background: #fff;
-    border-radius: $global-radius;
-    height: 100%;
-    width: 100%;
-    box-shadow: $sr-shadow;
+//    margin: 7.5px;
+//    padding: 7.5px;
+//    background: #fff;
+//    border-radius: $global-radius;
+//    height: 100%;
+//    width: 100%;
+    
 }
 .sr-opt-block label{
     color: $color-red;
+    background: #fff;
+    border-radius: $global-radius;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    height:45px;
+    padding: 5px;
+    line-height: 1.1;
+    vertical-align: middle;
+    text-align: center;
+    box-shadow: $sr-shadow;
+    cursor: pointer;
+}
+.sr-opt-block label:first-child{
+    vertical-align: middle;
+}
+input[type=checkbox]:checked ~ label, 
+input[type=radio]:checked ~ label{
+    color:#fff;
+    background: $color-green;
+    border-radius: $global-radius;
+    box-shadow: $sr-shadow-down;
+}
+.sr-opt-block label:hover{
+    color:#fff;
+    background: $color-green;
+    border-radius: $global-radius;
+//    box-shadow: $sr-shadow-down;
+}
+input[type="checkbox"], input[type="radio"]{
+    display: none;
 }
 //  Range Styles
 .sr-range {
@@ -597,47 +675,67 @@ progress::-moz-progress-bar {
   background: $color-green !important; }
 
 .sr-range li figure {
-  width: 25px;
-  height: 25px;
-  border: 5px solid $color-white;
-  margin: auto;
-  cursor: pointer;
-  border-radius: $global-radius; }
-  @media only screen and (min-width: 40em) {
-    .sr-range li figure {
-      width: 60px;
-      height: 60px;
-      border: 8px solid $color-white;
-      margin: auto;
-      cursor: pointer;
-      border-radius: 1000px; } }
+    width: 30px;
+    height: 30px;
+    border: 5px solid $color-white;
+    margin: auto;
+    cursor: pointer;
+    border-radius: $global-rounded;
+    
+    
+    @include breakpoint(medium){
+        width: 60px;
+        height: 60px;
+        border: 8px solid $color-white;
+        margin: auto;
+        cursor: pointer;
+        border-radius: $global-rounded;    
+    }    
+}
+//  @media only screen and (min-width: 40em) {
+//    .sr-range li figure {
+//      width: 60px;
+//      height: 60px;
+//      border: 8px solid $color-white;
+//      margin: auto;
+//      cursor: pointer;
+//      border-radius: 1000px; 
+//      } 
+//}
 
 .sr-range :last-child figure {
-  background: $color-red-shade3; }
+  background: $color-red-shade3; 
+}
 
 .sr-range li:nth-of-type(6) figure {
   background: $color-red-shade2; }
 
 .sr-range li:nth-of-type(5) figure {
-  background: $color-red-shade1; }
+  background: $color-red-shade1; 
+}
 
 .sr-range li:nth-of-type(4) figure {
-  background: $color-red; }
+  background: $color-red; 
+}
 
 .sr-range li:nth-of-type(3) figure {
-  background: $color-red-tint1; }
+  background: $color-red-tint1; 
+}
 
 .sr-range li:nth-of-type(2) figure {
-  background: $color-red-tint2; }
+  background: $color-red-tint2; 
+}
 
 .sr-range :first-child figure {
-  background: $color-red-tint3; }
+  background: $color-red-tint3; 
+}
 
 .sr-range li:nth-of-type(2) figcaption,
 .sr-range li:nth-of-type(3) figcaption,
 .sr-range li:nth-of-type(5) figcaption,
 .sr-range li:nth-of-type(6) figcaption {
-  visibility: hidden; }
+  visibility: hidden; 
+}
 
 .sr-range figcaption {
   font-size: 0.6rem;
@@ -671,12 +769,7 @@ progress::-moz-progress-bar {
 //    border-radius: $global-radius;
 ////    height: 100%;
 //}
-.sr-multi-select-button{}
-.sr-quest-type-range{}
-.sr-range{}
 
-figure{}
-figcaption{}
 .sr-error-message{
     background: $color-white-shade1;
     padding: 5px 30px 50px 30px;
@@ -691,8 +784,6 @@ figcaption{}
     border: 1px solid $color-red;
     max-width: 80%;
 }
-.sr-save-progress{}
-.sr-save-progress
 .sr-exit-button{
     @extend %button;
     @include button-style(
@@ -723,6 +814,7 @@ figcaption{}
     width: 100%;
     border-bottom-left-radius:8px;
     border-bottom-right-radius:8px;
+    border-top:1px solid $color-green-shade2;
 
 //    margin-top: 30px;
 
@@ -787,8 +879,11 @@ input[type="color"], textarea, select {
     min-width: 200px;
 }
 input[type="radio"] + label, input[type="checkbox"] + label {
-  margin-left: 0.8rem;
-  margin-right: 0;
-  margin-bottom: 0;
-  vertical-align: middle;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+//  margin-left: 0;
+//  margin-right: 0;
+//  margin-bottom: 0;
+//  vertical-align: middle;
 }

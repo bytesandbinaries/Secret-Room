@@ -32,6 +32,18 @@ angular
         controllerAs: 'question',
 		access: { isFree: true }
       })
+      .when('/terms', {
+        templateUrl: 'views/terms.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main',
+		access: { isFree: true }
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main',
+		access: { isFree: true }
+      })
       .otherwise({
         redirectTo: '/',
 		access: { isFree: true}
