@@ -9,7 +9,7 @@ angular.module('secretRoom')
     else{$scope.question_status='getQuestions';}
     $scope.currentlevel=$scope.user.currentlevel;
     $scope.get_category=function(){
-        $http({url:'http://localhost/secret-room/App/server/get_c.php', method:'GET'}).
+        $http({url:'http://localhost:8888/secret-room/app/server/get_c.php', method:'GET'}).
         success(function(responseData, status, headers, config) {
             $scope.que_data=responseData;
         }),
@@ -181,7 +181,7 @@ angular.module('secretRoom')
     }
     $scope.save_response=function(){
     	var datap={user:$scope.user, response:$scope.qresponse}
-        $http({method:'Post', url:'http://localhost:8888/secret-room/App/server/add_response.php', data:datap,
+        $http({method:'Post', url:'http://localhost:8888/secret-room/app/server/add_response.php', data:datap,
             headers : {
                 'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
             }}).
