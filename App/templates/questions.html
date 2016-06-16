@@ -38,7 +38,7 @@
 
                                         <div class="sr-single-select-block" ng-if="(opt.item.indexOf('()')===-1)">
                                                <div class="sr-radio-select-button">
-                                                   <input type="radio"  name="{{ques_data[currQ].q_no}}" ng-model="ques_data[currQ].value" value="{{opt.item}}" id="radio-{{ques_data[currQ].q_no}}"/>
+                                                   <input type="radio" ng-click="next()"  name="{{ques_data[currQ].q_no}}" ng-model="ques_data[currQ].value" value="{{opt.item}}" id="radio-{{ques_data[currQ].q_no}}"/>
                                                     <label ng-bind="opt.item" for="radio-{{ques_data[currQ].q_no}}"></label>
                                                 </div>
                                         </div>
