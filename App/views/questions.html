@@ -49,73 +49,76 @@
 <!--                   <form class="sr-form-field">-->
                        <input type="text" ng-model="ques_data[currQ].resp[$index].value" />
 <!--                   </form>-->
+<<<<<<< HEAD
+                    </div>
 
-               </div>
+            
+                    <div class="" ng-if="ques_data[currQ].q_type=='mp'" ng-init="breakoptions(ques_data[currQ])">
 
+                        <div class="sr-quest-opt" ng-if="ques_data[currQ].q_responseMax==1" >
+                           <ul class="sr-form-field">
+                               <li class="sr-opt-block" ng-repeat="opt in ques_data[currQ].resp">
 
-                <div class="sr-quest-type-selection" ng-if="ques_data[currQ].q_type=='mp'" ng-init="breakoptions(ques_data[currQ])">
+                                    <div class="sr-radio-select" ng-if="(opt.item.indexOf('()')===-1)">
+                                               <input type="radio"  name="{{ques_data[currQ].q_no}}" ng-model="ques_data[currQ].value" value="{{opt.item}}" id="radio-{{opt.item}}"/>
+                                                <label ng-bind="opt.item" for="radio-{{opt.item}}"></label>
+                                    </div>
 
-                    <div class="sr-quest-opt" ng-if="ques_data[currQ].q_responseMax==1" >
-                       <ul class="sr-form-field">
-                           <li class="sr-opt-block" ng-repeat="opt in ques_data[currQ].resp">
+                                    <div class="sr-dropdown-select" ng-if="!(opt.item.indexOf('()')===-1)">
+                                        <select class="sr-select-options" ng-model="opt.value" ng-options="option.value as option.name for option in selection">
+                                        </select>
+                                    </div>
 
-                                <div class="sr-radio-select" ng-if="(opt.item.indexOf('()')===-1)">
-                                           <input  ng-click="next()" type="radio"  name="{{ques_data[currQ].q_no}}" ng-model="ques_data[currQ].value" value="{{opt.item}}" id="radio-{{opt.item}}"/>
-                                            <label ng-bind="opt.item" for="radio-{{opt.item}}"></label>
-                                </div>
+                                </li>
+                            </ul>
+                         </div><!--sr-single-select-type-->
 
-                                <div class="sr-dropdown-select" ng-if="!(opt.item.indexOf('()')===-1)">
-                                    <select class="sr-select-options" ng-model="opt.value" ng-options="option.value as option.name for option in selection">
-                                    </select>
-                                </div>
+                         <div class="sr-quest-opt" ng-if="ques_data[currQ].q_responseMax==0 || ques_data[currQ].q_responseMax>1 ">
+                            <ul class="sr-form-field">
+                               <li class="sr-opt-block" ng-repeat="opt in ques_data[currQ].resp">
+                                    <div class="sr-checkbox-select">
+                                        <input type="checkbox"  name="{{ques_data[currQ].q_no}}" ng-model="opt.value" value="{{opt.item}}" id="check-{{opt.item}}"/>
+                                       <label ng-bind="opt.item" for="check-{{opt.item}}"></label>
+                                   </div>
+                               </li>
+                            </ul>
+                         </div><!--sr-multi-select-type-->
 
-                            </li>
-                        </ul>
-                     </div><!--sr-single-select-type-->
+                    </div><!--sr-quest-type-selection-->
+            
 
-                     <div class="sr-quest-opt" ng-if="ques_data[currQ].q_responseMax==0 || ques_data[currQ].q_responseMax>1 ">
-                        <ul class="sr-form-field">
-                           <li class="sr-opt-block" ng-repeat="opt in ques_data[currQ].resp">
-                                <div class="sr-checkbox-select">
-                                    <input type="checkbox"  name="{{ques_data[currQ].q_no}}" ng-model="opt.value" value="{{opt.item}}" id="check-{{opt.item}}"/>
-                                   <label ng-bind="opt.item" for="check-{{opt.item}}"></label>
-                               </div>
-                           </li>
-                        </ul>
-                     </div><!--sr-multi-select-type-->
+               
+                    <div class="sr-quest-type" ng-if="ques_data[currQ].q_type=='s'" ng-init="breakoptions(ques_data[currQ])">
+                        <div class="sr-quest-opt">
+                           <ul class="sr-range">
+                               <li ng-repeat="rang in getNumber((ques_data[currQ].resp.length*3)-2) track by $index">
+                                   <figure ng-click="range_select(ques_data[currQ], $index)"></figure>
+                                   <figcaption ng-if="((4+$index) % 3 == 1)" ng-bind="ques_data[currQ].resp[($index/3)].item"></figcaption>
+                                   <figcaption ng-if="!((4+$index) % 3 == 1)"> range{{((ques_data[currQ].resp.length*3)-2)-$index}}</figcaption>
+                               </li>
+                           </ul>
+                       </div>
+                    </div><!--sr-quest-type-range]-->
+               
+                    
+                 
+                    <div class="sr-quest-range-type" ng-if="ques_data[currQ].q_type=='sm'" ng-init="breakoptions(ques_data[currQ])">
+                        <div class="sr-sub-quest"><span ng-bind="ques_data[currQ].resp[attnum].item"></span></div>
+                        <div ng-click="moveattback()"></div>
+                        <div class="sr-quest-opt">
+                           <ul class="sr-range">
+                               <li ng-click="moveattforward(ques_data[currQ].resp)" ng-repeat="rang in    getNumber((ques_data[currQ].resp[attnum].respScale.length*3)-2) track by $index" >
+                                   <figure ng-click="ques_data[currQ].resp[attnum].respScale.value=$index"></figure>
+                                   <figcaption ng-if="((4+$index) % 3 == 1)" ng-bind="ques_data[currQ].resp[attnum].respScale[($index/3)].item"></figcaption>
+                                   <figcaption ng-if="!((4+$index) % 3 == 1)"> range{{((ques_data[currQ].resp[attnum].respScale.length*3)-2)-$index}}
+                                   </figcaption>
+                               </li>
+                           </ul>
+                       </div>
 
-                </div><!--sr-quest-type-selection-->
+                     </div><!--sr-quest-type-range[with sub quest]-->
+                </div><!--  option-wrap-->
 
-
-                <div class="sr-quest-type-range" ng-if="ques_data[currQ].q_type=='s'" ng-init="breakoptions(ques_data[currQ])">
-                    <div class="sr-quest-opt">
-                       <ul class="sr-range">
-                           <li ng-repeat="rang in getNumber((ques_data[currQ].resp.length*3)-2) track by $index">
-                               <figure ng-click="range_select(ques_data[currQ], $index)"></figure>
-                               <figcaption ng-if="((4+$index) % 3 == 1)" ng-bind="ques_data[currQ].resp[($index/3)].item"></figcaption>
-                               <figcaption ng-if="!((4+$index) % 3 == 1)"> range{{((ques_data[currQ].resp.length*3)-2)-$index}}</figcaption>
-                           </li>
-                       </ul>
-                   </div>
-                </div><!--sr-quest-type-range]-->
-
-
-                <div class="sr-quest-range-type" ng-if="ques_data[currQ].q_type=='sm'" ng-init="breakoptions(ques_data[currQ])">
-                    <div class="sr-sub-quest"><span ng-bind="ques_data[currQ].resp[attnum].item"></span></div>
-                    <div ng-click="moveattback()"></div>
-                    <div class="sr-quest-opt">
-                       <ul class="sr-range">
-                           <li ng-click="moveattforward(ques_data[currQ].resp)" ng-repeat="rang in    getNumber((ques_data[currQ].resp[attnum].respScale.length*3)-2) track by $index" >
-                               <figure ng-click="ques_data[currQ].resp[attnum].respScale.value=$index"></figure>
-                               <figcaption ng-if="((4+$index) % 3 == 1)" ng-bind="ques_data[currQ].resp[attnum].respScale[($index/3)].item"></figcaption>
-                               <figcaption ng-if="!((4+$index) % 3 == 1)"> range{{((ques_data[currQ].resp[attnum].respScale.length*3)-2)-$index}}
-                               </figcaption>
-                           </li>
-                       </ul>
-                   </div>
-
-                </div><!--sr-quest-type-range[with sub quest]-->
->>>>>>> origin/remerger
 
 
 
