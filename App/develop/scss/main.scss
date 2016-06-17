@@ -70,7 +70,9 @@ $foundation-version: '1.2.0';
 $sr-shadow: 2px 2px 3px $color-white-shade2;
 $sr-shadow-down: 1px 1px -2px $color-white-shade2;
 
-
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
 a{
     color: $color-green;
 }
@@ -146,8 +148,10 @@ body{
         }
 }
 .sr-login-call{
+    color: $color-green;
     display: none;
     @include breakpoint(large){
+        margin-right: 15px;
         display: inline-block;
     }
 }
@@ -157,7 +161,7 @@ body{
         $background:$color-green,
         $background-hover:$color-green-shade2,
         $color:#fff,
-        $style:solid
+        $style:hollow
         );
      @include button-size(
         $size:small,
@@ -190,9 +194,10 @@ body{
         );
 }
 .sr-ui-wrap{
+//    flex-basis: auto;
     z-index: $z3;
     width: 100%;
-    min-height: 400px;
+//    min-height: 400px;
 }
 .sr-footer-wrap{
     display: flex;
@@ -202,7 +207,7 @@ body{
     width:100%;
     background: $color-gray-shade3;
     color: $color-white-shade2;
-    border-top: 8px solid $color-green-shade2;
+//    border-top: 8px solid $color-green-shade2;
 //    min-height: 120px;
 }
 .sr-footer-bar{
@@ -263,7 +268,7 @@ body{
     background-repeat: no-repeat;
     background-position: center top;
     position: relative;
-    min-height: 800px;
+    min-height: 700px;
     @include breakpoint(){}
 }
 .sr-welcome{
@@ -321,7 +326,7 @@ body{
         $orientation:vertical
         );
     box-sizing: border-box;
-    margin: 40px 30px;
+//    margin: 40px 30px;
     color: $color-gray-tint1;
 //    padding: 60px 15px;
     @include breakpoint(large){
@@ -341,7 +346,7 @@ body{
     font-weight: 700;
 }
 .sr-hero p{
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto 30px auto;
     font-size: $font-up2;
     
@@ -353,44 +358,76 @@ body{
     font-size: $font-up3;
     text-align: center
 }
+.section-divider{
+    width:70%;
+    margin: 30px auto;
+}
 .sub{
+    color: $color-white-shade2;
+    text-align: center;
     font-size: $font-up2;
+    font-weight: 300;
     padding-right: 30px;
     padding-left: 30px;
 }
 .sr-icon-block{
     display: flex;
+//    flex-wrap: wrap;
     justify-content: center;
-    max-width: 800px;
     padding-right: 30px;
     padding-left: 30px;
-    margin: 30px auto;
+    margin: 30px auto 60px auto;
     text-align: center;
+    @include breakpoint(medium){max-width: 80%;}
     }
 .sr-icon-block > div{
     margin: 15px;
     color: $color-green;
-//    @include grid-block(4);
-//    margin-right: 0;
+    @include breakpoint(medium){
+        width:30%;
+        font-size: $font-up1;
+    }
 }
 .sr-icon-block > div >img{
     margin-right: auto;
     margin-left: auto;
     display: block;
     max-height: 220px;
-//    min-height: 84px
-//    @include grid-block(4);
-//    margin-right: 0;
 }
-
-
-
+.sr-icon-block > div >caption{
+    font-size: $font-up1;
+}
+.sr-illus-block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80%;
+    padding-right: 0px;
+    padding-left: 30px;
+    margin: 30px auto;
+    text-align: center
+}
+.sr-illus-block > div{
+    @include breakpoint(medium){
+        width:25%;
+        padding: 15px;
+    }
+}
+.sr-illus-block >div>img{
+    max-width: 200px;
+}
+.sr-illus-block >div>h3{
+    color: $color-green;
+    font-weight: 300;
+}
 .sr-head-block{
     @include grid-content(12);
     color: $color-green;
     font-size:$font-up2;
 }
 .sr-info-block{
+//    -webkit-margin-before: 0;
+    vertical-align: text-top;
     color: $color-gray-tint1;
     font-size: $font-up1;
 }
@@ -409,6 +446,18 @@ body{
     @include grid-content(
         $size:6
         );
+}
+.banner-info-block{
+    display: block;
+    font-size: $font-default;
+    line-height: 1.6;
+    padding-bottom: 30px;
+}
+.banner-info-heading{
+    display: block;
+    font-size: $font-up3;
+    font-weight: 700;
+    line-height: 1.6;
 }
 .sr-info-group div p{
     font-size: $font-down1
@@ -471,8 +520,9 @@ body{
     color: $color-gray;
     text-align: center;
     width: 100%;
+    min-height: 650px;
     padding-bottom: 60px;
-    padding-top: 60px;
+    padding-top: 0;
 }
 .sr-quest-content{
     box-sizing: border-box;
@@ -494,11 +544,11 @@ body{
     border-top-right-radius: 8px;
 }
 .sr-quest-control{}
-.sr-cat-icon{
-    display: block;
-    width:150px;
-    margin:0 auto;
-}
+//.sr-cat-icon{
+//    display: block;
+//    width:150px;
+//    margin:0 auto;
+//}
 .sr-category-heading, .sr-category-description{
     text-align: center;
 }
@@ -535,16 +585,29 @@ body{
 //    height: 80px;
 }
 .sr-cat-icon-area{
-//    height:60px;
+    display: flex;
+    align-items: center;
+    background: $color-green-shade1 ;
+//    height:160px;
     width:100%;
-    padding: 15px 30px;
-//    display: inline-block;
+    padding-top: 15px;
+    
 }
 .sr-cat-prog-icon{
-    position: relative;
+//    position: relative;
 //    top: -20px;
-    width: 80px;
+    z-index: -10;
+    height: 150px;
 //    float: left;
+}
+.screamer{
+    font-size: font-up2;
+    color:$color-white;
+    font-weight: 700;
+    display: inline-block;
+}
+.rider{
+
 }
 .sr-progress-bar{
     box-sizing: border-box;
@@ -599,7 +662,7 @@ progress::-moz-progress-bar {
 .sr-quest{
     background:$color-white ;
     color: $color-gray-tint2;
-    border-bottom: 1px solid $color-white-shade2;
+//    border-bottom: 1px solid $color-white-shade2;
     margin: 0;
     padding:15px 30px ;
     font-size: $font-up3;
@@ -639,13 +702,16 @@ progress::-moz-progress-bar {
     margin: 0;
     padding:15px 30px ;
     font-size: $font-default;
-    height: auto;
-    min-height: 120px;
+    min-height: 220px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
     transition: height 0.8s ease;
+}
+.option-wrap{
+    height: 220px;
+    overflow:hidden;
 }
 .sr-form-field{
     display: flex;
@@ -830,7 +896,7 @@ input[type="checkbox"], input[type="radio"]{
 //}
 
 .sr-error-message{
-    background: $color-white-shade1;
+    background: $color-white;
     padding: 5px 30px 50px 30px;
     color: $color-red;
     font-size: 1.3rem;
@@ -873,7 +939,7 @@ input[type="checkbox"], input[type="radio"]{
     width: 100%;
     border-bottom-left-radius:8px;
     border-bottom-right-radius:8px;
-    border-top:1px solid $color-green-shade2;
+//    border-top:1px solid $color-green-shade2;
 
 //    margin-top: 30px;
 
@@ -945,4 +1011,114 @@ input[type="radio"] + label, input[type="checkbox"] + label {
 //  margin-right: 0;
 //  margin-bottom: 0;
 //  vertical-align: middle;
+}
+
+//*-----------------------Sign Up Form -----------------------------*/
+
+.sign-up-block{
+    
+    margin-left: auto;
+    margin-right: auto;
+    padding-left:15px;
+    padding-right:15px;
+    @include breakpoint(medium){
+        max-width:80%;
+    }
+    }
+.sign-up-form{
+    position: relative;
+    
+    @include breakpoint(medium){
+//        height: 50px;
+    }
+}
+//.sign-up-form:after{
+////    content: '';
+////    display: table;
+//}
+.sign-up-input{
+    position: relative;
+    width:100%;
+    display: inline-block;
+    height: auto;
+    margin-bottom: 15px;
+    @include breakpoint(medium){
+        width:350px;
+    }
+}
+.sign-up-form input[type='text'], .sign-up-form input[type='email']{
+//    width:100%;
+//    display: inline-block;
+    text-align: center;
+    font-size: 1rem;
+//    line-height: 1;
+    vertical-align: middle;
+    padding: 0.9rem 1rem;
+    height: auto;
+    margin: 0;
+    border: 0;
+}
+
+
+
+.sign-up-form label{
+    position:absolute;
+    text-shadow: none;
+    margin-left: 50%;
+    left: -36px;
+//    left: 9000px;
+    bottom: 30px;
+    color:#617379;
+    pointer-events:none;
+    transition: all 0.3s ease-in-out;
+//    z-index: ;
+    
+}
+//label:focus, label:valid{
+//    position: absolute;
+//    bottom: 83px;
+//    color:#c3fc4f;
+//}
+.sign-up-form input[type='email']:focus ~ label, 
+.sign-up-form input[type='email']:valid ~ label{
+    position: absolute;
+    bottom: 83px;
+    color:#c3fc4f;
+}
+.sign-up-button{
+//    display: flex;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+//    line-height: 1;
+    text-shadow: 0 0 0 ;
+    vertical-align: middle;
+    width: 100%;
+    display: inline-block;
+    background: linear-gradient(to bottom, #9ed72b, #71aa00);
+    color: #2d4300;
+    padding: 0.9rem 1rem;
+    height: auto;
+    border-radius:$global-rounded;
+    border: 1px solid #304801;
+    
+}
+.sign-up-button:hover{
+    background: linear-gradient(to bottom, #71aa00, #5e8d00);
+}
+#mc_embed_signup input.mce_inline_error{
+    border-color: #51c8f0!important;
+//    border: 1px solid #9b5af2;
+}
+.sign-up-response{
+    padding: 5px 30px;
+}
+.success{
+    color: #c3fc4f;
+    text-align: center;
+}
+.error{
+    color: #d2beec;
+    text-align: center;
 }
