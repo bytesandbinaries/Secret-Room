@@ -87,8 +87,13 @@ angular.module('secretRoom')
 	        }
 	        else{
 	            $scope.user.currentlevel++;
-	            $scope.question_status='startNewcategory';
-	            $scope.get_questions($scope.user.currentlevel);
+                if($scope.user.currentlevel<$scope.que_data.length){
+	                $scope.question_status='startNewcategory';
+                }
+                else{
+                    $scope.saving_response();
+                }
+	        //    $scope.get_questions($scope.user.currentlevel);
 	        }
         }
         else{

@@ -43,7 +43,7 @@
                            <li class="sr-opt-block" ng-repeat="opt in ques_data[currQ].resp">
 
                                 <div class="sr-radio-select" ng-if="(opt.item.indexOf('()')===-1)">
-                                           <input type="radio"  name="{{ques_data[currQ].q_no}}" ng-model="ques_data[currQ].value" value="{{opt.item}}" id="radio-{{opt.item}}"/>
+                                           <input  ng-click="next()" type="radio"  name="{{ques_data[currQ].q_no}}" ng-model="ques_data[currQ].value" value="{{opt.item}}" id="radio-{{opt.item}}"/>
                                             <label ng-bind="opt.item" for="radio-{{opt.item}}"></label>
                                 </div>
 
