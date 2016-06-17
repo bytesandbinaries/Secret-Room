@@ -311,7 +311,7 @@ body{
         );
 //    width: 100%;
     background: $color-white;
-    border-top: 8px solid $color-gray;
+//    border-top: 8px solid $color-gray;
 //    margin-bottom: 60px;
 //    margin-top: 30px;
 //    border-radius: $global-radius;
@@ -323,14 +323,68 @@ body{
     box-sizing: border-box;
     margin: 40px 30px;
     color: $color-gray-tint1;
-    padding: 60px 15px;
+//    padding: 60px 15px;
     @include breakpoint(large){
-        @include grid-size(6);
+        @include grid-size(12);
         margin: 0 auto;
-        padding: 60px;
+//        padding: 60px;
         min-height: 400px;
     }
 }
+.sr-hero{
+    background: $color-white-shade1;
+    text-align: center;
+    padding:60px 30px;
+}
+.sr-hero h3{
+    font-size: $font-up3;
+    font-weight: 700;
+}
+.sr-hero p{
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    font-size: $font-up2;
+    
+}
+.sr-section{
+    padding: 30px 0;
+}
+.sr-section h3{
+    font-size: $font-up3;
+    text-align: center
+}
+.sub{
+    font-size: $font-up2;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.sr-icon-block{
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin: 30px auto;
+    text-align: center;
+    }
+.sr-icon-block > div{
+    margin: 15px;
+    color: $color-green;
+//    @include grid-block(4);
+//    margin-right: 0;
+}
+.sr-icon-block > div >img{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    max-height: 220px;
+//    min-height: 84px
+//    @include grid-block(4);
+//    margin-right: 0;
+}
+
+
+
 .sr-head-block{
     @include grid-content(12);
     color: $color-green;
@@ -362,6 +416,9 @@ body{
 .sr-info-group div h3{
     font-size: $font-up1;
 }
+.highlight{
+    text-align: center;
+}
 .sr-go-button{
     @extend %button;
     @include button-style(
@@ -376,7 +433,7 @@ body{
         );
     padding-left: 40px;
     padding-right: 40px;
-    @include breakpoint(large){
+    @include breakpoint(medium){
         @include button-size(
             $size:large,
             $expand:false
@@ -410,11 +467,12 @@ body{
 //-----------Question View--------------------//
 
 .sr-quest-view-wrap{
+    background: $color-white-shade1;
     color: $color-gray;
     text-align: center;
     width: 100%;
-    margin-bottom: 60px;
-    margin-top: 30px;
+    padding-bottom: 60px;
+    padding-top: 60px;
 }
 .sr-quest-content{
     box-sizing: border-box;
@@ -470,7 +528,7 @@ body{
     margin:0 auto;
 }
 .sr-progress-meta{
-    background: $color-white-shade1;
+    background: $color-white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 //    padding-top: 10px;
@@ -576,7 +634,7 @@ progress::-moz-progress-bar {
     transition: height 0.8s ease;
 }
 .sr-quest-opt{
-    background:$color-white-shade1 ;
+    background:$color-white ;
     color: $color-gray;
     margin: 0;
     padding:15px 30px ;
@@ -622,7 +680,7 @@ progress::-moz-progress-bar {
     
 }
 .sr-opt-block label{
-    color: $color-red;
+    color: $color-green;
     background: #fff;
     border-radius: $global-radius;
     margin: 0;
@@ -633,7 +691,8 @@ progress::-moz-progress-bar {
     line-height: 1.1;
     vertical-align: middle;
     text-align: center;
-    box-shadow: $sr-shadow;
+    border: 2px solid $color-green;
+//    box-shadow: $sr-shadow;
     cursor: pointer;
 }
 .sr-opt-block label:first-child{

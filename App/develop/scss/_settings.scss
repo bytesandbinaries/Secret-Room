@@ -117,11 +117,11 @@ $z5: 50;
 // Application Colors
 //-----Color Scale-------//
 
-$color-black:rgba(3, 1, 1, 1);
+$color-black:rgba(0, 0, 0, 1);
 $color-red: rgba(188, 12, 70, 1);
 $color-green: rgba(14, 183, 141, 1);
 $color-gray:rgba(62, 58, 59, 1);
-$color-white:rgba(231, 231, 231, 1);
+$color-white:rgba(280, 280, 280, 1);
 
 //tints $ Shade------------------//
 
@@ -144,8 +144,8 @@ $color-gray-shade2: darken($color-gray,12);
 $color-gray-shade3: darken($color-gray,18);
 
 
-$color-white-shade1: darken($color-white,18);
-$color-white-shade2: darken($color-white,35);
+$color-white-shade1: rgba(216, 232, 224, 1);
+$color-white-shade2: rgba(152, 167, 160, 1);
 
  $primary-color: rgba(14, 183, 141, 1);
  $secondary-color: rgba(188, 12, 70, 1);
