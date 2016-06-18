@@ -49,8 +49,8 @@
                 <div class="option-wrap">
                     <div class="sr-quest-opt" ng-if="ques_data[currQ].q_type=='tb'" ng-repeat="rep in getNumber(ques_data[currQ].q_responseMax)">
                        <input type="text" ng-model="ques_data[currQ].resp[$index].value" />
-                    </div>
 
+                    </div>
 
                     <div class="" ng-if="ques_data[currQ].q_type=='mp'" ng-init="breakoptions(ques_data[currQ])">
                         <div class="sr-quest-opt" ng-if="ques_data[currQ].q_responseMax==1" >
