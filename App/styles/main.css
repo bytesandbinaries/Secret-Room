@@ -7026,8 +7026,8 @@ body {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  padding-bottom: 45px;
-  padding-top: 45px; }
+  padding-bottom: 15px;
+  padding-top: 15px; }
   @media only screen and (min-width: 75em) {
     .sr-footer-bar {
       flex-flow: row wrap;
@@ -7084,7 +7084,7 @@ body {
 
 .sr-enter-button {
   position: absolute;
-  bottom: 160px;
+  bottom: 80px;
   left: -125px;
   width: 250px;
   padding-left: 30px;
@@ -7342,6 +7342,7 @@ body {
   padding-top: 0; }
 
 .sr-quest-content {
+  position: relative;
   box-sizing: border-box;
   margin: 40px 30px;
   border-radius: 4px; }
@@ -7352,7 +7353,7 @@ body {
 
 .sr-cat-control {
   padding: 30px;
-  background: white;
+  background: #d8e8e0;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px; }
 
@@ -7381,7 +7382,7 @@ body {
 
 .sr-cat-icon-area {
   display: flex;
-  align-items: center;
+  justify-content: center;
   background: #0b9170;
   width: 100%;
   padding-top: 15px; }
@@ -7391,14 +7392,26 @@ body {
   height: 150px; }
 
 .screamer {
-  font-size: font-up2;
+  font-size: 1.6rem;
   color: white;
   font-weight: 700;
-  display: inline-block; }
+  display: inline-block;
+  line-height: 1.2;
+  margin-bottom: 15px; }
+
+.rider {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  max-width: 400px;
+  line-height: 1.2; }
 
 .sr-progress-bar {
   box-sizing: border-box;
   width: 100%;
+  background: #d8e8e0;
+  padding: 10px;
   margin-top: 0;
   color: #3e3a3b;
   font-size: 0.7rem; }
@@ -7419,10 +7432,12 @@ body {
 
 progress, meter {
   display: block;
-  margin: 0;
-  height: 1rem;
+  max-width: 60%;
+  margin: 0 auto;
+  height: 1.5rem;
+  padding: 10px;
   color: #820831;
-  background: #fff;
+  background: #d8e8e0;
   transition: all 0.8s ease; }
 
 progress::-webkit-progress-bar {
@@ -7441,23 +7456,27 @@ progress::-moz-progress-bar {
 .sr-quest {
   background: white;
   color: #5e5859;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
   margin: 0;
   padding: 15px 30px;
   font-size: 1.6rem; }
 
 .sr-sub-quest {
-  background: #d8e8e0;
-  padding: 15px 30px; }
+  position: absolute;
+  padding: 15px 30px;
+  width: 100%; }
 
 .sr-sub-quest span {
   position: relative;
+  top: -15px;
   display: inline-block;
-  background: #fff;
-  color: #bc0c46;
+  background: #d8e8e0;
+  color: #3e3a3b;
+  font-weight: 700;
   padding: 15px 30px;
   font-size: 1.4rem;
-  border-radius: 8px;
-  box-shadow: 2px 2px 3px #98a7a0; }
+  border-radius: 8px; }
 
 .sr-sub-quest span:before {
   position: absolute;
@@ -7655,8 +7674,8 @@ input[type="checkbox"], input[type="radio"] {
   justify-content: space-between;
   align-self: flex-end;
   width: 100%;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px; }
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px; }
 
 .sr-back {
   padding: 25px 10px 25px 55px;

@@ -214,8 +214,8 @@ body{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    padding-bottom: 45px;
-    padding-top: 45px;    
+    padding-bottom: 15px;
+    padding-top: 15px;    
         @include breakpoint(large){
         flex-flow: row wrap;
         justify-content: space-between;
@@ -280,7 +280,7 @@ body{
 }
 .sr-enter-button{
     position:absolute;
-    bottom: 160px;
+    bottom: 80px;
     left: -125px;
     width: 250px;
     padding-left: 30px;
@@ -525,6 +525,7 @@ body{
     padding-top: 0;
 }
 .sr-quest-content{
+    position: relative;
     box-sizing: border-box;
     margin: 40px 30px;
 //    border: 8px solid $color-gray-tint2;
@@ -539,7 +540,7 @@ body{
 }
 .sr-cat-control{
     padding: 30px;
-    background: $color-white;
+    background: $color-white-shade1;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
@@ -586,7 +587,7 @@ body{
 }
 .sr-cat-icon-area{
     display: flex;
-    align-items: center;
+    justify-content: center;
     background: $color-green-shade1 ;
 //    height:160px;
     width:100%;
@@ -601,18 +602,27 @@ body{
 //    float: left;
 }
 .screamer{
-    font-size: font-up2;
+    font-size: $font-up3;
     color:$color-white;
     font-weight: 700;
     display: inline-block;
+    line-height:1.2;
+    margin-bottom:15px;
 }
 .rider{
-
+    display: block;
+    font-size: $font-default;
+    font-weight:700;
+    color: $color-white;
+    max-width: 400px;
+    line-height:1.2;
 }
 .sr-progress-bar{
     box-sizing: border-box;
 //    height: 60px;
     width:100%;
+    background: $color-white-shade1;
+    padding: 10px;
 //    display: inline-block;
     margin-top: 0;
 //    padding-left: 30px;
@@ -635,11 +645,13 @@ body{
 }
 progress, meter{
     display: block;
-    margin: 0;
-    height: 1rem;
+    max-width: 60%;
+    margin: 0 auto;
+    height: 1.5rem;
+    padding: 10px;
     color: $color-red-shade2;
 //    border-radius: $global-rounded;
-    background: #fff;
+    background: $color-white-shade1;
     transition: all 0.8s ease;
 }
 progress::-webkit-progress-bar {
@@ -663,25 +675,35 @@ progress::-moz-progress-bar {
     background:$color-white ;
     color: $color-gray-tint2;
 //    border-bottom: 1px solid $color-white-shade2;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
     margin: 0;
     padding:15px 30px ;
     font-size: $font-up3;
 }
 .sr-sub-quest{
-    background:$color-white-shade1 ;
+//    background:$color-white-shade1 ;
+    position: absolute;
+//    left:-193px;
+//    margin-left:50%;
     padding:15px 30px ;
+//    border: 2px solid $color-white-shade2;
+    width: 100%;
+    
 }
 .sr-sub-quest span{
     position: relative;
+    top:-15px;
     display: inline-block;
-    background:#fff;
-    color: $color-red;
-//    margin: 30px;
+    background:$color-white-shade1;
+    color: $color-gray;
+    font-weight:700;
+    //    margin: 30px;
     padding:15px 30px ;
     font-size: $font-up2;
 //    border: 1px solid $color-white-shade2;
     border-radius: 8px;
-    box-shadow: $sr-shadow;
+//    box-shadow: $sr-shadow;
 }
 .sr-sub-quest span:before{
     position: absolute;
@@ -937,8 +959,8 @@ input[type="checkbox"], input[type="radio"]{
     justify-content: space-between;
     align-self: flex-end;
     width: 100%;
-    border-bottom-left-radius:8px;
-    border-bottom-right-radius:8px;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
 //    border-top:1px solid $color-green-shade2;
 
 //    margin-top: 30px;
