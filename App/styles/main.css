@@ -7383,7 +7383,8 @@ body {
 .sr-cat-icon-area {
   display: flex;
   justify-content: center;
-  background: #0b9170;
+  background: #48aa83;
+  background: url("../images/banner.jpg");
   width: 100%;
   padding-top: 15px; }
 
