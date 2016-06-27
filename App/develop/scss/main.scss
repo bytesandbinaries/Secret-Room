@@ -897,6 +897,9 @@ input[type="checkbox"], input[type="radio"]{
     justify-content: center;
     align-content: center;
 }
+.sr-fig{
+    display: inline-block
+}
 .sr-multi-select-field{
     display: flex;
     justify-content: center;
@@ -1025,6 +1028,7 @@ input[type="color"], textarea, select {
     color: $color-green-shade1;
     line-height: 1.2;
     min-width: 200px;
+    max-width: 360px;
 }
 input[type="radio"] + label, input[type="checkbox"] + label {
     display: inline-flex;
@@ -1037,6 +1041,12 @@ input[type="radio"] + label, input[type="checkbox"] + label {
 }
 
 //*-----------------------Sign Up Form -----------------------------*/
+
+.sr-save-progress{
+max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .sign-up-block{
     

@@ -7629,6 +7629,9 @@ input[type="checkbox"], input[type="radio"] {
   justify-content: center;
   align-content: center; }
 
+.sr-fig {
+  display: inline-block; }
+
 .sr-multi-select-field {
   display: flex;
   justify-content: center;
@@ -7723,12 +7726,18 @@ input[type="color"], textarea, select {
   min-height: 50px;
   color: #0b9170;
   line-height: 1.2;
-  min-width: 200px; }
+  min-width: 200px;
+  max-width: 360px; }
 
 input[type="radio"] + label, input[type="checkbox"] + label {
   display: inline-flex;
   justify-content: center;
   align-items: center; }
+
+.sr-save-progress {
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .sign-up-block {
   margin-left: auto;

@@ -1,10 +1,10 @@
-<div class="sr-quest-view-wrap">
+<div class="sr-quest-view-wrap" ng-init="get_category()">
 
 
 
     <div class="sr-quest-status" ng-switch on="question_status">
 
-        <div ng-switch-when="startNewcategory" ng-init="get_category()"  class="sr-cat-control">
+        <div ng-switch-when="startNewcategory"   class="sr-cat-control">
            <img class="sr-cat-icon" src="../assets/img/quest_placeholder.png">
             <h2 class="sr-category-heading" ng-bind="que_data[user.currentlevel].title"></h2>
             <p class="sr-category-description" ng-bind="que_data[user.currentlevel].description"></p>
@@ -126,11 +126,15 @@ questions like a boss</span>
                         <div ng-click="moveattback()"></div>
                         <div class="sr-quest-opt">
                            <ul class="sr-range">
-                               <li ng-click="moveattforward(ques_data[currQ].resp)" ng-repeat="rang in    getNumber((ques_data[currQ].resp[attnum].respScale.length*3)-2) track by $index" >
-                                   <figure ng-click="ques_data[currQ].resp[attnum].respScale.value=$index"></figure>
-                                   <figcaption ng-if="((4+$index) % 3 == 1)" ng-bind="ques_data[currQ].resp[attnum].respScale[($index/3)].item"></figcaption>
-                                   <figcaption ng-if="!((4+$index) % 3 == 1)"> range{{((ques_data[currQ].resp[attnum].respScale.length*3)-2)-$index}}
-                                   </figcaption>
+                               <li ng-repeat="rang in getNumber((ques_data[currQ].resp[attnum].respScale.length*3)-2) track by $index" > 
+                                  
+                                        <div class="sr-fig" ng-click="moveattforward(ques_data[currQ].resp)" >
+                                            <figure ng-click="ques_data[currQ].resp[attnum].respScale.value=$index"> 
+                                           </figure>
+                                       </div>
+                                       <figcaption ng-if="((4+$index) % 3 == 1)" ng-bind="ques_data[currQ].resp[attnum].respScale[($index/3)].item"></figcaption>
+                                       <figcaption ng-if="!((4+$index) % 3 == 1)"> range{{((ques_data[currQ].resp[attnum].respScale.length*3)-2)-$index}}
+                                       </figcaption>
                                </li>
                            </ul>
                        </div>
