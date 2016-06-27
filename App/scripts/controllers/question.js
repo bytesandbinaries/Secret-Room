@@ -9,8 +9,9 @@ angular.module('secretRoom')
     else{$scope.question_status='getQuestions';}
     $scope.currentlevel=$scope.user.currentlevel;
     $scope.get_category=function(){
-//        $http({url:'http://localhost:8888/secret-room/app/server/get_c.php', method:'GET'}).
-        $http({url:'http://localhost/secret-room/app/server/get_c.php', method:'GET'}).
+       $http({url:'http://localhost:8888/secret-room/app/server/get_c.php', method:'GET'}).
+        //$http({url:'http://localhost/secret-room/app/server/get_c.php', method:'GET'}).
+//        $http({url:'../../server/get_c.php', method:'GET'}). //online
         success(function(responseData, status, headers, config) {
             $scope.que_data=responseData;
         }),
@@ -24,6 +25,8 @@ angular.module('secretRoom')
     $scope.moveattforward= function(queAttr){
         if($scope.attnum != (queAttr.length)-1){ $scope.attnum++;}
         else{$scope.next();}
+
+        // $scope.attnum !==(queAttr.length)-1 ? $scope.attnumm++ : $scope.next();
     }
 
 
@@ -65,15 +68,19 @@ angular.module('secretRoom')
     		}
     	}
     	if(r.q_no==6){
-    			if($scope.ques_data[0].value==$scope.ques_data[1].value){
+    			if($scope.ques_data[1].value==$scope.ques_data[2].value){
     			move=false;
-    			console.log('yay!!');
     			$scope.errorM='Sorry!! you need to select a different gender';
+    		}
+    	}
+        if(r.q_no==7 || r.q_no==10){
+    			if($scope.q.value[0].value!=='NG'){
+    			$scope.currQ++;
     		}
     	}
     	if(r.q_no==19){
 
-    		if($scope.ques_data[13].value.indexOf('kids')==-1){ $scope.currQ++;}
+    		if($scope.ques_data[14].value.indexOf('kids')==-1){ $scope.currQ++;}
     	}
     	if(r.q_no==1){$scope.user.name=r.value	}
     	if(move==true){
@@ -187,7 +194,8 @@ angular.module('secretRoom')
     }
     $scope.save_response=function(){
     	var datap={user:$scope.user, response:$scope.qresponse}
-        $http({method:'Post', url:'http://localhost:8888/secret-room/app/server/add_response.php', data:datap,
+        $http({method:'Post', url:'../../server/add_response.php', data:datap, //online
+        //$http({method:'Post', url:'http://localhost:8888/secret-room/app/server/add_response.php', data:datap,
             headers : {
                 'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
             }}).

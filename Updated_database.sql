@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
+-- version 4.4.10
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 26, 2016 at 11:30 PM
--- Server version: 5.6.17
--- PHP Version: 5.5.12
+-- Host: localhost
+-- Generation Time: Jun 27, 2016 at 01:13 PM
+-- Server version: 5.5.42
+-- PHP Version: 7.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `secretroom`
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `match` (
-  `match_id` int(11) NOT NULL AUTO_INCREMENT,
+  `match_id` int(11) NOT NULL,
   `match_type` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
   `f_cid` int(11) NOT NULL,
   `f_qid` int(11) NOT NULL,
@@ -37,9 +37,8 @@ CREATE TABLE IF NOT EXISTS `match` (
   `m_qid` int(11) NOT NULL,
   `m_range` int(11) NOT NULL,
   `last_update` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `date_created` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`match_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+  `date_created` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `match`
@@ -55,16 +54,15 @@ INSERT INTO `match` (`match_id`, `match_type`, `f_cid`, `f_qid`, `s_cid`, `s_qid
 --
 
 CREATE TABLE IF NOT EXISTS `profile` (
-  `p_id` int(11) NOT NULL AUTO_INCREMENT,
+  `p_id` int(11) NOT NULL,
   `p_email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `p_pass` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `p_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `p_gender` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `p_age` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `p_height` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  `p_timestamp` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`p_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=46 ;
+  `p_timestamp` varchar(20) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=46 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `profile`
@@ -113,7 +111,7 @@ INSERT INTO `profile` (`p_id`, `p_email`, `p_pass`, `p_name`, `p_gender`, `p_age
 --
 
 CREATE TABLE IF NOT EXISTS `question_bank` (
-  `question_id` int(11) NOT NULL AUTO_INCREMENT,
+  `question_id` int(11) NOT NULL,
   `question_text` varchar(500) NOT NULL,
   `question_category` varchar(50) NOT NULL,
   `question_order` int(11) NOT NULL,
@@ -124,9 +122,8 @@ CREATE TABLE IF NOT EXISTS `question_bank` (
   `question_response_max` int(11) NOT NULL,
   `question_weight` int(11) NOT NULL,
   `question_updated` varchar(50) NOT NULL,
-  `question_created` varchar(50) NOT NULL,
-  PRIMARY KEY (`question_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=85 ;
+  `question_created` varchar(50) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `question_bank`
@@ -166,7 +163,7 @@ INSERT INTO `question_bank` (`question_id`, `question_text`, `question_category`
 (35, 'It is important that my partner is has an attractive appearance?', '', 2, '', '', 'Not Important| Important| Very Important', 1, 1, 0, '1453502304', '1453502304'),
 (37, 'It is important that my partner has an attractive appearance?', '3', 2, 's', '', 'Not Important| Important| Very Important', 1, 1, 0, '1453503229', '1453503229'),
 (46, 'How well does the following describe you? Use the scale to answer', '5', 0, 'sm', 'I''m proud of my education.|\r\nI have to be in control of a situation.|\r\nI get upset quickly.|\r\nI either like or hate new people.|\r\nI feel better around others.|\r\nI take my anger out on others.|\r\nI like to stay fit.|\r\nI''m always prepared.|\r\nI pay attention to detail.|\r\nI always accomplish a lot.|\r\nI like a lot of variety.|\r\nI have good social skills.|\r\nI get easily discouraged.\r\n', 'Not me at all| Slightly me| Thatâ€™s exactly me', 0, 0, 0, '1455026390', '1453579053'),
-(47, 'In a relationship, I consider the following issues? Use the scale to answer.', '5', 2, 'sm', 'Moral values|\nFun and relaxation|\nReliability|\nExperimentation|\nSimilar beliefs|\nRisk taking|\nPhysical appearance|\nOur chemistry|\nOur similarities|\nAffection|\nPersonality|\nSexual compatibility|\nAbility to communicate|\nHonesty|\nIntellectual discussion|\nSociability|', 'Not important| Important| Very important', 0, 5, 0, '1466391460', '1453579196'),
+(47, 'In a relationship, I consider the following issues? Use the scale to answer.', '5', 2, 'sm', 'Moral values|\nFun and relaxation|\nReliability|\nExperimentation|\nSimilar beliefs|\nRisk taking|\nPhysical appearance|\nOur chemistry|\nOur similarities|\nAffection|\nPersonality|\nSexual compatibility|\nAbility to communicate|\nHonesty|\nIntellectual discussion|\nSociability', 'Not important| Important| Very important', 0, 5, 0, '1467023144', '1453579196'),
 (48, 'In a relationship, I consider the following issues? Use the scale to answer.\n', '', 2, '', 'Moral values|\r\nMotivation|\r\nFun and relaxation|\r\nReliability|\r\nSex appeal|\r\nExperimentation|\r\nSimilar beliefs|\r\nRisk taking|\r\nPhysical appearance|\r\nOur chemistry|\r\nOur similarities|\r\nAffection|\r\nPersonality|\r\nKindness|\r\nSexual compatibility|\r\nAbility to communicate|\r\nHonesty|', 'Not Important| Important| Very Important', 0, 0, 0, '1453579431', '1453579431'),
 (50, 'What three things are you most grateful for in your life, past and present?', '5', 2, 'tb', '', '', 3, 3, 0, '1455026508', '1453651866'),
 (51, 'How interested will you be in a partner that has the following hobbies?', '5', 2, 'sm', 'Music|\r\nAdventure Sports|\r\nFine Food and Dining|\r\nTeam Sports (Football, Rugby, Cricket etc.)|\r\nArts and Crafts|\r\nTheatre / Dance / Opera / Ballet|\r\nRacket Sports|\r\nNature / Gardening|\r\nSocialising / Clubbing|\r\nPhilanthropy|\r\nMovies / Cinema|\r\nTravel|\r\nArt|\r\nPhotography|\r\nSailing / Windsurfing / Water Sports|\r\nLiterature / Reading|\r\nHealth and Fitness|\r\nHiking / Climbing', 'Not interested| Somewhat interested| Very interested', 0, 0, 0, '1455026552', '1453652120'),
@@ -190,7 +187,7 @@ INSERT INTO `question_bank` (`question_id`, `question_text`, `question_category`
 (72, '', '', 2, '', '', '', 0, 0, 0, '1456823927', '1456823927'),
 (73, '', '', 2, '', '', '', 0, 0, 0, '1456823969', '1456823969'),
 (74, '1', '', 2, '', '', '', 0, 0, 0, '1456824054', '1456824054'),
-(75, 'How often do you smoke', '5', 1, 'mp', '', '', 0, 1, 1, '1466391711', '1466391711'),
+(75, 'How often do you smoke', '5', 1, 'mp', 'Never| A few times a year| about once a week| A few times a week| every day', '', 1, 1, 1, '1467022929', '1466391711'),
 (76, 'What''s your Email Address', '1', 0, 'tb', '', '', 0, 1, 0, '1466392080', '1466392038'),
 (77, 'Please enter your first name', '5', 0, 'tb', '', '', 0, 1, 0, '1466392129', '1466392129'),
 (78, 'It''s ok to match me with men/women who are...(Select all that apply)', '', 0, 'mp', '', '', 0, 8, 1, '1466392212', '1466392212'),
@@ -208,14 +205,13 @@ INSERT INTO `question_bank` (`question_id`, `question_text`, `question_category`
 --
 
 CREATE TABLE IF NOT EXISTS `question_category` (
-  `category_id` int(11) NOT NULL AUTO_INCREMENT,
+  `category_id` int(11) NOT NULL,
   `category_title` varchar(50) NOT NULL,
   `category_description` varchar(500) NOT NULL,
   `category_order` int(11) NOT NULL,
   `category_updated` varchar(50) NOT NULL,
-  `category_created` varchar(50) NOT NULL,
-  PRIMARY KEY (`category_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+  `category_created` varchar(50) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `question_category`
@@ -234,15 +230,14 @@ INSERT INTO `question_category` (`category_id`, `category_title`, `category_desc
 --
 
 CREATE TABLE IF NOT EXISTS `response_bank` (
-  `response_id` int(11) NOT NULL AUTO_INCREMENT,
+  `response_id` int(11) NOT NULL,
   `profile_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
   `question_id` int(11) NOT NULL,
   `question_response` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
   `question_subresponse` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `timestamp` int(11) NOT NULL,
-  PRIMARY KEY (`response_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2810 ;
+  `timestamp` int(11) NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=2810 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `response_bank`
@@ -1145,9 +1140,9 @@ INSERT INTO `response_bank` (`response_id`, `profile_id`, `category_id`, `questi
 (894, 10, 5, 46, 'I pay attention to detail.', '5', 1458426582),
 (895, 10, 5, 46, 'I always accomplish a lot.', '6', 1458426582),
 (896, 10, 5, 46, 'I like a lot of variety.', '5', 1458426582),
-(897, 10, 5, 46, 'I have good social skills.', '4', 1458426582);
+(897, 10, 5, 46, 'I have good social skills.', '4', 1458426582),
+(898, 10, 5, 46, 'I get easily discouraged.', '5', 1458426582);
 INSERT INTO `response_bank` (`response_id`, `profile_id`, `category_id`, `question_id`, `question_response`, `question_subresponse`, `timestamp`) VALUES
-(898, 10, 5, 46, 'I get easily discouraged.', '5', 1458426582),
 (899, 10, 5, 47, 'Happy', '6', 1458426582),
 (900, 10, 5, 47, 'Sad', '5', 1458426582),
 (901, 10, 5, 47, 'Worried', '4', 1458426582),
@@ -2033,10 +2028,10 @@ INSERT INTO `response_bank` (`response_id`, `profile_id`, `category_id`, `questi
 (1781, 37, 1, 25, '4', '4', 1459792602),
 (1782, 37, 1, 32, 'Have his/her own business', 'Have his/her own business', 1459792602),
 (1783, 37, 2, 26, 'Master''s Degree', 'Master''s Degree', 1459792602),
-(1784, 37, 2, 27, 'Master''s Degree', 'Master''s Degree', 1459792602);
-INSERT INTO `response_bank` (`response_id`, `profile_id`, `category_id`, `question_id`, `question_response`, `question_subresponse`, `timestamp`) VALUES
+(1784, 37, 2, 27, 'Master''s Degree', 'Master''s Degree', 1459792602),
 (1785, 37, 2, 28, '4', '4', 1459792602),
-(1786, 37, 2, 30, '', '', 1459792602),
+(1786, 37, 2, 30, '', '', 1459792602);
+INSERT INTO `response_bank` (`response_id`, `profile_id`, `category_id`, `question_id`, `question_response`, `question_subresponse`, `timestamp`) VALUES
 (1787, 37, 2, 31, '4', '4', 1459792602),
 (1788, 37, 2, 29, 'Self-employed', 'Self-employed', 1459792602),
 (1789, 37, 3, 33, '', '', 1459792602),
@@ -2848,9 +2843,9 @@ INSERT INTO `response_bank` (`response_id`, `profile_id`, `category_id`, `questi
 (2595, 43, 3, 36, 'I love  helping others', '3', 1466121686),
 (2596, 43, 3, 36, 'I love to seek adventure.', '3', 1466121686),
 (2597, 43, 3, 36, 'I often leave a mess in my room.', '3', 1466121686),
-(2598, 43, 3, 36, 'My contributions usually raise the level of conversation.', '3', 1466121686);
+(2598, 43, 3, 36, 'My contributions usually raise the level of conversation.', '3', 1466121686),
+(2599, 43, 3, 36, 'I become stressed easily.', '3', 1466121686);
 INSERT INTO `response_bank` (`response_id`, `profile_id`, `category_id`, `question_id`, `question_response`, `question_subresponse`, `timestamp`) VALUES
-(2599, 43, 3, 36, 'I become stressed easily.', '3', 1466121686),
 (2600, 43, 3, 36, 'I often try to make sure that other people feel good.', '3', 1466121686),
 (2601, 43, 3, 36, 'I''m good at analysing problems.', '3', 1466121686),
 (2602, 43, 3, 36, 'I stand up for myself and my interests.', '3', 1466121686),
@@ -3062,6 +3057,69 @@ INSERT INTO `response_bank` (`response_id`, `profile_id`, `category_id`, `questi
 (2808, 45, 5, 62, 'Maybe', 'Maybe', 1466230209),
 (2809, 45, 5, 63, 'No', 'No', 1466230209);
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `match`
+--
+ALTER TABLE `match`
+  ADD PRIMARY KEY (`match_id`);
+
+--
+-- Indexes for table `profile`
+--
+ALTER TABLE `profile`
+  ADD PRIMARY KEY (`p_id`);
+
+--
+-- Indexes for table `question_bank`
+--
+ALTER TABLE `question_bank`
+  ADD PRIMARY KEY (`question_id`);
+
+--
+-- Indexes for table `question_category`
+--
+ALTER TABLE `question_category`
+  ADD PRIMARY KEY (`category_id`);
+
+--
+-- Indexes for table `response_bank`
+--
+ALTER TABLE `response_bank`
+  ADD PRIMARY KEY (`response_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `match`
+--
+ALTER TABLE `match`
+  MODIFY `match_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `profile`
+--
+ALTER TABLE `profile`
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=46;
+--
+-- AUTO_INCREMENT for table `question_bank`
+--
+ALTER TABLE `question_bank`
+  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=85;
+--
+-- AUTO_INCREMENT for table `question_category`
+--
+ALTER TABLE `question_category`
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `response_bank`
+--
+ALTER TABLE `response_bank`
+  MODIFY `response_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2810;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

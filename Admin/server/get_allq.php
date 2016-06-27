@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 0);
 $host = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 $database = "secretroom";
 // $username = "wwwbytes_secretr";
 // $password = "secretroom1@";
