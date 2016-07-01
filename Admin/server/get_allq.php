@@ -2,12 +2,12 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 0);
 $host = "localhost";
-$username = "root";
-$password = "root";
-$database = "secretroom";
-// $username = "wwwbytes_secretr";
-// $password = "secretroom1@";
-// $database = "wwwbytes_secretroom";
+// $username = "root";
+// $password = "root";
+// $database = "secretroom";
+$username = "wwwbytes_secretr";
+$password = "secretroom";
+$database = "wwwbytes_secretroom";
 
 $con=mysqli_connect($host,$username,$password, $database);
 $a_json = array();

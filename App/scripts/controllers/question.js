@@ -1,19 +1,45 @@
 angular.module('secretRoom')
   .controller('QuestionCtrl', ['$scope','userData','$http', '$injector', function ($scope, userData, $http, $injector) {
     $scope.user=userData.data();
-    $scope.saved=false;
+
     $scope.qresponse=[];
-    if($scope.user.lastquestionId==0){
-        $scope.question_status='startNewcategory';
-    }
-    else{$scope.question_status='getQuestions';}
+    //check if the the user is using the app for the first time.
+
     $scope.currentlevel=$scope.user.currentlevel;
     $scope.get_category=function(){
       // $http({url:'http://localhost:8888/secret-room/app/server/get_c.php', method:'GET'}).
-        $http({url:'http://localhost/secret-room/app/server/get_c.php', method:'GET'}).
-//        $http({url:'../../server/get_c.php', method:'GET'}). //online
+        //$http({url:'http://localhost/secret-room/app/server/get_c.php', method:'GET'}).
+        $http({url:'../../server/get_c.php', method:'GET'}). //online
         success(function(responseData, status, headers, config) {
             $scope.que_data=responseData;
+            if($scope.user.lastquestionId==0){
+                $scope.question_status='startNewcategory';
+            }
+            //get the user back to the last saved question.
+            else{
+                $scope.saved=true;
+                //get the total question in the saved question category
+                var total_questionInLevel=$scope.que_data[$scope.user.currentlevel-1].all_questions
+                console.log(total_questionInLevel);
+                //find the position of the last question
+                for($v=0; $v<total_questionInLevel.length; $v++){
+
+                    if(total_questionInLevel[$v].q_no==$scope.user.lastquestionId){
+                        //check if there are more questions in this level
+                        if(($v+1)==total_questionInLevel.length){
+                            $scope.user.currentlevel--;
+                            $scope.moveToNewLevel();
+                        }
+                        else{
+                            $scope.currQ=$v+1;
+                            $scope.ques_data=total_questionInLevel;
+                            $scope.question_status='getQuestions';
+                            $scope.moveToNewQuestion()
+                        }
+                        break;
+                    }
+                }
+            }
         }),
         function(err) {
             $scope.message="An Error occured Please Check your internet connection and try again..."
@@ -86,26 +112,33 @@ angular.module('secretRoom')
     	if(move==true){
     		$scope.error=false;
     		$scope.qresponse.push($scope.q);
-            console.log($scope.q);
-	        if($scope.currQ<($scope.ques_data.length -1)) {   $scope.currQ++;
-	            var qtype=$scope.ques_data[$scope.currQ].q_type
-	                if(qtype=='mp' || qtype=='s' || qtype=='sm' || qtype=='tb'){
-	                    $scope.breakoptions($scope.ques_data[$scope.currQ])
-	                }
+	        if($scope.currQ<($scope.ques_data.length -1)) {
+                $scope.moveToNewQuestion();
 	        }
 	        else{
-	            $scope.user.currentlevel++;
-                if($scope.user.currentlevel<$scope.que_data.length){
-	                $scope.question_status='startNewcategory';
-                }
-                else{
-                    $scope.saving_response();
-                }
+	            $scope.moveToNewLevel();
 	        //    $scope.get_questions($scope.user.currentlevel);
 	        }
         }
         else{
         	$scope.error=true;
+        }
+    }
+    $scope.moveToNewQuestion=function(){
+        $scope.currQ++;
+        console.log($scope.ques_data[$scope.currQ]);
+        var qtype=$scope.ques_data[$scope.currQ].q_type
+            if(qtype=='mp' || qtype=='s' || qtype=='sm' || qtype=='tb'){
+                $scope.breakoptions($scope.ques_data[$scope.currQ])
+            }
+    }
+    $scope.moveToNewLevel=function(){
+        $scope.user.currentlevel++;
+        if($scope.user.currentlevel<$scope.que_data.length){
+            $scope.question_status='startNewcategory';
+        }
+        else{
+            $scope.saving_response();
         }
     }
     $scope.goback=function(){

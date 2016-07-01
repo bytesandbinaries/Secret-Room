@@ -1,0 +1,12 @@
+<div ng-init="get_status()">
+    <h1>Welcome Back <span ng-bind="user.fname"></span></h1>
+    <div><span ng-bind="user.email"></span></div>
+    <div><span ng-bind="user.gender"></span></div>
+    <div>You've been a member for <span ng-bind="user.joined | posttime"></span>
+
+    <h2>Your Profile is not Completed</h2>
+    <div>You have answered <span ng-bind="total_que"></span> questions</div>
+    <div>Your are currently on level <span ng-bind="user.currentlevel"></span> of 4 </div>
+
+    <input type="button" ng-click="loadquestions()" value="Complete Your Profile"/>
+</div>

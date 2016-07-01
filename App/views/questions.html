@@ -26,7 +26,7 @@
                        <div><img class="sr-cat-prog-icon" src="../images/boy2.png"></div>
                        <div>
                            <span class="screamer">Ah AH! <br>Your killing it...</span><br>
-                           <span class="rider">We would love to see your JAMB scores...Really!! You’re answering these 
+                           <span class="rider">We would love to see your JAMB scores...Really!! You’re answering these
 questions like a boss</span>
                        </div>
                        <div><img class="sr-cat-prog-icon" src="../images/girl2.png"></div>
@@ -126,10 +126,10 @@ questions like a boss</span>
                         <div ng-click="moveattback()"></div>
                         <div class="sr-quest-opt">
                            <ul class="sr-range">
-                               <li ng-repeat="rang in getNumber((ques_data[currQ].resp[attnum].respScale.length*3)-2) track by $index" > 
-                                  
+                               <li ng-repeat="rang in getNumber((ques_data[currQ].resp[attnum].respScale.length*3)-2) track by $index" >
+
                                         <div class="sr-fig" ng-click="moveattforward(ques_data[currQ].resp)" >
-                                            <figure ng-click="ques_data[currQ].resp[attnum].respScale.value=$index"> 
+                                            <figure ng-click="ques_data[currQ].resp[attnum].respScale.value=$index">
                                            </figure>
                                        </div>
                                        <figcaption ng-if="((4+$index) % 3 == 1)" ng-bind="ques_data[currQ].resp[attnum].respScale[($index/3)].item"></figcaption>
@@ -173,7 +173,7 @@ questions like a boss</span>
                     <h3 class="">Progress Saved</h3>
                     <h4 class="" >You have to finish the questions to get a match</h4>
                     <a  class="sr-go-button" ng-click="changefromsave()">Continue</a>
-                    <a href="/#" class="sr-stop-button">Exit</a>
+                    <a href="#/account" class="sr-stop-button">Exit</a>
                 </div>
             </div>
         </div>

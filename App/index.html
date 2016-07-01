@@ -30,23 +30,24 @@
     <div class="sr-header-wrap" >
         <header class="sr-top-bar">
             <div class="sr-logo-area"><a href="/#/"  class="sr-main-logo"><img src="images/secret_room-logo.png"></a></div>
-            <div class="sr-login-area">
+            <div class="sr-login-area" ng-controller="MainCtrl">
                 <div class="sr-login-content">
                     <span class="sr-login-call">Already a member?</span>
                     <zf-action-sheet id="login-action-sheet">
-                        <zf-as-button><span class="sr-login-button">Login</span></zf-as-button>
+                        <zf-as-button ng-if="user.status=='new'"><span class="sr-login-button">Login</span></zf-as-button>
                         <zf-as-content position="bottom">
                            <h4>Great to have you back</h4>
-                            <form>
+                            <form ng-submit="login()">
                                 <label>
-                                User Name
-                                <input type="text" placeholder="Username">
+                                    Email Address
+                                    <input type="text" placeholder="Email Address" ng-model="user.email" required="">
                                 </label>
                                 <label>
-                                Password
-                                <input type="text" placeholder="Password">
+                                    Password
+                                    <input type="password" placeholder="Password" ng-model="user.password" required="">
                                 </label>
                                 <button type="submit" class="sr-login-form-btn">Sign Into Your Account</button>
+                                <div ng-if="errorL" ng-bind="errorM">Wrong Email or Password, please try again.</div>
                             </form>
                         </zf-as-content>
                     </zf-action-sheet>
@@ -74,7 +75,7 @@
            </div>
       </footer>
         </div></div>
-        
+
          <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
@@ -109,13 +110,15 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        
+
         <script src="scripts/app.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/services.js"></script>
+    <script src="scripts/controllers/account.js"></script>
     <script src="scripts/controllers/question.js"></script>
     <script src="scripts/controllers/configuration.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="scripts/moment.js"></script>
 
 
         <!-- endbuild -->

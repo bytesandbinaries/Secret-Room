@@ -32,6 +32,12 @@ angular
         controllerAs: 'question',
 		access: { isFree: true }
       })
+      .when('/account', {
+        templateUrl: 'views/account.html',
+        controller: 'AccountCtrl',
+        controllerAs: 'account',
+		access: { isFree: false }
+      })
       .when('/terms', {
         templateUrl: 'views/terms.html',
         controller: 'MainCtrl',
@@ -56,7 +62,7 @@ angular
   .run(['$rootScope',  '$location', 'userData', function(root, $location, userData) {
       root.$on('$routeChangeSuccess', function(scope, currView, prevView) {
           var user= userData.data()
-          try{if (!currView.access.isFree && (user.status=="")) { $location.path('/');  }}
+          try{if (!currView.access.isFree && (user.status=="new")) { $location.path('/');  }}
           catch(e){}
       });
   }])

@@ -12,7 +12,7 @@ $postdata = file_get_contents("php://input");
 $request = json_decode($postdata);
 print_r($request);
 $t=time();
-$p_id=$request->user->id;
+$p_id=$request->user->userID;
 if($p_id==0){
 	$pass=md5($request->user->password);
 	$sql = "insert into `profile` values (NULL, '".mysqli_real_escape_string($con, $request->user->email)."', '".$pass."', '".mysqli_real_escape_string($con, $request->user->name)."', '', '', '', '".$t."')";
