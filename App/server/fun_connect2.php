@@ -2,7 +2,7 @@
 header('Access-Control-Allow-Origin: *');
 	$host = "localhost";
 	$username = "root";
-	$password = "";
+	$password = "root";
 	$database = "secretroom";
 	$con=mysqli_connect($host,$username,$password, $database);
 	//@ mysql_pconnect($host,$username,$password);
