@@ -1,9 +1,9 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 	$host = "localhost";
-	$username = "wwwbytes_secretr";
-	$password = "secretroom";
-	$database = "wwwbytes_secretroom";
+	$username = "root";
+	$password = "";
+	$database = "secretroom";
 	$con=mysqli_connect($host,$username,$password, $database);
 	//@ mysql_pconnect($host,$username,$password);
 	//$connection=mysql_select_db($database);
