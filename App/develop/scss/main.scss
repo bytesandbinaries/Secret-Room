@@ -67,11 +67,20 @@ $foundation-version: '1.2.0';
 
 //------ Utility Class-----//
 
+$font-screamer: 54px;
+$font-rider: 32px;
+$font-heading: 24px;
+$font-sub-head: 18px;
+$font-body: 14px;
+$font-note:12px;
+
 $sr-shadow: 2px 2px 3px $color-white-shade2;
 $sr-shadow-down: 1px 1px -2px $color-white-shade2;
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
+    font-family: $body-font-family;
+    text-transform: uppercase;
 }
 a{
     color: $color-green;
@@ -93,6 +102,7 @@ a:hover{
 body{
     background: $color-black;
     color: $color-white-shade2;
+    font-family: $body-font-family;
 
 }
 
@@ -171,6 +181,7 @@ body{
     padding-right: 25px;
     border-radius: $global-rounded;
     margin: 0;
+    border-width: 2px;
     @include breakpoint(medium){
         @include button-size(
         $size:medium,
@@ -274,9 +285,10 @@ body{
 .sr-welcome{
     width: 100%;
     position: absolute;
-    top:30px;
+    top:-10px;
     text-align: center;
     color: $color-green;
+    font-size: $font-screamer;
 }
 .sr-enter-button{
     position:absolute;
@@ -300,6 +312,7 @@ body{
     background-repeat: no-repeat;
     background-position: 15px center;
     border-radius: $global-rounded;
+    border-width: 2px;
 }
 .sr-enter-button:hover{
 //    @include button-style($color-white,$color-white,$color-white, hollow);

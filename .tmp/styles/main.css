@@ -6917,13 +6917,15 @@ meta.foundation-mq {
   animation-delay: 700ms !important; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700; }
+  font-weight: 700;
+  font-family: "usual", Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-transform: uppercase; }
 
 a {
-  color: #0eb78d; }
+  color: #0ea982; }
 
 a:hover {
-  color: #15edb7; }
+  color: #13e2ad; }
 
 .float-content {
   height: auto; }
@@ -6935,7 +6937,8 @@ a:hover {
 
 body {
   background: black;
-  color: #98a7a0; }
+  color: #98a7a0;
+  font-family: "usual", Helvetica Neue, Helvetica, Arial, sans-serif; }
 
 .sr-app-frame {
   width: 100%;
@@ -6982,7 +6985,7 @@ body {
   color: #98a7a0; }
 
 .sr-login-call {
-  color: #0eb78d;
+  color: #0ea982;
   display: none; }
   @media only screen and (min-width: 75em) {
     .sr-login-call {
@@ -6990,18 +6993,19 @@ body {
       display: inline-block; } }
 
 .sr-login-button {
-  border: 1px solid #0eb78d;
+  border: 1px solid #0ea982;
   background: transparent;
-  color: #0eb78d;
+  color: #0ea982;
   font-size: 0.8rem;
   padding-left: 25px;
   padding-right: 25px;
   border-radius: 1000px;
-  margin: 0; }
+  margin: 0;
+  border-width: 2px; }
   .sr-login-button:hover, .sr-login-button:focus {
-    border-color: #25eebc;
+    border-color: #1decb8;
     background: transparent;
-    color: #25eebc; }
+    color: #1decb8; }
   @media only screen and (min-width: 40em) {
     .sr-login-button {
       font-size: 1rem;
@@ -7009,7 +7013,7 @@ body {
       padding-right: 40px; } }
 
 .sr-login-form-btn {
-  background: #0eb78d;
+  background: #0ea982;
   color: #fff;
   font-size: 1rem;
   display: block;
@@ -7017,7 +7021,7 @@ body {
   margin-left: 0;
   margin-right: 0; }
   .sr-login-form-btn:hover, .sr-login-form-btn:focus {
-    background: #0a7e61;
+    background: #097057;
     color: #fff; }
 
 .sr-ui-wrap {
@@ -7089,9 +7093,10 @@ body {
 .sr-welcome {
   width: 100%;
   position: absolute;
-  top: 30px;
+  top: -10px;
   text-align: center;
-  color: #0eb78d; }
+  color: #0ea982;
+  font-size: 54px; }
 
 .sr-enter-button {
   position: absolute;
@@ -7101,18 +7106,19 @@ body {
   padding-left: 30px;
   padding-right: 30px;
   margin-left: 50%;
-  border: 1px solid #0eb78d;
+  border: 1px solid #0ea982;
   background: transparent;
-  color: #0eb78d;
+  color: #0ea982;
   font-size: 1.3rem;
   background-image: url(../images/icon-door.png);
   background-repeat: no-repeat;
   background-position: 15px center;
-  border-radius: 1000px; }
+  border-radius: 1000px;
+  border-width: 2px; }
   .sr-enter-button:hover, .sr-enter-button:focus {
-    border-color: #25eebc;
+    border-color: #1decb8;
     background: transparent;
-    color: #25eebc; }
+    color: #1decb8; }
 
 .sr-enter-button:hover {
   background-image: url(../images/icon-door.png);
@@ -7207,7 +7213,7 @@ body {
 
 .sr-icon-block > div {
   margin: 15px;
-  color: #0eb78d; }
+  color: #0ea982; }
   @media only screen and (min-width: 40em) {
     .sr-icon-block > div {
       width: 30%;
@@ -7241,7 +7247,7 @@ body {
   max-width: 200px; }
 
 .sr-illus-block > div > h3 {
-  color: #0eb78d;
+  color: #0ea982;
   font-weight: 300; }
 
 .sr-head-block {
@@ -7252,7 +7258,7 @@ body {
   -ms-overflow-style: -ms-autohiding-scrollbar;
   flex: 0 0 100%;
   max-width: 100%;
-  color: #0eb78d;
+  color: #0ea982;
   font-size: 1.4rem; }
 
 .sr-info-block {
@@ -7316,13 +7322,13 @@ body {
   text-align: center; }
 
 .sr-go-button {
-  background: #0eb78d;
+  background: #0ea982;
   color: #fff;
   font-size: 1.3rem;
   padding-left: 40px;
   padding-right: 40px; }
   .sr-go-button:hover, .sr-go-button:focus {
-    background: #0a7e61;
+    background: #097057;
     color: #fff; }
   @media only screen and (min-width: 40em) {
     .sr-go-button {
@@ -7330,13 +7336,13 @@ body {
       margin: 0 auto; } }
 
 .sr-stop-button {
-  background: #bc0c46;
+  background: #eb1346;
   color: #fff;
   font-size: 1.3rem;
   padding-left: 40px;
   padding-right: 40px; }
   .sr-stop-button:hover, .sr-stop-button:focus {
-    background: #820831;
+    background: #b20e35;
     color: #fff; }
   @media only screen and (min-width: 75em) {
     .sr-stop-button {
@@ -7372,7 +7378,7 @@ body {
   text-align: center; }
 
 .sr-category-button {
-  background: #0eb78d;
+  background: #0ea982;
   color: #fff;
   font-size: 1.3rem;
   padding-left: 40px;
@@ -7380,7 +7386,7 @@ body {
   display: block;
   margin: 0 auto; }
   .sr-category-button:hover, .sr-category-button:focus {
-    background: #0a7e61;
+    background: #097057;
     color: #fff; }
   @media only screen and (min-width: 75em) {
     .sr-category-button {
@@ -7448,7 +7454,7 @@ progress, meter {
   margin: 0 auto;
   height: 1.5rem;
   padding: 10px;
-  color: #820831;
+  color: #b20e35;
   background: #d8e8e0;
   transition: all 0.8s ease; }
 
@@ -7457,11 +7463,11 @@ progress::-webkit-progress-bar {
   background: #fff; }
 
 progress::-webkit-progress-value {
-  background: #820831;
+  background: #b20e35;
   transition: all 0.8s ease; }
 
 progress::-moz-progress-bar {
-  background: #820831;
+  background: #b20e35;
   border-radius: 1000px;
   transition: all 0.8s ease; }
 
@@ -7538,7 +7544,7 @@ progress::-moz-progress-bar {
       margin: 7.5px; } }
 
 .sr-opt-block label {
-  color: #0eb78d;
+  color: #0ea982;
   background: #fff;
   border-radius: 4px;
   margin: 0;
@@ -7549,7 +7555,7 @@ progress::-moz-progress-bar {
   line-height: 1.1;
   vertical-align: middle;
   text-align: center;
-  border: 2px solid #0eb78d;
+  border: 2px solid #0ea982;
   cursor: pointer; }
 
 .sr-opt-block label:first-child {
@@ -7558,13 +7564,13 @@ progress::-moz-progress-bar {
 input[type=checkbox]:checked ~ label,
 input[type=radio]:checked ~ label {
   color: #fff;
-  background: #0eb78d;
+  background: #0ea982;
   border-radius: 4px;
   box-shadow: 1px 1px -2px #98a7a0; }
 
 .sr-opt-block label:hover {
   color: #fff;
-  background: #0eb78d;
+  background: #0ea982;
   border-radius: 4px; }
 
 input[type="checkbox"], input[type="radio"] {
@@ -7586,7 +7592,7 @@ input[type="checkbox"], input[type="radio"] {
   width: 14.285%; }
 
 .sr-range li figure:hover, .sr-range li figure:checked, .sr-range-selected {
-  background: #0eb78d !important; }
+  background: #0ea982 !important; }
 
 .sr-range li figure {
   width: 30px;
@@ -7605,25 +7611,25 @@ input[type="checkbox"], input[type="radio"] {
       border-radius: 1000px; } }
 
 .sr-range :last-child figure {
-  background: #6f0729; }
+  background: #a00d30; }
 
 .sr-range li:nth-of-type(6) figure {
-  background: #820831; }
+  background: #b20e35; }
 
 .sr-range li:nth-of-type(5) figure {
-  background: #960a38; }
+  background: #c5103b; }
 
 .sr-range li:nth-of-type(4) figure {
-  background: #bc0c46; }
+  background: #eb1346; }
 
 .sr-range li:nth-of-type(3) figure {
-  background: #e20e54; }
+  background: #ef3863; }
 
 .sr-range li:nth-of-type(2) figure {
-  background: #f0155d; }
+  background: #f04b72; }
 
 .sr-range :first-child figure {
-  background: #f1286b; }
+  background: #f25e81; }
 
 .sr-range li:nth-of-type(2) figcaption,
 .sr-range li:nth-of-type(3) figcaption,
@@ -7652,7 +7658,7 @@ input[type="checkbox"], input[type="radio"] {
 .sr-error-message {
   background: white;
   padding: 5px 30px 50px 30px;
-  color: #bc0c46;
+  color: #eb1346;
   font-size: 1.3rem; }
 
 .sr-error-message span {
@@ -7660,13 +7666,13 @@ input[type="checkbox"], input[type="radio"] {
   background: white;
   padding: 15px 30px;
   border-radius: 10px;
-  border: 1px solid #bc0c46;
+  border: 1px solid #eb1346;
   max-width: 80%; }
 
 .sr-exit-button {
-  border: 1px solid #0eb78d;
+  border: 1px solid #0ea982;
   background: transparent;
-  color: #0eb78d;
+  color: #0ea982;
   font-size: 1.3rem;
   display: block;
   width: 100%;
@@ -7675,9 +7681,9 @@ input[type="checkbox"], input[type="radio"] {
   padding-left: 40px;
   padding-right: 40px; }
   .sr-exit-button:hover, .sr-exit-button:focus {
-    border-color: #25eebc;
+    border-color: #1decb8;
     background: transparent;
-    color: #25eebc; }
+    color: #1decb8; }
   @media only screen and (min-width: 75em) {
     .sr-exit-button {
       font-size: 1.3rem;
@@ -7685,7 +7691,7 @@ input[type="checkbox"], input[type="radio"] {
 
 .sr-quest-nav {
   display: flex;
-  background: #0b9170;
+  background: #0b8365;
   justify-content: space-between;
   align-self: flex-end;
   width: 100%;
@@ -7731,11 +7737,11 @@ input[type="number"], input[type="search"],
 input[type="tel"], input[type="time"], input[type="url"],
 input[type="color"], textarea, select {
   border-radius: 4px;
-  border: 1px solid #0eb78d;
+  border: 1px solid #0ea982;
   font-size: 1.3rem;
   padding: 12px;
   min-height: 50px;
-  color: #0b9170;
+  color: #0b8365;
   line-height: 1.2;
   min-width: 200px;
   max-width: 360px; }
