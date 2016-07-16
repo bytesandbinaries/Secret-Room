@@ -1,10 +1,8 @@
 angular.module('secretRoom')
   .controller('QuestionCtrl', ['$scope','userData','$http', '$injector', function ($scope, userData, $http, $injector) {
     $scope.user=userData.data();
-
     $scope.qresponse=[];
     //check if the the user is using the app for the first time.
-
     $scope.currentlevel=$scope.user.currentlevel;
     $scope.get_category=function(){
       // $http({url:'http://localhost:8888/secret-room/app/server/get_c.php', method:'GET'}).

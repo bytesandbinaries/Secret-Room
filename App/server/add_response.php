@@ -52,5 +52,5 @@ if(count($newupdate)>0){
 	$res=mysqli_query($con, $sql);
 }
 include 'matcher.php';
-echo $_GET['callback'].json_encode($p_id);
+echo json_encode($p_id);
 ?>
