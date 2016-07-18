@@ -147,13 +147,9 @@ angular.module('secretRoom')
     $scope.get_country=function(){
         $http.get("scripts/country.json").success(function(response) {$scope.selection = response;});
     }
-
-
     $scope.get_state=function(){
         $http.get("scripts/state_local.json").success(function(response) {$scope.selection = response;});
     }
-
-
     $scope.get_age=function(){
         $scope.selection=[{'name':'Select Age', 'value':''},{'name':'18-25 years', 'value':'18-25'},{'name':'26-30 years', 'value':'26-30'},{'name':'31-35 years', 'value':'31-35'},{'name':'36-40 years', 'value':'36-40'},
         {'name':'41-45 years', 'value':'41-45'},{'name':'46-50 years', 'value':'46-50'}, {'name':'Above 50 years', 'value':'Above 50'}
@@ -198,13 +194,10 @@ angular.module('secretRoom')
                     eachscale.value='';
                     eachresp.respScale.push(eachscale);
                 }
-
 		//if($s==(splitopt.length-2)){return;}
             }
             else{eachresp.value='';}
             que.resp.push(eachresp)
-
-
         }
         console.log(que.resp);
     }
@@ -225,19 +218,26 @@ angular.module('secretRoom')
     }
     $scope.save_response=function(){
     	var datap={user:$scope.user, response:$scope.qresponse}
+        $scope.status="Please wait..."
         $http({method:'Post', url:'../../server/add_response.php', data:datap, //online
         //$http({method:'Post', url:'http://localhost:8888/secret-room/app/server/add_response.php', data:datap,
             headers : {
                 'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
             }}).
         success(function(responseData, status, headers, config) {
-            $scope.user.id=responseData;
-            $scope.saved=true;
+            if($scope.user.status=='new' && $scope.user.id==0){
+                $scope.user.id=responseData;
+                $scope.saved=true;
+                $scope.user.status='registered';
+            }
+            else{
+                $scope.saved=true;
+            }
             $scope.qresponse=[];
         }),
         function(err) {
             $scope.message="An Error occured Please Check your internet connection and try again..."
         }
-     }
-     $scope.changefromsave=function(){     $scope.question_status='getQuestions';     }
+    }
+    $scope.changefromsave=function(){     $scope.question_status='getQuestions';     }
 }])

@@ -1,16 +1,29 @@
-<div class="sr-quest-view-wrap" ng-init="get_category()">
-
-
+<div class="sr-quest-view-wrap">
 
     <div class="sr-quest-status" ng-switch on="question_status">
-
+        <div ng-switch-default class="sr-cat-control">
+            <div class="sr-save-progress" ng-show="user.status=='new'">
+                <h3 class="sr-">Quick Registration</h3>
+                <h4 class="sr-" >Account Details</h4>
+                <form ng-submit="save_response()" >
+                   <input type="text" ng-model="user.email" placeholder="Type Email address" required />
+                   <input type="password" ng-model="user.password" placeholder="Type Password" required />
+                   <input type="submit" value="Submit" class="sr-go-button"/>
+                   <div ng-bind="status"></div>
+                </form>
+            </div>
+            <div  class="sr-save-progress" ng-show="user.status=='registered'">
+                <h3 class="sr-">Registration Successful</h3>
+                <div>Glad to have you on board!!! <br> Please, click the button below to continue.</div>
+                <button class="sr-go-button" ng-click="get_category()">Continue</button>
+            </div>
+        </div>
         <div ng-switch-when="startNewcategory"   class="sr-cat-control">
            <img class="sr-cat-icon" src="../assets/img/quest_placeholder.png">
             <h2 class="sr-category-heading" ng-bind="que_data[user.currentlevel].title"></h2>
             <p class="sr-category-description" ng-bind="que_data[user.currentlevel].description"></p>
             <button class="sr-category-button" ng-click="get_questions(user.currentlevel)">Start</button>
         </div>
-
 
         <div ng-switch-when="getQuestions" class="sr-quest-control">
                 <div class="sr-progress-meta">
@@ -155,15 +168,6 @@ questions like a boss</span>
             </div><!--sr-quest-content-->
         </div><!--sr-quest-control-->
         <div ng-switch-when="save" class="sr-cat-control">
-            <div ng-show="!saved" class="sr-save-progress">
-                <h3 class="sr-">Save your progress</h3>
-                <h4 class="sr-" >Account Details</h4>
-                <form ng-submit="save_response()">
-                   <input type="text" ng-model="user.email" placeholder="Type Email address" required />
-                   <input type="password" ng-model="user.password" placeholder="Type Password" required />
-                   <input type="submit" value="Submit" class="sr-go-button"/>
-                </form>
-            </div>
             <div ng-show="saved" class="sr-save-progress">
                 <div ng-show="ques_data[currQ].q_no==63">
                     <h3 class="">We have your data</h3>
