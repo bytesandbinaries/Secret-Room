@@ -169,11 +169,19 @@ questions like a boss</span>
         </div><!--sr-quest-control-->
         <div ng-switch-when="save" class="sr-cat-control">
             <div ng-show="saved" class="sr-save-progress">
-                <div ng-show="ques_data[currQ].q_no==63">
+                <div ng-show="ques_data[currQ].q_no==84">
                     <h3 class="">We have your data</h3>
                     <h4 class="" >Now we can find a possible match for you </h4>
+                    <div>
+                        <label>
+                            <input type="checkbox" ng-model="terms" style="display:block" />
+                            I have read the understood the <a href="#/privacy">Privacy Policy </a>and <a href="#terms"> Terms and Conditions</a> of using this service.
+                        </label>
+                        <input type="button" ng-click="acceptTerms()" value="Continue" />
+
+                    </div>
                 </div>
-                <div ng-show="ques_data[currQ].q_no<63">
+                <div ng-show="ques_data[currQ].q_no<84">
                     <h3 class="">Progress Saved</h3>
                     <h4 class="" >You have to finish the questions to get a match</h4>
                     <a  class="sr-go-button" ng-click="changefromsave()">Continue</a>

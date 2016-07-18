@@ -239,5 +239,19 @@ angular.module('secretRoom')
             $scope.message="An Error occured Please Check your internet connection and try again..."
         }
     }
-    $scope.changefromsave=function(){     $scope.question_status='getQuestions';     }
+    $scope.changefromsave=function(){     $scope.question_status='getQuestions';  }
+    $scope.acceptTerms=function(){
+        $http({method:'Post', url:'../../server/accept_terms.php', data:$scope.user.id, //online
+            headers : {
+                'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+            }}).
+        success(function(responseData, status, headers, config) {
+                if(responseData=='updated'){
+                    $scope.user.status='registeredandAccepted';
+                }
+        }),
+        function(err) {
+            $scope.message="An Error occured Please Check your internet connection and try again..."
+        }
+    }
 }])

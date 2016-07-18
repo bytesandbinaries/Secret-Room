@@ -50,6 +50,12 @@ angular
         controllerAs: 'main',
 		access: { isFree: true }
       })
+      .when('/privacy', {
+        templateUrl: 'views/privacy.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main',
+		access: { isFree: true }
+      })
       .otherwise({
         redirectTo: '/',
 		access: { isFree: true}
