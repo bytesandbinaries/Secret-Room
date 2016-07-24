@@ -8,8 +8,8 @@ angular.module('secretRoom')
     $scope.currentlevel=$scope.user.currentlevel;
     $scope.get_category=function(){
       // $http({url:'http://localhost:8888/secret-room/app/server/get_c.php', method:'GET'}).
-        //$http({url:'http://localhost/secret-room/app/server/get_c.php', method:'GET'}).
-        $http({url:'../../server/get_c.php', method:'GET'}). //online
+        $http({url:'http://localhost/secret-room/app/server/get_c.php', method:'GET'}).
+//        $http({url:'../../server/get_c.php', method:'GET'}). //online
         success(function(responseData, status, headers, config) {
             $scope.que_data=responseData;
             if($scope.user.lastquestionId==0){
@@ -157,13 +157,13 @@ angular.module('secretRoom')
 
 
     $scope.get_age=function(){
-        $scope.selection=[{'name':'Select Age', 'value':''},{'name':'18-25 years', 'value':'18-25'},{'name':'26-30 years', 'value':'26-30'},{'name':'31-35 years', 'value':'31-35'},{'name':'36-40 years', 'value':'36-40'},
+        $scope.selection=[{'name':'Select Age', 'value':''},{'name':'26-30 years', 'value':'26-30'},{'name':'31-35 years', 'value':'31-35'},{'name':'36-40 years', 'value':'36-40'},
         {'name':'41-45 years', 'value':'41-45'},{'name':'46-50 years', 'value':'46-50'}, {'name':'Above 50 years', 'value':'Above 50'}
     ]
     }
 
     $scope.get_height=function(){
-        $scope.selection=[{'name':'Select Height', 'value':''},{'name':'3-4 Feet', 'value':'3-4 feet'},{'name':'4-5 Feet', 'value':'4-5 feet'},{'name':'5-6 Feet', 'value':'5-6 feet'},{'name':'6-7 Feet', 'value':'6-7 feet'}]
+        $scope.selection=[{'name':'Select Height', 'value':''},{'name':'3-4 Feet', 'value':'3-4 feet'},{'name':'4-5 Feet', 'value':'4-5 feet'},{'name':'5-6 Feet', 'value':'5-6 feet'},{'name':'6-7 Feet', 'value':'6-7 feet'},{'name':'Not Important', 'value':'Not Important'}]
     }
     $scope.get_youfrom=function(){
         $scope.localgov= $scope.ques_data[$scope.currQ-1].resp[0].value.trim().split('|')

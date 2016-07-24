@@ -4,17 +4,19 @@
 
     <div class="sr-quest-status" ng-switch on="question_status">
 
-        <div ng-switch-when="startNewcategory"   class="sr-cat-control">
-           <img class="sr-cat-icon" src="../assets/img/quest_placeholder.png">
-            <h2 class="sr-category-heading" ng-bind="que_data[user.currentlevel].title"></h2>
-            <p class="sr-category-description" ng-bind="que_data[user.currentlevel].description"></p>
-            <button class="sr-category-button" ng-click="get_questions(user.currentlevel)">Start</button>
+        <div ng-switch-when="startNewcategory"   class="sr-section">
+            <div  class="sr-card">
+               <img class="sr-cat-icon" src="../assets/img/quest_placeholder.png">
+                <h2 class="sr-category-heading" ng-bind="que_data[user.currentlevel].title"></h2>
+                <p class="sr-category-description" ng-bind="que_data[user.currentlevel].description"></p>
+                <button class="sr-category-button" ng-click="get_questions(user.currentlevel)">Start</button>
+            </div>
         </div>
 
 
-        <div ng-switch-when="getQuestions" class="sr-quest-control">
-                <div class="sr-progress-meta">
-                   <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Personal Details'">
+        <div ng-switch-when="getQuestions" class="sr-section-wrap">
+                <div class="sr-section-header">
+                   <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='About You'">
                        <div><img class="sr-cat-prog-icon" src="../images/boy3.png"></div>
                        <div>
                            <span class="screamer">Nothing good comes easy</span><br>
@@ -22,7 +24,7 @@
                        </div>
                        <div><img class="sr-cat-prog-icon" src="../images/girl3.png"></div>
                    </div>
-                   <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Professional Details'">
+                   <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Your History'">
                        <div><img class="sr-cat-prog-icon" src="../images/boy2.png"></div>
                        <div>
                            <span class="screamer">Ah AH! <br>Your killing it...</span><br>
@@ -31,7 +33,7 @@ questions like a boss</span>
                        </div>
                        <div><img class="sr-cat-prog-icon" src="../images/girl2.png"></div>
                    </div>
-                   <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Qualities'">
+                   <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Your Qualities'">
                        <div><img class="sr-cat-prog-icon" src="../images/boy1.png"></div>
                        <div>
                            <span class="screamer">Stay Focused</span><br>
@@ -39,7 +41,7 @@ questions like a boss</span>
                        </div>
                        <div><img class="sr-cat-prog-icon" src="../images/girl1.png"></div>
                    </div>
-                   <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Personal Description'">
+                   <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Some ther Qualities'">
                         <div><img class="sr-cat-prog-icon" src="../images/boy4.png"></div>
                        <div>
                            <span class="screamer">Some flowers & <br>Some Awesomeness</span><br>
@@ -154,8 +156,8 @@ questions like a boss</span>
                 </div><!--sr-quest-nav-->
             </div><!--sr-quest-content-->
         </div><!--sr-quest-control-->
-        <div ng-switch-when="save" class="sr-cat-control">
-            <div ng-show="!saved" class="sr-save-progress">
+        <div ng-switch-when="save" class="sr-section">
+            <div ng-show="!saved" class="sr-save-progress sr-card">
                 <h3 class="sr-">Save your progress</h3>
                 <h4 class="sr-" >Account Details</h4>
                 <form ng-submit="save_response()">
@@ -164,7 +166,7 @@ questions like a boss</span>
                    <input type="submit" value="Submit" class="sr-go-button"/>
                 </form>
             </div>
-            <div ng-show="saved" class="sr-save-progress">
+            <div ng-show="saved" class="sr-save-progress sr-card">
                 <div ng-show="ques_data[currQ].q_no==63">
                     <h3 class="">We have your data</h3>
                     <h4 class="" >Now we can find a possible match for you </h4>
