@@ -1,22 +1,34 @@
-<div class="sr-quest-view-wrap" ng-init="get_category()">
-
-
+<div class="sr-quest-view-wrap">
 
     <div class="sr-quest-status" ng-switch on="question_status">
 
-        <div ng-switch-when="startNewcategory"   class="sr-section">
-            <div  class="sr-card">
-               <img class="sr-cat-icon" src="../assets/img/quest_placeholder.png">
-                <h2 class="sr-category-heading" ng-bind="que_data[user.currentlevel].title"></h2>
-                <p class="sr-category-description" ng-bind="que_data[user.currentlevel].description"></p>
-                <button class="sr-category-button" ng-click="get_questions(user.currentlevel)">Start</button>
+        <div ng-switch-default class="sr-section">
+            <div class="sr-card" ng-show="user.status=='new'">
+                <h3 class="sr-">Quick Registration</h3>
+                <h4 class="sr-" >Account Details</h4>
+                <form ng-submit="save_response()" >
+                   <input type="text" ng-model="user.email" placeholder="Type Email address" required />
+                   <input type="password" ng-model="user.password" placeholder="Type Password" required />
+                   <input type="submit" value="Submit" class="sr-go-button"/>
+                   <div ng-bind="status"></div>
+                </form>
+            </div>
+            <div  class="sr-card" ng-show="user.status=='registered'">
+                <h3 class="sr-">Registration Successful</h3>
+                <div>Glad to have you on board!!! <br> Please, click the button below to continue.</div>
+                <button class="sr-go-button" ng-click="get_category()">Continue</button>
             </div>
         </div>
+        <div ng-switch-when="startNewcategory"   class="sr-cat-control">
+           <img class="sr-cat-icon" src="../assets/img/quest_placeholder.png">
+            <h2 class="sr-category-heading" ng-bind="que_data[user.currentlevel].title"></h2>
+            <p class="sr-category-description" ng-bind="que_data[user.currentlevel].description"></p>
+            <button class="sr-category-button" ng-click="get_questions(user.currentlevel)">Start</button>
+        </div>
 
-
-        <div ng-switch-when="getQuestions" class="sr-section-wrap">
-                <div class="sr-section-header">
-                   <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='About You'">
+        <div ng-switch-when="getQuestions" class="sr-quest-control">
+                <div class="sr-progress-meta">
+                   <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Personal Details'">
                        <div><img class="sr-cat-prog-icon" src="../images/boy3.png"></div>
                        <div>
                            <span class="screamer">Nothing good comes easy</span><br>
@@ -156,22 +168,22 @@ questions like a boss</span>
                 </div><!--sr-quest-nav-->
             </div><!--sr-quest-content-->
         </div><!--sr-quest-control-->
+
         <div ng-switch-when="save" class="sr-section">
-            <div ng-show="!saved" class="sr-save-progress sr-card">
-                <h3 class="sr-">Save your progress</h3>
-                <h4 class="sr-" >Account Details</h4>
-                <form ng-submit="save_response()">
-                   <input type="text" ng-model="user.email" placeholder="Type Email address" required />
-                   <input type="password" ng-model="user.password" placeholder="Type Password" required />
-                   <input type="submit" value="Submit" class="sr-go-button"/>
-                </form>
-            </div>
             <div ng-show="saved" class="sr-save-progress sr-card">
-                <div ng-show="ques_data[currQ].q_no==63">
+                <div ng-show="ques_data[currQ].q_no==84">
                     <h3 class="">We have your data</h3>
                     <h4 class="" >Now we can find a possible match for you </h4>
+                    <div>
+                        <label>
+                            <input type="checkbox" ng-model="terms" style="display:block" />
+                            I have read the understood the <a href="#/privacy">Privacy Policy </a>and <a href="#terms"> Terms and Conditions</a> of using this service.
+                        </label>
+                        <input type="button" ng-click="acceptTerms()" value="Continue" />
+
+                    </div>
                 </div>
-                <div ng-show="ques_data[currQ].q_no<63">
+                <div ng-show="ques_data[currQ].q_no<84">
                     <h3 class="">Progress Saved</h3>
                     <h4 class="" >You have to finish the questions to get a match</h4>
                     <a  class="sr-go-button" ng-click="changefromsave()">Continue</a>

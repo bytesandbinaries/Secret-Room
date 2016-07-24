@@ -4,9 +4,11 @@
     <div><span ng-bind="user.gender"></span></div>
     <div>You've been a member for <span ng-bind="user.joined | posttime"></span>
 
-    <h2>Your Profile is not Completed</h2>
+    <h2 ng-if="continue">Your Profile is not Completed</h2>
     <div>You have answered <span ng-bind="total_que"></span> questions</div>
     <div>Your are currently on level <span ng-bind="user.currentlevel"></span> of 4 </div>
-
-    <input type="button" ng-click="loadquestions()" value="Complete Your Profile"/>
+    <div>
+        <input ng-if="continue" type="button" ng-click="loadquestions()" value="Complete Your Profile"/>
+        <div ng-if="!continue">You have successfully completed your profile. Our representative will contact you shortly.</div>
+    </div>
 </div>

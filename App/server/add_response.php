@@ -15,7 +15,7 @@ $t=time();
 $p_id=$request->user->userID;
 if($p_id==0){
 	$pass=md5($request->user->password);
-	$sql = "insert into `profile` values (NULL, '".mysqli_real_escape_string($con, $request->user->email)."', '".$pass."', '".mysqli_real_escape_string($con, $request->user->name)."', '', '', '', '".$t."')";
+	$sql = "insert into `profile` values (NULL, '".mysqli_real_escape_string($con, $request->user->email)."', '".$pass."', '".mysqli_real_escape_string($con, $request->user->name)."', '', '', '', '".$t."', '', '')";
 	$rs = mysqli_query($con, $sql) or die('can\'t add to profile '.mysqli_error($con)) ;
 	$p_id = mysqli_insert_id($con);
 }
@@ -52,5 +52,5 @@ if(count($newupdate)>0){
 	$res=mysqli_query($con, $sql);
 }
 include 'matcher.php';
-echo $_GET['callback'].json_encode($p_id);
+echo json_encode($p_id);
 ?>
