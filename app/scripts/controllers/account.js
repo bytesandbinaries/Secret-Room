@@ -3,7 +3,8 @@ angular.module('secretRoom')
     $scope.user=userData.data();
     $scope.continue=true;
     $scope.get_status=function(){
-        $http({url:'../../server/get_status.php?userid='+$scope.user.userID, method:'GET'}). //online
+//        $http({url:'../../server/get_status.php?userid='+$scope.user.userID, method:'GET'}). //online
+        $http({url:'http://localhost/secret-room/app/server/get_status.php?userid='+$scope.user.userID, method:'GET'}). //buchi
         success(function(responseData, status, headers, config) {
             console.log(responseData);
             $scope.all_responses=responseData;

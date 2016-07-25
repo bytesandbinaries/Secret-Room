@@ -900,7 +900,7 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
         margin-left: 0.8rem;
         float: none; }
 
-.button, .button-group > li > a, .button-group > li > label, .button-group > li > button, .sr-login-button, .sr-login-form-btn, .sr-enter-button, .sr-go-button, .sr-stop-button, .sr-category-button, .sr-exit-button {
+.button, .button-group > li > a, .button-group > li > label, .button-group > li > button, .sr-login-button, .sr-login-form-btn, .sr-enter-button, .sr-go-button, .sr-stop-button, .sr-category-button, .sr-exit-button, .sign-up-button {
   display: inline-block;
   border: 0;
   text-align: center;
@@ -6148,7 +6148,7 @@ meta.foundation-mq {
 /*
   Styles for the action sheet container. Action sheets pin to the top or bottom of the screen.
 */
-.button, .button-group > li > a, .button-group > li > label, .button-group > li > button, .sr-login-button, .sr-login-form-btn, .sr-enter-button, .sr-go-button, .sr-stop-button, .sr-category-button, .sr-exit-button {
+.button, .button-group > li > a, .button-group > li > label, .button-group > li > button, .sr-login-button, .sr-login-form-btn, .sr-enter-button, .sr-go-button, .sr-stop-button, .sr-category-button, .sr-exit-button, .sign-up-button {
   display: inline-block;
   border: 0;
   text-align: center;
@@ -7106,6 +7106,7 @@ span.sr-accent {
   padding-right: 30px;
   margin-left: 50%;
   text-transform: uppercase;
+  font-weight: 700;
   border: 1px solid #43b5a8;
   background: transparent;
   color: #43b5a8;
@@ -7360,16 +7361,17 @@ span.sr-accent {
 .sr-stop-button {
   background: #F5142E;
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding-left: 40px;
   padding-right: 40px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: 700; }
   .sr-stop-button:hover, .sr-stop-button:focus {
     background: #F5142E;
     color: #fff; }
   @media only screen and (min-width: 75em) {
     .sr-stop-button {
-      font-size: 1.3rem;
+      font-size: 1rem;
       margin: 0 auto; } }
 
 .sr-quest-view-wrap {
@@ -7455,7 +7457,7 @@ span.sr-accent {
   justify-content: center;
   background: #43b5a8;
   width: 100%;
-  padding-top: 15px; }
+  padding: 15px; }
 
 .sr-cat-prog-icon {
   z-index: -10;
@@ -7770,14 +7772,20 @@ input[type="checkbox"], input[type="radio"] {
   background-size: 30px; }
 
 .sr-save {
-  padding: 25px 10px 25px 55px;
-  color: white;
-  text-align: right;
-  border-radius: 1000px;
-  background-image: url(../images/sr-nav-out.png);
-  background-repeat: no-repeat;
-  background-position: 15px center;
-  background-size: 30px; }
+  vertical-align: middle;
+  box-sizing: border-box;
+  height: 36px;
+  padding: 9px 20px;
+  color: #00a99d;
+  background: white;
+  text-align: center;
+  border-radius: 4px;
+  margin-top: 15px; }
+
+.sr-save:hover {
+  color: #d8e8e0;
+  background: #00a99d;
+  border: 2px solid #d8e8e0; }
 
 .sr-forward {
   padding: 25px 55px 25px 10px;
@@ -7789,7 +7797,7 @@ input[type="checkbox"], input[type="radio"] {
   background-size: 30px; }
 
 .sr-back:hover, .sr-save:hover, .sr-forward:hover {
-  color: white; }
+  color: #d8e8e0; }
 
 input[type="text"], input[type="password"],
 input[type="date"], input[type="datetime"],
@@ -7850,13 +7858,15 @@ input[type="radio"] + label, input[type="checkbox"] + label {
       width: 350px; } }
 
 .sign-up-form input[type='text'], .sign-up-form input[type='email'] {
+  width: 100%;
   text-align: center;
   font-size: 1rem;
   vertical-align: middle;
-  padding: 0.9rem 1rem;
-  height: auto;
+  padding: 0.85em 1em;
   margin: 0;
-  border: 0; }
+  border: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
 
 .sign-up-form label {
   position: absolute;
@@ -7874,25 +7884,37 @@ input[type="radio"] + label, input[type="checkbox"] + label {
   bottom: 83px;
   color: #c3fc4f; }
 
-.sign-up-button {
-  font-weight: 600;
-  cursor: pointer;
-  text-align: center;
-  font-size: 1rem;
-  text-transform: uppercase;
-  text-shadow: 0 0 0;
-  vertical-align: middle;
-  width: 100%;
-  display: inline-block;
-  background: linear-gradient(to bottom, #9ed72b, #71aa00);
-  color: #2d4300;
-  padding: 0.9rem 1rem;
-  height: auto;
-  border-radius: 1000px;
-  border: 1px solid #304801; }
+@media only screen and (min-width: 40em) {
+  .sign-up-submit {
+    display: inline-block; } }
 
-.sign-up-button:hover {
-  background: linear-gradient(to bottom, #71aa00, #5e8d00); }
+.sign-up-button {
+  background: #43b5a8;
+  color: #fff;
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+  min-height: 50px;
+  border-radius: 4px; }
+  .sign-up-button:hover, .sign-up-button:focus {
+    background: #00a99d;
+    color: #fff; }
+  @media only screen and (min-width: 40em) {
+    .sign-up-button {
+      font-size: 1rem;
+      margin: 0 auto;
+      position: relative;
+      left: -4px;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0; } }
 
 #mc_embed_signup input.mce_inline_error {
   border-color: #51c8f0 !important; }

@@ -2,8 +2,8 @@
 
     <div class="sr-quest-status" ng-switch on="question_status">
 
-        <div ng-switch-default class="sr-section">
-            <div class="sr-card" ng-show="user.status=='new'">
+        <div ng-switch-default class="sr-section" >
+            <div class="sr-card" ng-show="user.status=='new'" >
                 <h3 class="sr-">Quick Registration</h3>
                 <p class="sr-" >We know you're itching to get along but you'd need to create an Account to Get Sarted</p>
                 <form ng-submit="save_response()" >
@@ -31,45 +31,45 @@
         <div ng-switch-when="getQuestions" class="sr-quest-control">
                 <div class="sr-progress-meta">
                    <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='About You'">
-<!--                       <div><img class="sr-cat-prog-icon" src="../images/boy3.png"></div>-->
+                       <div><img class="sr-cat-prog-icon" src="../images/boy3.png"></div>
                        <div>
                            <span class="screamer">Nothing good comes easy</span><br>
                            <span class="rider">But we’ve made these questions as easy as possible for you: That’s how much we care</span>
                        </div>
-<!--                       <div><img class="sr-cat-prog-icon" src="../images/girl3.png"></div>-->
+                       <div><img class="sr-cat-prog-icon" src="../images/girl3.png"></div>
                    </div>
                    <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Your History'">
-<!--                       <div><img class="sr-cat-prog-icon" src="../images/boy2.png"></div>-->
+                       <div><img class="sr-cat-prog-icon" src="../images/boy2.png"></div>
                        <div>
                            <span class="screamer">Ah AH! Your killing it...</span><br>
                            <span class="rider">We would love to see your JAMB scores...Really!! You’re answering these
 questions like a boss</span>
                        </div>
-<!--                       <div><img class="sr-cat-prog-icon" src="../images/girl2.png"></div>-->
+                       <div><img class="sr-cat-prog-icon" src="../images/girl2.png"></div>
                    </div>
                    <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Your Qualities'">
-<!--                       <div><img class="sr-cat-prog-icon" src="../images/boy1.png"></div>-->
+                       <div><img class="sr-cat-prog-icon" src="../images/boy1.png"></div>
                        <div>
                            <span class="screamer">Stay Focused</span><br>
                            <span class="rider">Somewhere at the other end of these questions your perfect match awaits you</span>
                        </div>
-<!--                       <div><img class="sr-cat-prog-icon" src="../images/girl1.png"></div>-->
+                       <div><img class="sr-cat-prog-icon" src="../images/girl1.png"></div>
                    </div>
                    <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Some Other Qualities'">
-<!--                        <div><img class="sr-cat-prog-icon" src="../images/boy4.png"></div>-->
+                        <div><img class="sr-cat-prog-icon" src="../images/boy4.png"></div>
                        <div>
                            <span class="screamer">Some flowers & <br>Some Awesomeness</span><br>
                            <span class="rider">We really can see your future, and it’s all lovey dovey *Wink Wink*</span>
                        </div>
-<!--                       <div><img class="sr-cat-prog-icon" src="../images/girl4.png"></div>-->
+                       <div><img class="sr-cat-prog-icon" src="../images/girl4.png"></div>
                    </div>
                    <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Other Details'">
-<!--                       <div><img class="sr-cat-prog-icon" src="../images/boy5.png"></div>-->
+                       <div><img class="sr-cat-prog-icon" src="../images/boy5.png"></div>
                        <div>
                            <span class="screamer">Drum Roll Please<br>We are near the the!</span><br>
                            <span class="rider">t’s been a long day, but sharing it with you made it really worthwhile</span>
                        </div>
-<!--                       <div><img class="sr-cat-prog-icon" src="../images/girl5.png"></div>-->
+                       <div><img class="sr-cat-prog-icon" src="../images/girl5.png"></div>
                    </div>
                    <div class="sr-progress-bar">
                        <div class="sr-progress-text"></div>
@@ -84,15 +84,15 @@ questions like a boss</span>
 
 
                 <div class="option-wrap">
-                    <div class="sr-quest-opt" ng-if="ques_data[currQ].q_type=='tb'" ng-repeat="rep in getNumber(ques_data[currQ].q_responseMax)">
+                    <div class="sr-quest-opt" ng-if="ques_data[currQ].q_type=='tb'" ng-repeat="rep in getNumber(ques_data[currQ].q_responseMax)" animation-in="slideInRight" animation-out="slideOutUp">
                        <input type="text" ng-model="ques_data[currQ].resp[$index].value" />
 
                     </div>
 
                     <div class="" ng-if="ques_data[currQ].q_type=='mp'" ng-init="breakoptions(ques_data[currQ])">
-                        <div class="sr-quest-opt" ng-if="ques_data[currQ].q_responseMax==1" >
+                        <div class="sr-quest-opt" ng-if="ques_data[currQ].q_responseMax==1" animation-in="slideInRight" animation-out="slideOutUp">
                            <ul class="sr-form-field">
-                               <li class="sr-opt-block" ng-repeat="opt in ques_data[currQ].resp">
+                               <li class="sr-opt-block" ng-repeat="opt in ques_data[currQ].resp" animation-in="slideInRight" animation-out="slideOutUp">
 
                                     <div class="sr-radio-select" ng-if="(opt.item.indexOf('()')===-1)">
                                                <input type="radio" ng-click="next()" name="{{ques_data[currQ].q_no}}" ng-model="ques_data[currQ].value" value="{{opt.item}}" id="radio-{{opt.item}}"/>
@@ -180,7 +180,7 @@ questions like a boss</span>
                            Legal wants to make sure you've read and accept our <a href="#/privacy">Privacy Policy </a>and <a href="#terms"> Terms and Conditions</a> of using this service.
                        </p>
                         <p>
-                            <input id="terms" type="checkbox" ng-model="terms" style="display:block" />
+                            <input id="terms" type="checkbox" ng-model="terms" style="display:inline-block" />
                             <label for="terms">I accept</label> 
                         </p>
                     <input type="button" ng-click="acceptTerms()" value="Finish" class="sr-go-button"/>
