@@ -219,7 +219,8 @@ angular.module('secretRoom')
     $scope.save_response=function(){
     	var datap={user:$scope.user, response:$scope.qresponse}
         $scope.status="Please wait..."
-        $http({method:'Post', url:'../../server/add_response.php', data:datap, //online
+        //$http({method:'Post', url:'../../server/add_response.php', data:datap, //online
+        $http({method:'Post', url:'http://localhost/secret-room/app/server/add_response.php', data:datap,
         //$http({method:'Post', url:'http://localhost:8888/secret-room/app/server/add_response.php', data:datap,
             headers : {
                 'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'

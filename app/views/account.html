@@ -12,3 +12,22 @@
         <div ng-if="!continue">You have successfully completed your profile. Our representative will contact you shortly.</div>
     </div>
 </div>
+<div class="sr-view-wrap">
+    <div class="sr-view-content">
+        <div class="sr-hero">
+            <h2>Welcome Back <span ng-bind="user.fname"></span></h2>
+            <div><span ng-bind="user.email"></span></div>
+            <div><span ng-bind="user.gender"></span></div>
+            <div>You've been a member for <span ng-bind="user.joined | posttime"></span></div>
+        </div>
+        <div class="sr-section">
+            <h2 ng-if="continue">Your Profile is not Completed</h2>
+            <div>You have answered <span ng-bind="total_que"></span> questions</div>
+            <div>Your are currently on level <span ng-bind="user.currentlevel"></span> of 4 </div>
+            <div>
+                <input ng-if="continue" type="button" ng-click="loadquestions()" value="Complete Your Profile"/>
+                <div ng-if="!continue">You have successfully completed your profile. Our representative will contact you shortly.</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,69 +5,71 @@
         <div ng-switch-default class="sr-section">
             <div class="sr-card" ng-show="user.status=='new'">
                 <h3 class="sr-">Quick Registration</h3>
-                <h4 class="sr-" >Account Details</h4>
+                <p class="sr-" >We know you're itching to get along but you'd need to create an Account to Get Sarted</p>
                 <form ng-submit="save_response()" >
-                   <input type="text" ng-model="user.email" placeholder="Type Email address" required />
-                   <input type="password" ng-model="user.password" placeholder="Type Password" required />
-                   <input type="submit" value="Submit" class="sr-go-button"/>
+                   <input type="text" ng-model="user.email" placeholder="Your Email address" required />
+                   <input type="password" ng-model="user.password" placeholder="Your Password" required />
+                   <input type="submit" value="Create Account" class="sr-go-button"/>
                    <div ng-bind="status"></div>
                 </form>
             </div>
             <div  class="sr-card" ng-show="user.status=='registered'">
                 <h3 class="sr-">Registration Successful</h3>
-                <div>Glad to have you on board!!! <br> Please, click the button below to continue.</div>
+                <p>Glad to have you on board!!! <br> Please, click the button below to continue.</p>
                 <button class="sr-go-button" ng-click="get_category()">Continue</button>
             </div>
         </div>
-        <div ng-switch-when="startNewcategory"   class="sr-cat-control">
-           <img class="sr-cat-icon" src="../assets/img/quest_placeholder.png">
-            <h2 class="sr-category-heading" ng-bind="que_data[user.currentlevel].title"></h2>
-            <p class="sr-category-description" ng-bind="que_data[user.currentlevel].description"></p>
-            <button class="sr-category-button" ng-click="get_questions(user.currentlevel)">Start</button>
+        <div ng-switch-when="startNewcategory"   class=" sr-section">
+            <div  class="sr-card">
+               <img class="sr-cat-icon" src="../assets/img/quest_placeholder.png">
+                <h2 class="sr-category-heading" ng-bind="que_data[user.currentlevel].title"></h2>
+                <p class="sr-category-description" ng-bind="que_data[user.currentlevel].description"></p>
+                <button class="sr-go-button" ng-click="get_questions(user.currentlevel)">Start</button>
+            </div>
         </div>
 
         <div ng-switch-when="getQuestions" class="sr-quest-control">
                 <div class="sr-progress-meta">
-                   <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Personal Details'">
-                       <div><img class="sr-cat-prog-icon" src="../images/boy3.png"></div>
+                   <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='About You'">
+<!--                       <div><img class="sr-cat-prog-icon" src="../images/boy3.png"></div>-->
                        <div>
                            <span class="screamer">Nothing good comes easy</span><br>
                            <span class="rider">But we’ve made these questions as easy as possible for you: That’s how much we care</span>
                        </div>
-                       <div><img class="sr-cat-prog-icon" src="../images/girl3.png"></div>
+<!--                       <div><img class="sr-cat-prog-icon" src="../images/girl3.png"></div>-->
                    </div>
                    <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Your History'">
-                       <div><img class="sr-cat-prog-icon" src="../images/boy2.png"></div>
+<!--                       <div><img class="sr-cat-prog-icon" src="../images/boy2.png"></div>-->
                        <div>
-                           <span class="screamer">Ah AH! <br>Your killing it...</span><br>
+                           <span class="screamer">Ah AH! Your killing it...</span><br>
                            <span class="rider">We would love to see your JAMB scores...Really!! You’re answering these
 questions like a boss</span>
                        </div>
-                       <div><img class="sr-cat-prog-icon" src="../images/girl2.png"></div>
+<!--                       <div><img class="sr-cat-prog-icon" src="../images/girl2.png"></div>-->
                    </div>
                    <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Your Qualities'">
-                       <div><img class="sr-cat-prog-icon" src="../images/boy1.png"></div>
+<!--                       <div><img class="sr-cat-prog-icon" src="../images/boy1.png"></div>-->
                        <div>
                            <span class="screamer">Stay Focused</span><br>
                            <span class="rider">Somewhere at the other end of these questions your perfect match awaits you</span>
                        </div>
-                       <div><img class="sr-cat-prog-icon" src="../images/girl1.png"></div>
+<!--                       <div><img class="sr-cat-prog-icon" src="../images/girl1.png"></div>-->
                    </div>
-                   <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Some ther Qualities'">
-                        <div><img class="sr-cat-prog-icon" src="../images/boy4.png"></div>
+                   <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Some Other Qualities'">
+<!--                        <div><img class="sr-cat-prog-icon" src="../images/boy4.png"></div>-->
                        <div>
                            <span class="screamer">Some flowers & <br>Some Awesomeness</span><br>
                            <span class="rider">We really can see your future, and it’s all lovey dovey *Wink Wink*</span>
                        </div>
-                       <div><img class="sr-cat-prog-icon" src="../images/girl4.png"></div>
+<!--                       <div><img class="sr-cat-prog-icon" src="../images/girl4.png"></div>-->
                    </div>
                    <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Other Details'">
-                       <div><img class="sr-cat-prog-icon" src="../images/boy5.png"></div>
+<!--                       <div><img class="sr-cat-prog-icon" src="../images/boy5.png"></div>-->
                        <div>
                            <span class="screamer">Drum Roll Please<br>We are near the the!</span><br>
                            <span class="rider">t’s been a long day, but sharing it with you made it really worthwhile</span>
                        </div>
-                       <div><img class="sr-cat-prog-icon" src="../images/girl5.png"></div>
+<!--                       <div><img class="sr-cat-prog-icon" src="../images/girl5.png"></div>-->
                    </div>
                    <div class="sr-progress-bar">
                        <div class="sr-progress-text"></div>
@@ -172,16 +174,16 @@ questions like a boss</span>
         <div ng-switch-when="save" class="sr-section">
             <div ng-show="saved" class="sr-save-progress sr-card">
                 <div ng-show="ques_data[currQ].q_no==84">
-                    <h3 class="">We have your data</h3>
-                    <h4 class="" >Now we can find a possible match for you </h4>
-                    <div>
-                        <label>
-                            <input type="checkbox" ng-model="terms" style="display:block" />
-                            I have read the understood the <a href="#/privacy">Privacy Policy </a>and <a href="#terms"> Terms and Conditions</a> of using this service.
-                        </label>
-                        <input type="button" ng-click="acceptTerms()" value="Continue" />
-
-                    </div>
+                    <h3 class="">That's All Folks</h3>
+                    <p class="" >Thought it would be longer? Nah we've got all we need. Now you can sit back and relax while we find a match for you. But first... </p>
+                       <p>
+                           Legal wants to make sure you've read and accept our <a href="#/privacy">Privacy Policy </a>and <a href="#terms"> Terms and Conditions</a> of using this service.
+                       </p>
+                        <p>
+                            <input id="terms" type="checkbox" ng-model="terms" style="display:block" />
+                            <label for="terms">I accept</label> 
+                        </p>
+                    <input type="button" ng-click="acceptTerms()" value="Finish" class="sr-go-button"/>
                 </div>
                 <div ng-show="ques_data[currQ].q_no<84">
                     <h3 class="">Progress Saved</h3>

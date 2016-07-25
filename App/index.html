@@ -34,26 +34,32 @@
             <div class="sr-logo-area"><a href="/#/"  class="sr-main-logo"><img src="images/secret_room-logo.png"></a></div>
             <div class="sr-login-area" ng-controller="MainCtrl">
                 <div class="sr-login-content">
-                    <span class="sr-login-call">Already a member?</span>
+                    <span ng-if="user.status=='new'" class="sr-login-call">Already a member?</span>
                     <zf-action-sheet id="login-action-sheet">
                         <zf-as-button ng-if="user.status=='new'"><span class="sr-login-button">Login</span></zf-as-button>
                         <zf-as-content position="bottom">
-                           <h4>Great to have you back</h4>
+                           <h5>Great to have you back</h5>
                             <form ng-submit="login()">
                                 <label>
-                                    Email Address
+<!--                                    Email Address-->
                                     <input type="text" placeholder="Email Address" ng-model="user.email" required="">
                                 </label>
                                 <label>
-                                    Password
+<!--                                    Password-->
                                     <input type="password" placeholder="Password" ng-model="user.password" required="">
                                 </label>
-                                <button type="submit" class="sr-login-form-btn">Sign Into Your Account</button>
+                                <button type="submit" class="sr-go-button">Sign In</button>
                                 <div ng-if="errorL" ng-bind="errorM">Wrong Email or Password, please try again.</div>
                             </form>
                         </zf-as-content>
                     </zf-action-sheet>
+                    <a ng-if="user.status!=='new'" class="sr-login-button" ng-click="saving_response()">Log Out</a>
                 </div>
+<!--
+                <div class="sr-login-content">
+                        <a ng-if="user.status=='new'"><span class="sr-login-button">Log Out</span></a>
+                </div>
+-->
             </div>
           </header>
       </div>
