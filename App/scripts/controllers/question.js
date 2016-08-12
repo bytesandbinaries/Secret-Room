@@ -1,13 +1,13 @@
 angular.module('secretRoom')
-  .controller('QuestionCtrl', ['$scope','userData','$http', '$injector', function ($scope, userData, $http, $injector) {
+  .controller('QuestionCtrl', ['$scope','userData','$http', '$location', function ($scope, userData, $http, $location) {
     $scope.user=userData.data();
     $scope.qresponse=[];
     //check if the the user is using the app for the first time.
     $scope.currentlevel=$scope.user.currentlevel;
     $scope.get_category=function(){
 //       $http({url:'http://localhost:8888/secret-room/app/server/get_c.php', method:'GET'}).
-        $http({url:'http://localhost/secret-room/app/server/get_c.php', method:'GET'}).
-//        $http({url:'../../server/get_c.php', method:'GET'}). //online
+//        $http({url:'http://localhost/secret-room/app/server/get_c.php', method:'GET'}).
+        $http({url:'../../server/get_c.php', method:'GET'}). //online
         success(function(responseData, status, headers, config) {
             $scope.que_data=responseData;
             if($scope.user.lastquestionId==0){
@@ -97,14 +97,16 @@ angular.module('secretRoom')
     			$scope.errorM='Sorry!! you need to select a different gender';
     		}
     	}
-        if(r.q_no==7 || r.q_no==10){
-    			if($scope.q.value[0].value!=='NG'){
-    			$scope.currQ++;
-    		}
+        if(r.q_no==7 || r.q_no==9 || r.q_no==10){
+			if($scope.q.value[0].value!=='NG'){
+			    $scope.currQ++;
+		    }
     	}
     	if(r.q_no==19){
-
-    		if($scope.ques_data[14].value.indexOf('kids')==-1){ $scope.currQ++;}
+            if($scope.ques_data[15].value.indexOf('kids')==-1){ $scope.currQ++;}
+    	}
+        if(r.q_no==79){
+            $scope.user.name=$scope.ques_data[$scope.currQ-1].resp[0].value;
     	}
     	if(r.q_no==1){$scope.user.name=r.value	}
     	if(move==true){
@@ -126,9 +128,9 @@ angular.module('secretRoom')
         $scope.currQ++;
         console.log($scope.ques_data[$scope.currQ]);
         var qtype=$scope.ques_data[$scope.currQ].q_type
-            if(qtype=='mp' || qtype=='s' || qtype=='sm' || qtype=='tb'){
-                $scope.breakoptions($scope.ques_data[$scope.currQ])
-            }
+        if(qtype=='mp' || qtype=='s' || qtype=='sm' || qtype=='tb'){
+            $scope.breakoptions($scope.ques_data[$scope.currQ])
+        }
     }
     $scope.moveToNewLevel=function(){
         $scope.user.currentlevel++;
@@ -219,12 +221,12 @@ angular.module('secretRoom')
     $scope.save_response=function(){
     	var datap={user:$scope.user, response:$scope.qresponse}
         $scope.status="Please wait..."
-        //$http({method:'Post', url:'../../server/add_response.php', data:datap, //online
-        $http({method:'Post', url:'http://localhost/secret-room/app/server/add_response.php', data:datap,
+        $http({method:'Post', url:'../../server/add_response.php', data:datap, //online
+        //$http({method:'Post', url:'http://localhost/secret-room/app/server/add_response.php', data:datap,
         //$http({method:'Post', url:'http://localhost:8888/secret-room/app/server/add_response.php', data:datap,
-            headers : {
-                'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
-            }}).
+        headers : {
+            'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+        }}).
         success(function(responseData, status, headers, config) {
             if($scope.user.status=='new' && $scope.user.id==0){
                 $scope.user.id=responseData;
@@ -242,17 +244,16 @@ angular.module('secretRoom')
     }
     $scope.changefromsave=function(){     $scope.question_status='getQuestions';  }
     $scope.acceptTerms=function(){
-        $http({method:'Post', url:'../../server/accept_terms.php', data:$scope.user.id, //online
-            headers : {
-                'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
-            }}).
+        var data=JSON.stringify($scope.user);
+        $http({method:'get', url:'../../server/accept_terms.php?user='+data}).
         success(function(responseData, status, headers, config) {
-                if(responseData=='updated'){
-                    $scope.user.status='registeredandAccepted';
+                if(responseData=='Updated'){
+                    $location.path("/account");
+                    //$scope.user.status='registeredandAccepted';
                 }
         }),
         function(err) {
             $scope.message="An Error occured Please Check your internet connection and try again..."
         }
-    }
+    }//07087118099
 }])

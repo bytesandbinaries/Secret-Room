@@ -1,15 +1,8 @@
 <?php
 error_reporting(E_ALL);
-ini_set('display_errors', 0);
-$host = "localhost";
-// $username = "root";
-// $password = "root";
-// $database = "secretroom";
-$username = "wwwbytes_secretr";
-$password = "secretroom";
-$database = "wwwbytes_secretroom";
-
-$con=mysqli_connect($host,$username,$password, $database);
+ini_set('display_errors', 1);
+require_once("fun_connect2.php");
+$matcher=array();
 $a_json = array();
 if(isset($_GET['data'])){$data=json_decode($_GET['data']);}
 if($_GET['action']=='addQ'){
@@ -21,6 +14,19 @@ if($_GET['action']=='addQ'){
   //if($rsu){ header("Location: index.php?action=viewQ&q_id=".$q_id);}
 
 }
+else if ($_GET['action']=='searchUser'){
+  $response=array('profile'=>'', 'matches'=>'');
+  $p_id=mysqli_real_escape_string($con, $data->id);
+  $sqlu="Select * from `profile` where  p_id=".$p_id;
+  $rsu=mysqli_query($con, $sqlu) or die ("Error : could not Search" . mysqli_error($con));
+  $qobject = array();
+  while($info= mysqli_fetch_array($rsu)){
+    $qobject = $info;
+  }
+  //echo $_GET['callback'].json_encode($qobject);
+  $response['profile']=$qobject;
+  include 'matcher.php';
+  }
 else if ($_GET['action']=='editQ'){
     $t=time();print_r($data);
   $sqlu="Update question_bank set `question_text`='".mysqli_real_escape_string($con, $data->{'1'})."', `question_category`='".$data->{'2'}."',  `question_type` ='".$data->{'4'}."', `question_response_options`='".mysqli_real_escape_string($con, $data->{'5'})."', `question_scale`='".$data->{'6'}."', `question_response_min`='".$data->{'7'}."', `question_response_max`='".$data->{'8'}."', `question_weight`='".$data->{'9'}."', `question_updated`='".$t."' where `question_id`=".$data->{'0'};

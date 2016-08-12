@@ -6,7 +6,7 @@ appServices.service('levelData', function(){
   }
 })
 appServices.service('userData', ['$rootScope', function($rootScope){
-  var savedData =  {name:'', id:0, email:'', userID:'', currentlevel:0, gender:'', lastquestionId:0, status:'new', prop_pict:'', password:''}
+  var savedData =  {name:'', id:0, email:'', userID:'', currentlevel:0, gender:'', lastquestionId:0, status:'new', address:'', password:''}
 
   return{
      data:function() {   return savedData; }

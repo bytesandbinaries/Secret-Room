@@ -67,6 +67,12 @@ angular
           controllerAs: 'editC',
   		      access: { isFree: true  }
         })
+        .when('/uprofile', {
+            templateUrl: 'templates/userProfile.html',
+            controller: 'userProfileCtrl',
+            controllerAs: 'userProfileC',
+    		    access: { isFree: true  }
+          })
       .otherwise({
         redirectTo: '/',
 		access: { isFree: true}

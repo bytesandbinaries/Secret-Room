@@ -1,0 +1,39 @@
+<div class="" style="padding:5px 15px; background:#ccc; color:#555"><h2>User Profile</h2></div>
+<div class="" style="padding:10px; background:#eee; color:#555" ng-switch="view">
+    <div ng-switch-when="search">
+        <form  ng-submit="search()">
+            <input type="text" placeholder="UserId" required ng-model="user.id" />
+            <input type="Submit" value="Search" />
+        </form>
+    </div>
+    <div ng-switch-when="found">
+        <div>
+            <label>User Name:</label> <span ng-bind="userP.p_name"></span>
+        </div>
+        <div>
+            <label>User Gender:</label> <span ng-bind="userP.p_gender"></span>
+        </div>
+        <div>
+            <label>User Age Range:</label> <span ng-bind="userP.p_age"></span>
+        </div>
+        <div>
+            <label>User Email Address:</label> <span ng-bind="userP.p_email"></span>
+        </div>
+        <div>
+            <label>Account status:</label> <span ng-bind="userP.p_status"></span>
+        </div>
+
+        <div>
+            <h4>List of Possible Matches</h4>
+            <div class="table_head">
+                <div class="table_headings username">User Name</div>
+                <div class="table_headings useremail">User Email</div>
+                <div class="table_headings useraddress">Address</div>
+            </div>
+            <div class="table_row" ng-repeat="list in matches">
+                <div class="table_list username" ng-bind="list.profile_id"></div>
+                <div class="table_list useremail" ng-bind="list.p_email"></div>
+            </div>
+        </div>
+    </div>
+</div>
