@@ -583,7 +583,7 @@ span.sr-accent{
 .sr-quest-content{
     position: relative;
     box-sizing: border-box;
-    margin: 40px 30px;
+    margin: 0 30px 40px;
     border-radius: $global-radius;
     @include breakpoint(large){
         width: 60%;
@@ -613,7 +613,7 @@ span.sr-accent{
 .sr-quest-control{}
 .sr-cat-icon{
     display: block;
-    width:150px;
+    width:250px;
     margin:0 auto;
     padding-bottom: 40px;
 }
@@ -676,7 +676,7 @@ span.sr-accent{
 //    position: relative;
 //    top: -20px;
     z-index: -10;
-    height: 150px;
+    width: 150px;
 //    float: left;
 }
 .screamer{
@@ -815,8 +815,8 @@ progress::-moz-progress-bar {
     transition: height 0.8s ease;
 }
 .option-wrap{
-    max-height: 520px;
-    overflow:hidden;
+//    max-height: 520px;
+//    overflow:hidden;
 }
 .sr-form-field{
     display: flex;
@@ -870,8 +870,8 @@ progress::-moz-progress-bar {
 .sr-opt-block label:first-child{
     vertical-align: middle;
 }
-input[type=checkbox]:checked ~ label, 
-input[type=radio]:checked ~ label{
+.sr-opt-block input[type=checkbox]:checked ~ label, 
+.sr-opt-block input[type=radio]:checked ~ label{
     color:#fff;
     background: $color-primary-1;
     border-radius: $global-radius;
@@ -883,38 +883,55 @@ input[type=radio]:checked ~ label{
     border-radius: $global-radius;
 //    box-shadow: $sr-shadow-down;
 }
-input[type="checkbox"], input[type="radio"]{
+.sr-quest-opt input[type="text"]{
+    @include breakpoint(medium){
+        max-width:60%;
+    }
+}
+input[type="checkbox"], 
+input[type="radio"]{
     display: none;
 }
-//  Range Styles
+//**************************** Range Styles ********************************//
+//**************************************************************************//
+
+//Position the entire Range wrapper wrapper ul
 .sr-range {
   position: relative;
   list-style-type: none;
   margin: 0 auto;
 }
+//Clear the Range wrapper floats
 .sr-range:after{
     content: "";
     display: table;
     clear: both;
 }
-  .sr-range li {
+// Style the list item wrapper containing the Range Buttons and their label text
+.sr-range li {
     float: left;
     padding-left: 8px;
     padding-right:8px;
+    width: 14.285%;
+    
+    @include breakpoint(medium){}      
 }
-
-.sr-range li figure:hover, .sr-range li figure:checked, .sr-range-selected {
-  background: $color-primary-1 !important; }
-
+//Remove padding for the first and last Range list items
+.sr-range li:first-of-type{
+    padding-left: 0;
+}
+.sr-range li:last-of-type{
+    padding-right: 0;
+}
+// Set the core styles of the range buttons 
 .sr-range li figure {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     border: 5px solid $color-neutral;
     margin: auto;
     cursor: pointer;
     border-radius: $global-rounded;
-    
-    
+        
     @include breakpoint(medium){
         width: 80px;
         height: 80px;
@@ -924,18 +941,14 @@ input[type="checkbox"], input[type="radio"]{
         border-radius: $global-rounded;    
     }    
 }
-//  @media only screen and (min-width: 40em) {
-//    .sr-range li figure {
-//      width: 60px;
-//      height: 60px;
-//      border: 8px solid $color-white;
-//      margin: auto;
-//      cursor: pointer;
-//      border-radius: 1000px; 
-//      } 
-//}
-
-.sr-range :last-of-type figure {
+//set the styles for hover and active states of Range buttons
+.sr-range li figure:hover, 
+.sr-range li figure:checked, 
+.sr-range-selected {
+    background: $color-primary-1 !important; 
+}
+// Set the colors of the range buttons 
+.sr-range li:last-of-type figure {
   background: $color-dark-0 ; 
 }
 
@@ -958,7 +971,7 @@ input[type="checkbox"], input[type="radio"]{
   background: $color-dark-5 ; 
 }
 
-.sr-range :first-of-type figure {
+.sr-range li:first-of-type figure {
   background: $color-dark-6 ; 
 }
 
@@ -972,8 +985,8 @@ input[type="checkbox"], input[type="radio"]{
 .sr-range figcaption {
     padding-top: 5px;
     font-weight: $font-weight-bold;
-  font-size: $font-down1;
-  line-height: 0.7rem; 
+    font-size: $font-down1;
+    line-height: 0.7rem; 
 }
 .sr-single-select-block{}
 .sr-radio-select-button{}
@@ -993,21 +1006,6 @@ input[type="checkbox"], input[type="radio"]{
     list-style-type: none;
     margin: 0;
 }
-//.sr-checkbox-block{
-//    margin: 7.5px;
-//    padding: 7.5px;
-//    background: #fff;
-//    border-radius: $global-radius;
-////    height: 100%;
-//}
-//.sr-checkbox-block{
-//    margin: 7.5px;
-//    padding: 7.5px;
-//    background: #fff;
-//    border-radius: $global-radius;
-////    height: 100%;
-//}
-
 .sr-error-message{
     background: $color-white;
     padding: 5px 30px 50px 30px;
@@ -1061,41 +1059,13 @@ input[type="checkbox"], input[type="radio"]{
 .sr-back{
     padding: 25px 10px 25px 55px;
     color: $color-white;
-//    background: $gray;
     text-align: right;
-//    border-bottom-left-radius: $global-rounded;
-//    border-top-left-radius: $global-rounded;
-//    border-bottom-right-radius: $global-radius;
-//    border-top-right-radius: $global-radius;
     background-image: url(../images/sr-nav-back.png);
     background-repeat: no-repeat;
     background-position: 15px center;
     background-size: 30px;
-//    text-transform: uppercase;
 }
 .sr-save{
-//    @extend %button;
-//    @include button-style(
-//        $background:$color-white,
-//        $background-hover:darken($color-neutral, 5) ,
-//        $color:$color-primary-0,
-//        $style:solid
-//        );
-//    @include button-size(
-//        $size:small,
-//        $expand:false
-//        );
-//    padding-left: 20px;
-//    padding-right: 20px;
-//    text-transform: uppercase;
-//    font-weight:$font-weight-bold;
-//    @include breakpoint(medium){
-//        @include button-size(
-//            $size:small,
-//            $expand:false
-//        );
-////        margin:0 auto;
-//    }
     vertical-align: middle;
     box-sizing: border-box;
     height: 36px;
@@ -1105,11 +1075,6 @@ input[type="checkbox"], input[type="radio"]{
     text-align: center;
     border-radius: 4px;
     margin-top: 15px;
-//    text-transform: uppercase;
-//    background-image: url(../images/sr-nav-out.png);
-//    background-repeat: no-repeat;
-//    background-position: 15px center;
-//    background-size: 30px;
 }
 .sr-save:hover{
     color: $color-neutral;
@@ -1119,29 +1084,32 @@ input[type="checkbox"], input[type="radio"]{
 .sr-forward{
     padding: 25px 55px 25px 10px;
     color: $color-white;
-//    background: $gray;
     text-align: left;
-//    border-bottom-left-radius: $global-radius;
-//    border-top-left-radius: $global-radius;
-//    border-bottom-right-radius: $global-rounded;
-//    border-top-right-radius: $global-rounded;
     background-image: url(../images/sr-nav-fwd.png);
     background-repeat: no-repeat;
     background-position: 80% center;
     background-size: 30px;
-//    text-transform: uppercase;
 }
-.sr-back:hover, .sr-save:hover, .sr-forward:hover {
-//  background: $color-neutral;
+.sr-back:hover, 
+.sr-save:hover, 
+.sr-forward:hover {
     color:$color-neutral;
 }
-input[type="text"], input[type="password"],
-input[type="date"], input[type="datetime"],
-input[type="datetime-local"], input[type="month"],
-input[type="week"], input[type="email"],
-input[type="number"], input[type="search"],
-input[type="tel"], input[type="time"], input[type="url"],
-input[type="color"], textarea{
+input[type="text"], 
+input[type="password"],
+input[type="date"], 
+input[type="datetime"],
+input[type="datetime-local"], 
+input[type="month"],
+input[type="week"], 
+input[type="email"],
+input[type="number"], 
+input[type="search"],
+input[type="tel"], 
+input[type="time"], 
+input[type="url"],
+input[type="color"], 
+textarea{
     border-radius: $global-radius;
     border: 1px solid $color-primary-1;
     font-size: 1.3rem;
@@ -1150,8 +1118,6 @@ input[type="color"], textarea{
     color: $color-primary-1 ;
     line-height: 1.2;
     width: 100%;
-//    min-width: 200px;
-//    max-width: 360px;
 }
 select {
     border-radius: $global-radius;
@@ -1162,23 +1128,18 @@ select {
     color: $color-primary-1 ;
     line-height: 1.2;
     width: 100%;
-//    min-width: 200px;
-//    max-width: 360px;
 }
-input[type="radio"] + label, input[type="checkbox"] + label {
+input[type="radio"] + label, 
+input[type="checkbox"] + label {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-//  margin-left: 0;
-//  margin-right: 0;
-//  margin-bottom: 0;
-//  vertical-align: middle;
 }
 
 //*-----------------------Sign Up Form -----------------------------*/
 
 .sr-save-progress{
-max-width: 360px;
+    max-width: 360px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1196,33 +1157,28 @@ max-width: 360px;
 .sign-up-form{
     position: relative;
     
-    @include breakpoint(medium){
+  @include breakpoint(medium){
 //        height: 50px;
     }
 }
-//.sign-up-form:after{
-////    content: '';
-////    display: table;
-//}
+
 .sign-up-input{
     position: relative;
     width:100%;
     display: inline-block;
     height: auto;
     margin-bottom: 15px;
-    @include breakpoint(medium){
-        width:350px;
+    
+  @include breakpoint(medium){
+    width:350px;
     }
 }
 .sign-up-form input[type='text'], .sign-up-form input[type='email']{
     width:100%;
-//    display: inline-block;
     text-align: center;
     font-size: 1rem;
-//    line-height: 1;
     vertical-align: middle;
     padding: 0.85em 1em;
-//    height: auto;
     margin: 0;
     border: 0;
     border-top-right-radius: 0;
@@ -1236,19 +1192,11 @@ max-width: 360px;
     text-shadow: none;
     margin-left: 50%;
     left: -36px;
-//    left: 9000px;
     bottom: 10px;
     color:#617379;
     pointer-events:none;
-    transition: all 0.3s ease-in-out;
-//    z-index: ;
-    
+    transition: all 0.3s ease-in-out;    
 }
-//label:focus, label:valid{
-//    position: absolute;
-//    bottom: 83px;
-//    color:#c3fc4f;
-//}
 .sign-up-form input[type='email']:focus ~ label, 
 .sign-up-form input[type='email']:valid ~ label{
     position: absolute;
@@ -1278,18 +1226,19 @@ max-width: 360px;
     font-weight:$font-weight-bold;
     min-height: 50px;
     border-radius: 4px;
-    @include breakpoint(medium){
-        @include button-size(
-            $size:medium,
-            $expand:false
-        );
-        margin:0 auto;
-        position: relative;
-        left:-4px;        
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+    
+  @include breakpoint(medium){
+    @include button-size(
+        $size:medium,
+        $expand:false
+    );
+    margin:0 auto;
+    position: relative;
+    left:-4px;        
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     }
 }
 //.sign-up-button:hover{

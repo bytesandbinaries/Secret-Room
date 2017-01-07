@@ -1,12 +1,12 @@
 angular.module('secretRoom')
-  .controller('QuestionCtrl', ['$scope','userData','$http', '$location', function ($scope, userData, $http, $location) {
+  .controller('QuestionCtrl', ['$scope','userData','$http', '$injector', function ($scope, userData, $http, $injector) {
     $scope.user=userData.data();
     $scope.qresponse=[];
     //check if the the user is using the app for the first time.
     $scope.currentlevel=$scope.user.currentlevel;
     $scope.get_category=function(){
-//       $http({url:'http://localhost:8888/secret-room/app/server/get_c.php', method:'GET'}).
-        $http({url:'http://localhost/secret-room/app/server/get_c.php', method:'GET'}).
+//       $http({url:'http://localhost:8888/secret-room/app/server/get_c.php', method:'GET'}). //Shola Local
+        $http({url:'http://localhost/secret-room/app/server/get_c.php', method:'GET'}).//Buchi Local
 //        $http({url:'../../server/get_c.php', method:'GET'}). //online
         success(function(responseData, status, headers, config) {
             $scope.que_data=responseData;
@@ -20,7 +20,7 @@ angular.module('secretRoom')
                 var total_questionInLevel=$scope.que_data[$scope.user.currentlevel-1].all_questions
                 console.log(total_questionInLevel);
                 //find the position of the last question
-                for(var $v=0; $v<total_questionInLevel.length; $v++){
+                for($v=0; $v<total_questionInLevel.length; $v++){
 
                     if(total_questionInLevel[$v].q_no==$scope.user.lastquestionId){
                         //check if there are more questions in this level
@@ -70,7 +70,7 @@ angular.module('secretRoom')
     		}
     	}
     	else{
-    		for(var $h=0; $h<r.resp.length; $h++){
+    		for($h=0; $h<r.resp.length; $h++){
     			if(r.q_type !='sm'){
                     if($h==0 && (typeof r.resp!='undefined')){$scope.q.value=[]; }
     				if(r.value!=''){move=true; $scope.q.value=r.value;}
@@ -97,16 +97,14 @@ angular.module('secretRoom')
     			$scope.errorM='Sorry!! you need to select a different gender';
     		}
     	}
-        if(r.q_no==7 || r.q_no==9 || r.q_no==10){
-			if($scope.q.value[0].value!='NG'){
-			    $scope.currQ++;
-		    }
+        if(r.q_no==7 || r.q_no==10){
+    			if($scope.q.value[0].value!=='NG'){
+    			$scope.currQ++;
+    		}
     	}
     	if(r.q_no==19){
-            if($scope.ques_data[15].value.indexOf('kids')==-1){ $scope.currQ++;}
-    	}
-        if(r.q_no==79){
-            $scope.user.name=$scope.ques_data[$scope.currQ-1].resp[0].value;
+
+    		if($scope.ques_data[14].value.indexOf('kids')==-1){ $scope.currQ++;}
     	}
     	if(r.q_no==1){$scope.user.name=r.value	}
     	if(move==true){
@@ -128,9 +126,9 @@ angular.module('secretRoom')
         $scope.currQ++;
         console.log($scope.ques_data[$scope.currQ]);
         var qtype=$scope.ques_data[$scope.currQ].q_type
-        if(qtype=='mp' || qtype=='s' || qtype=='sm' || qtype=='tb'){
-            $scope.breakoptions($scope.ques_data[$scope.currQ])
-        }
+            if(qtype=='mp' || qtype=='s' || qtype=='sm' || qtype=='tb'){
+                $scope.breakoptions($scope.ques_data[$scope.currQ])
+            }
     }
     $scope.moveToNewLevel=function(){
         $scope.user.currentlevel++;
@@ -153,8 +151,8 @@ angular.module('secretRoom')
         $http.get("scripts/state_local.json").success(function(response) {$scope.selection = response;});
     }
     $scope.get_age=function(){
-        $scope.selection=[{'name':'Select Age', 'value':''},{'name':'28-30 years', 'value':'28-30'},{'name':'31-35 years', 'value':'31-35'},{'name':'36-40 years', 'value':'36-40'},
-        {'name':'41-45 years', 'value':'41-45'},{'name':'46-50 years', 'value':'46-50'}, {'name':'Above 50 years', 'value':'Above 50'},{'name':'Not Important', 'value':'Not Important'}
+        $scope.selection=[{'name':'Select Age', 'value':''},{'name':'26-30 years', 'value':'26-30'},{'name':'31-35 years', 'value':'31-35'},{'name':'36-40 years', 'value':'36-40'},
+        {'name':'41-45 years', 'value':'41-45'},{'name':'46-50 years', 'value':'46-50'}, {'name':'Above 50 years', 'value':'Above 50'}
     ]
     }
 
@@ -221,12 +219,12 @@ angular.module('secretRoom')
     $scope.save_response=function(){
     	var datap={user:$scope.user, response:$scope.qresponse}
         $scope.status="Please wait..."
-//        $http({method:'Post', url:'../../server/add_response.php', data:datap, //online
-        $http({method:'Post', url:'http://localhost/secret-room/app/server/add_response.php', data:datap,
-        //$http({method:'Post', url:'http://localhost:8888/secret-room/app/server/add_response.php', data:datap,
-        headers : {
-            'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
-        }}).
+        //$http({method:'Post', url:'../../server/add_response.php', data:datap, //online
+        $http({method:'Post', url:'http://localhost/secret-room/app/server/add_response.php', data:datap,//Buchi Local
+        //$http({method:'Post', url:'http://localhost:8888/secret-room/app/server/add_response.php', data:datap,// Shola Local
+            headers : {
+                'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+            }}).
         success(function(responseData, status, headers, config) {
             if($scope.user.status=='new' && $scope.user.id==0){
                 $scope.user.id=responseData;
@@ -244,16 +242,25 @@ angular.module('secretRoom')
     }
     $scope.changefromsave=function(){     $scope.question_status='getQuestions';  }
     $scope.acceptTerms=function(){
-        var data=JSON.stringify($scope.user);
-        $http({method:'get', url:'../../server/accept_terms.php?user='+data}).
-        success(function(responseData, status, headers, config) {
-                if(responseData=='Updated'){
-                    $location.path("/account");
-                    //$scope.user.status='registeredandAccepted';
+        console.log('Accept Terms Function Ran');
+        $http({
+            method:'Post', url:'http://localhost/secret-room/app/server/accept_terms.php', //Buchi Local
+//            method:'Post', url:'http://localhost:8888/secret-room/app/server/add_response.php',// Shola Local
+//            method:'Post', url:'../../server/get_c.php', //Online
+            data:$scope.user.id, 
+            headers : {
+                'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+            }}).
+        success( function(responseData, status, headers, config) {
+            console.log('Success in Post');
+                if(responseData){
+                    $scope.user.status='registeredandAccepted';
+                    console.log('registered and accepted');                    
                 }
+            $scope.question_status='endMessage';
         }),
         function(err) {
             $scope.message="An Error occured Please Check your internet connection and try again..."
         }
-    }//07087118099
+    }
 }])

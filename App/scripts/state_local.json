@@ -1,5 +1,3 @@
-
-
 [
     {"loc_id":"0","name": "Select State", "value": ""},
     {"loc_id":"1","name":"Federal Capital Territory","value":"Gwagwalada|Kuje|Abaji|Abuja Municipal|Bwari|Kwali"}, {"loc_id":"2","name":"Abia","value":"Aba North|Aba South|Arochukwu|Bende|Ikwuano|Isiala-Ngwa North|Isiala-Ngwa South|Isuikwato|Obi Nwa|Ohafia|Osisioma|Ngwa|Ugwunagbo|Ukwa East|Ukwa West|Umuahia North|Umuahia South|Umu-Neochi"},
@@ -26,4 +24,6 @@
     {"loc_id":"30","name":"Osun","value":"Aiyedade|Aiyedire|Atakumosa East|Atakumosa West|Boluwaduro|Boripe|Ede North|Ede South|Egbedore|Ejigbo|Ife Central|Ife East|Ife North|Ife South|Ifedayo|Ifelodun|Ila|Ilesha East|Ilesha West|Irepodun|Irewole|Isokan|Iwo|Obokun|Odo-Otin|Ola-Oluwa|Olorunda|Oriade|Orolu|Osogbo"}, {"loc_id":"31","name":"Oyo","value":"Afijio|Akinyele|Atiba|Atigbo|Egbeda|Ibadan Central|Ibadan North|Ibadan North West|Ibadan South East|Ibadan South West|Ibarapa Central|Ibarapa East|Ibarapa North|Ido|Irepo|Iseyin|Itesiwaju|Iwajowa|Kajola|Lagelu|Ogbomosho North|Ogbmosho South|Ogo Oluwa|Olorunsogo|Oluyole|Ona-Ara|Orelope|Ori Ire|Oyo East|Oyo West|Saki East|Saki West|Surulere"}, {"loc_id":"32","name":"Plateau","value":"Barikin Ladi|Bassa|Bokkos|Jos East|Jos North|Jos South|Kanam|Kanke|Langtang North|Langtang South|Mangu|Mikang|Pankshin|Qua'an Pan|Riyom|Shendam|Wase"},
     {"loc_id":"33","name":"Rivers","value":"Abua\/Odual|Ahoada East|Ahoada West|Akuku Toru|Andoni|Asari-Toru|Bonny|Degema|Emohua|Eleme|Etche|Gokana|Ikwerre|Khana|Obia\/Akpor|Ogba\/Egbema\/Ndoni|Ogu\/Bolo|Okrika|Omumma|Opobo\/Nkoro|Oyigbo|Port-Harcourt|Tai"},
     {"loc_id":"34","name":"Sokoto","value":"Binji|Bodinga|Dange-shnsi|Gada|Goronyo|Gudu|Gawabawa|Illela|Isa|Kware|kebbe|Rabah|Sabon birni|Shagari|Silame|Sokoto North|Sokoto South|Tambuwal|Tangaza|Tureta|Wamako|Wurno|Yabo"}, {"loc_id":"35","name":"Taraba","value":"Ardo-kola|Bali|Donga|Gashaka|Cassol|Ibi|Jalingo|Karin-Lamido|Kurmi|Lau|Sardauna|Takum|Ussa|Wukari|Yorro|Zing"}, {"loc_id":"36","name":"Yobe","value":"Bade|Bursari|Damaturu|Fika|Fune|Geidam|Gujba|Gulani|Jakusko|Karasuwa|Karawa|Machina|Nangere|Nguru Potiskum|Tarmua|Yunusari|Yusufari"},
-    {"loc_id":"37","name":"Zamfara","value":"Anka|Bakura|Birnin Magaji|Bukkuyum|Bungudu|Gummi|Gusau|Kaura|Namoda|Maradun|Maru|Shinkafi|Talata Mafara|Tsafe|Zurmi"}]
+    {"loc_id":"37","name":"Zamfara","value":"Anka|Bakura|Birnin Magaji|Bukkuyum|Bungudu|Gummi|Gusau|Kaura|Namoda|Maradun|Maru|Shinkafi|Talata Mafara|Tsafe|Zurmi"},
+    {"loc_id":"38","name":"Not Important","value":"_"}
+]

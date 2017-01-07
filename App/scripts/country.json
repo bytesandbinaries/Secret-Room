@@ -242,5 +242,6 @@
   {"name": "Western Sahara", "value": "EH"},
   {"name": "Yemen", "value": "YE"},
   {"name": "Zambia", "value": "ZM"},
-  {"name": "Zimbabwe", "value": "ZW"}
+  {"name": "Zimbabwe", "value": "ZW"},
+  {"name": "Not Available", "value": "NA"}
 ]

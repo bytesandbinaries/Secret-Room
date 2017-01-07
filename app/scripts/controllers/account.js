@@ -7,20 +7,20 @@ angular.module('secretRoom')
         $http({url:'http://localhost/secret-room/app/server/get_status.php?userid='+$scope.user.userID, method:'GET'}). //buchi
         success(function(responseData, status, headers, config) {
             console.log(responseData);
-            $scope.all_responses=responseData;
-            $scope.total_que=responseData.length;
-            $scope.user.lastquestionId=responseData[$scope.total_que-1].question_id;
+            $scope.all_responses = responseData;
+            $scope.total_que = responseData.length;
+            $scope.user.lastquestionId = responseData[$scope.total_que-1].question_id;
             $scope.user.currentlevel=responseData[$scope.total_que-1].category_id;
             console.log($scope.user.lastquestionId);
-            if($scope.user.lastquestionId==63){
-                $scope.continue=false;
+            if($scope.user.lastquestionId > 60){
+                $scope.continue = false;
             }
-        }),
-        function(err) {
-            $scope.message="An Error occured Please Check your internet connection and try again..."
+        });
+        function error(err) {
+            $scope.message="An Error occured Please Check your internet connection and try again...";
         }
-    }
-    $scope.loadquestions=function(){
-        $location.path("/questions")
-    }
+    };    
+    $scope.loadquestions = function(){
+        $location.path("/questions");
+    };
 }]);

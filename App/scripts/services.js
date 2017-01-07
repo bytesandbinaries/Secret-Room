@@ -32,7 +32,7 @@ appServices.service('AuthService', ['userData','$q','$http','USER_ROLES','$rootS
 
     }
 
-    function useCredentials(token, stat) {
+  function useCredentials(token, stat) {
        username = token.token.split('.')[0];
        var user_ro= token.token.split('.')[1];
        var user_id= token.id;
@@ -68,7 +68,7 @@ appServices.service('AuthService', ['userData','$q','$http','USER_ROLES','$rootS
        $http.defaults.headers.common['X-Auth-Token'] = token;
    }
 
-    function destroyUserCredentials() {
+   function destroyUserCredentials() {
        authToken = undefined;
        username = '';
        isAuthenticated = false;
@@ -79,21 +79,21 @@ appServices.service('AuthService', ['userData','$q','$http','USER_ROLES','$rootS
 	   window.localStorage.setItem(LOCAL_TOKEN_KEY, token);
       useCredentials(token, stat);
 	  }
-	var register= function(regprams){
+	var register = function(regprams){
 		$http({url:'server/register_user.php?', method:'GET', params:regprams}).
               success(function(responseData, status, headers, config) {
                   data=responseData;
     			  loading=false;
-                  userCred(data, 'newp')
+                  userCred(data, 'newp');
               },
               function(err) {
 
               }
           );
-	}
-	var login=function(name, pw){
+	};
+	var login = function(name, pw){
 		return $q(function(resolve, reject) {
-          if (name != '' && pw != '') {
+          if (name !== '' && pw !== '') {
             $http.get('../server/login.php?email='+name+'&pass='+pw).
             success(function(response) {
               var logResult=response
@@ -118,7 +118,7 @@ appServices.service('AuthService', ['userData','$q','$http','USER_ROLES','$rootS
           } else  reject('Login Failed.');
 
         });
-	}
+	};
     return{
         login:login
     }
