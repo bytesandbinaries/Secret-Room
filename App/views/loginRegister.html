@@ -1,0 +1,24 @@
+<div class="sr-quest-view-wrap">
+
+        <div ng-switch-default class="sr-section" >
+
+            <div class="sr-card" ng-show="user.status == 'new'" >
+                <h3 class="sr-">Quick Registration</h3>
+                <p class="sr-" >We can't wait to meet you, but you'd need to create an account to get started</p>
+                <form ng-submit="save_response()" >
+                   <input type="text" ng-model="user.email" placeholder="Your Email address" required />
+                   <input type="password" ng-model="user.password" placeholder="Your Password" required />
+                   <input type="submit" value="Create Account" class="sr-go-button"/>
+                   <div ng-bind="status"></div>
+                </form>
+            </div>
+
+            <div  class="sr-card" ng-show="user.status =='registered'">
+                <h3 class="sr-">Registration Successful</h3>
+                <p>Glad to have you on board!!! <br/> Please, click the button below to continue.</p>
+                <button class="sr-go-button" ng-click="get_category()">Continue</button>
+            </div>
+
+        </div>
+
+</div><!--sr-quest-view-wrap-->

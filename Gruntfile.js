@@ -28,14 +28,14 @@ module.exports = function (grunt) {
     //----------------------------------------------------------------------------------------------------------------
   //---------------------------------------------------------------------- Define the configuration for all the tasks
   //-----------------------------------------------------------------------------------------------------------------
-    
-  grunt.initConfig({ 
-      
+
+  grunt.initConfig({
+
     pkg: grunt.file.readJSON('package.json'),
 
     // Project settings
     yeoman: appConfig,
-      
+
       // Sass Configuration
 
     sass: {
@@ -59,8 +59,8 @@ module.exports = function (grunt) {
             }]
         }
     },
-      
-      
+
+
       // Concatenate Configuration
 
     concat: {
@@ -97,7 +97,7 @@ module.exports = function (grunt) {
         }
     },
 
-      
+
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
@@ -107,26 +107,27 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
-        tasks: ['newer:jshint:all'],
+        // tasks: ['newer:jshint:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
         }
       },
+
       jsTest: {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
-        
+
       sass: {
-		files: "<%= yeoman.app %>/develop/scss/**/*.scss",
-		tasks: ["buildCss"]
-	  },
-        
-      	script: {
-		files: '<%= yeoman.app %>/develop/js/**/*.js',
-		tasks: ['buildJs']
-	  },
-        
+    		files: "<%= yeoman.app %>/develop/scss/**/*.scss",
+    		tasks: ["buildCss"]
+  	  },
+
+    	script: {
+    		files: ['<%= yeoman.app %>/develop/js/**/*.js'],
+    		tasks: ['buildJs']
+  	  },
+
       styles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
@@ -304,7 +305,7 @@ module.exports = function (grunt) {
         flow: {
           html: {
             steps: {
-              js: ['concat', 'uglifyjs'],
+              js: ['concat'],
               css: ['cssmin']
             },
             post: {}
@@ -315,7 +316,7 @@ module.exports = function (grunt) {
 
     // Performs rewrites based on filerev and the useminPrepare configuration
     usemin: {
-      html: ['<%= yeoman.dist %>/{,*/}*.html'],
+      html: ['<%= yeoman.dist %>/{,*/}*.html', '<%= yeoman.dist %>/views/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       js: ['<%= yeoman.dist %>/scripts/{,*/}*.js'],
       options: {
@@ -445,6 +446,12 @@ module.exports = function (grunt) {
           ]
         }, {
           expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>/views',
+          dest: '<%= yeoman.dist %>/views',
+          src: ['*.html']
+        },{
+          expand: true,
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
@@ -487,26 +494,26 @@ module.exports = function (grunt) {
     }
   });
 
-    
+
  //----------------------------------------------------------------------------------------------------------------
   //----------------------------------------------------------------------------------------- Dependent Plugins
   //-----------------------------------------------------------------------------------------------------------------
-    
+
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    
-    
-    
+
+
+
  //----------------------------------------------------------------------------------------------------------------
   //-----------------------------------------------------------------------------------------  Grunt Tasks
   //-----------------------------------------------------------------------------------------------------------------
-    
+
   grunt.registerTask('buildCss', ['sass']);
-  grunt.registerTask('buildJs',  ['concat', 'uglify']);
-    
+  grunt.registerTask('buildJs',  ['concat']);
+
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
@@ -548,20 +555,20 @@ module.exports = function (grunt) {
     'buildJs',
     'autoprefixer',
     'ngtemplates',
-    'concat',
+    // 'concat',
     'ngAnnotate',
     'copy:dist',
     'cdnify',
     'cssmin',
-    'uglify',
+    // 'uglify',
     'filerev',
     'usemin',
     'htmlmin'
   ]);
 
   grunt.registerTask('default', [
-    'newer:jshint',
-    'test',
+    // 'newer:jshint',
+    // 'test',
     'build'
   ]);
 };

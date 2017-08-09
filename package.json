@@ -1,5 +1,8 @@
 {
-  "name": "secretroom",
+  "name": "TheExclusives",
+  "description": "Dating App",
+  "repository": "null.com",
+  "license": "Private",
   "private": true,
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -36,8 +39,7 @@
   },
   "scripts": {
     "test": "grunt test"
-  }
-    ,
+  },
   "dependencies": {
     "normalize.css": "^4.1.1"
   }

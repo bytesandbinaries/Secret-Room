@@ -25,5 +25,5 @@
     {"loc_id":"33","name":"Rivers","value":"Abua\/Odual|Ahoada East|Ahoada West|Akuku Toru|Andoni|Asari-Toru|Bonny|Degema|Emohua|Eleme|Etche|Gokana|Ikwerre|Khana|Obia\/Akpor|Ogba\/Egbema\/Ndoni|Ogu\/Bolo|Okrika|Omumma|Opobo\/Nkoro|Oyigbo|Port-Harcourt|Tai"},
     {"loc_id":"34","name":"Sokoto","value":"Binji|Bodinga|Dange-shnsi|Gada|Goronyo|Gudu|Gawabawa|Illela|Isa|Kware|kebbe|Rabah|Sabon birni|Shagari|Silame|Sokoto North|Sokoto South|Tambuwal|Tangaza|Tureta|Wamako|Wurno|Yabo"}, {"loc_id":"35","name":"Taraba","value":"Ardo-kola|Bali|Donga|Gashaka|Cassol|Ibi|Jalingo|Karin-Lamido|Kurmi|Lau|Sardauna|Takum|Ussa|Wukari|Yorro|Zing"}, {"loc_id":"36","name":"Yobe","value":"Bade|Bursari|Damaturu|Fika|Fune|Geidam|Gujba|Gulani|Jakusko|Karasuwa|Karawa|Machina|Nangere|Nguru Potiskum|Tarmua|Yunusari|Yusufari"},
     {"loc_id":"37","name":"Zamfara","value":"Anka|Bakura|Birnin Magaji|Bukkuyum|Bungudu|Gummi|Gusau|Kaura|Namoda|Maradun|Maru|Shinkafi|Talata Mafara|Tsafe|Zurmi"},
-    {"loc_id":"38","name":"Not Important","value":"_"}
+    {"loc_id":"38","name":"Not Applicable","value":"null"}
 ]

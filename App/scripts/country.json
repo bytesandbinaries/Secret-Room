@@ -243,5 +243,5 @@
   {"name": "Yemen", "value": "YE"},
   {"name": "Zambia", "value": "ZM"},
   {"name": "Zimbabwe", "value": "ZW"},
-  {"name": "Not Available", "value": "NA"}
+  {"name": "Not Applicable", "value": "Null"}
 ]

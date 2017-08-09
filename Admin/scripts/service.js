@@ -13,7 +13,7 @@ appServices.service('appService', ['$q','$http','$location','$rootScope', functi
       if(data!=''){url=url+'&data='+JSON.stringify(data)}
       $http.get(url).
         success(function(response) {
-          console.log(response);
+          console.log(response)
           resolve(response);
         },
         function(err) {reject('Login Failed.');}
@@ -22,10 +22,10 @@ appServices.service('appService', ['$q','$http','$location','$rootScope', functi
 	}
   return{
     request_data :function(action, data) {
-      return request_data(action, data);
+      return request_data(action, data)
     },
   	register:function(regprams){
-  		 register(regprams);
+  		 register(regprams)
   	}
   }
-}]);
+}])

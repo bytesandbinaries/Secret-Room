@@ -900,7 +900,7 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
         margin-left: 0.8rem;
         float: none; }
 
-.button, .button-group > li > a, .button-group > li > label, .button-group > li > button, .sr-login-button, .sr-login-form-btn, .sr-enter-button, .sr-go-button, .sr-stop-button, .sr-category-button, .sr-exit-button, .sign-up-button {
+.button, .button-group > li > a, .button-group > li > label, .button-group > li > button, .sr-login-button, .sr-login-form-btn, .sr-enter-button, .sr-go-button-alt, .sr-go-button, .sr-stop-button, .sr-category-button, .sr-exit-button, .sign-up-button {
   display: inline-block;
   border: 0;
   text-align: center;
@@ -6148,7 +6148,7 @@ meta.foundation-mq {
 /*
   Styles for the action sheet container. Action sheets pin to the top or bottom of the screen.
 */
-.button, .button-group > li > a, .button-group > li > label, .button-group > li > button, .sr-login-button, .sr-login-form-btn, .sr-enter-button, .sr-go-button, .sr-stop-button, .sr-category-button, .sr-exit-button, .sign-up-button {
+.button, .button-group > li > a, .button-group > li > label, .button-group > li > button, .sr-login-button, .sr-login-form-btn, .sr-enter-button, .sr-go-button-alt, .sr-go-button, .sr-stop-button, .sr-category-button, .sr-exit-button, .sign-up-button {
   display: inline-block;
   border: 0;
   text-align: center;
@@ -6926,6 +6926,29 @@ a:hover {
 .button {
   text-transform: capitalize; }
 
+.loader {
+  background-image: url("../images/ellipsis.gif");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 30px;
+  height: 40px; }
+
+.message-logger {
+  padding-top: 30px;
+  color: #F5142E; }
+
+::-webkit-scrollbar {
+  width: 8px; }
+
+/* this targets the default scrollbar (compulsory) */
+::-webkit-scrollbar-track {
+  background: #f2f7f4; }
+
+::-webkit-scrollbar-thumb {
+  background: #00a99d;
+  border-radius: 10px; }
+
 body {
   background: black;
   color: #d8e8e0;
@@ -6961,11 +6984,10 @@ body {
 
 .sr-logo-area {
   align-self: flex-start;
-  width: 30%;
   float: left; }
 
 .sr-main-logo img {
-  width: 60px; }
+  height: 60px; }
 
 .sr-login-area {
   display: flex;
@@ -6992,7 +7014,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 1000px;
-  margin: 0;
   border-width: 2px;
   text-transform: uppercase;
   font-weight: 700; }
@@ -7020,6 +7041,7 @@ body {
     color: #fff; }
 
 .sr-ui-wrap {
+  flex-grow: 1;
   z-index: 30;
   width: 100%; }
 
@@ -7200,6 +7222,9 @@ span.sr-accent {
 .sr-section {
   padding: 80px 0; }
 
+.full-section {
+  flex-grow: 1; }
+
 .sr-section h3 {
   font-size: 1.2rem;
   text-align: center; }
@@ -7342,37 +7367,82 @@ span.sr-accent {
 .highlight {
   text-align: center; }
 
-.sr-go-button {
+.sr-go-button-alt {
   background: #43b5a8;
   color: #fff;
   font-size: 1rem;
   padding-left: 40px;
   padding-right: 40px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   text-transform: uppercase;
-  font-weight: 700; }
+  font-weight: 700;
+  border-radius: 4px; }
+  .sr-go-button-alt:hover, .sr-go-button-alt:focus {
+    background: #00a99d;
+    color: #fff; }
+  @media only screen and (min-width: 40em) {
+    .sr-go-button-alt {
+      font-size: 1.3rem;
+      margin: 0 auto;
+      font-size: 1rem; } }
+
+.sr-go-button {
+  background: #43b5a8;
+  color: #fff;
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 4px; }
   .sr-go-button:hover, .sr-go-button:focus {
     background: #00a99d;
     color: #fff; }
   @media only screen and (min-width: 40em) {
     .sr-go-button {
-      font-size: 1rem;
-      margin: 0 auto; } }
+      font-size: 1.3rem;
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      margin: 0 auto;
+      font-size: 1rem; } }
 
 .sr-stop-button {
   background: #F5142E;
   color: #fff;
   font-size: 1rem;
+  display: block;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
   padding-left: 40px;
   padding-right: 40px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   text-transform: uppercase;
-  font-weight: 700; }
+  font-weight: 700;
+  border-radius: 4px;
+  font-size: 0.8rem; }
   .sr-stop-button:hover, .sr-stop-button:focus {
     background: #F5142E;
     color: #fff; }
-  @media only screen and (min-width: 75em) {
+  @media only screen and (min-width: 40em) {
     .sr-stop-button {
-      font-size: 1rem;
-      margin: 0 auto; } }
+      font-size: 1.3rem;
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      margin: 0 auto;
+      font-size: 1rem; } }
 
 .sr-quest-view-wrap {
   background: #d8e8e0;
@@ -7537,8 +7607,9 @@ progress::-moz-progress-bar {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   margin: 0;
+  height: 120px;
   padding: 35px 30px 0 30px;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   line-height: 1.2; }
 
 .sr-sub-quest {
@@ -7580,6 +7651,11 @@ progress::-moz-progress-bar {
   justify-content: center;
   flex-wrap: wrap;
   transition: height 0.8s ease; }
+
+.option-wrap {
+  height: 240px;
+  background: #fff;
+  overflow-y: scroll; }
 
 .sr-form-field {
   display: flex;

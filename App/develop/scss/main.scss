@@ -89,7 +89,7 @@ a:hover{
     color: $color-primary-0;
 }
 .float-content{
-   height: auto; 
+   height: auto;
 }
 
 .float-content:after{
@@ -99,6 +99,44 @@ a:hover{
 }
 .button{
     text-transform: capitalize;
+}
+
+
+.loader{
+  background-image: url('../images/ellipsis.gif');
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 30px;
+  height: 40px;
+}
+
+.message-logger{
+  padding-top: 30px;
+  color: $color-secondary-0;
+}
+
+.action-sheet-container{
+  // position: relative;
+  // z-index: $z4;
+  // margin-bottom: 15px;
+  // height: 100px;
+}
+
+::-webkit-scrollbar {
+      width: 8px;
+} /* this targets the default scrollbar (compulsory) */
+
+::-webkit-scrollbar-track {
+    // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    // border-radius: 10px;
+    background: $color-neutral-tint-1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-primary-0;
+  border-radius: 10px;
+    // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 
 //--------App Scafold--------//
@@ -122,7 +160,7 @@ body{
     min-height: 760px;
     @include breakpoint(large){
     }
-}  
+}
 .sr-header-wrap{
     display: flex;
     justify-content: center;
@@ -142,11 +180,11 @@ body{
 }
 .sr-logo-area{
     align-self: flex-start;
-        width:30%;
+        // width:30%;
         float:left;
 }
 .sr-main-logo img{
-    width: 60px;
+    height: 60px;
 }
 .sr-login-area{
     display: flex;
@@ -157,7 +195,7 @@ body{
     width:30%;
     color: $color-neutral;
     @include breakpoint(large){
-       
+
         }
 }
 .sr-login-call{
@@ -184,7 +222,7 @@ body{
     padding-left: 15px;
     padding-right: 15px;
     border-radius: $global-rounded;
-    margin: 0;
+    // margin: 0;
     border-width: 2px;
     text-transform: uppercase;
     font-weight: $font-weight-bold;
@@ -213,7 +251,8 @@ body{
 
 }
 .sr-ui-wrap{
-//    flex-basis: auto;
+    flex-grow: 1;
+    // align-items: stretch;
     z-index: $z3;
     width: 100%;
 //    min-height: 400px;
@@ -234,7 +273,7 @@ body{
     flex-flow: column wrap;
     justify-content: center;
     padding-bottom: 15px;
-    padding-top: 15px;    
+    padding-top: 15px;
         @include breakpoint(large){
         flex-flow: row wrap;
         justify-content: space-between;
@@ -277,7 +316,7 @@ body{
         display: inline-block;
         text-align:center;
         margin-bottom: 5px;
-    } 
+    }
 }
 
 //-----------------Home view-----------------//
@@ -337,7 +376,7 @@ span.sr-accent{
     background-image: url(../images/icon-door.png);
     background-repeat: no-repeat;
     background-position: 15px center;
-    
+
 }
 
 //-------------------------------Intro View-------------------------//
@@ -395,11 +434,16 @@ span.sr-accent{
     max-width: 800px;
     margin: 0 auto 30px auto;
     font-size: $font-up2;
-    
+
 }
 .sr-section{
     padding: 80px 0;
 }
+
+.full-section{
+    flex-grow: 1;
+}
+
 .sr-section h3{
     font-size: $font-up3;
     text-align: center
@@ -519,7 +563,7 @@ span.sr-accent{
 .highlight{
     text-align: center;
 }
-.sr-go-button{
+.sr-go-button-alt{
     @extend %button;
     @include button-style(
         $background:$color-primary-1,
@@ -533,15 +577,49 @@ span.sr-accent{
         );
     padding-left: 40px;
     padding-right: 40px;
+    padding-top: 18px;
+    padding-bottom: 18px;
     text-transform: uppercase;
     font-weight:$font-weight-bold;
+    border-radius: 4px;
     @include breakpoint(medium){
         @include button-size(
-            $size:medium,
+            $size: large,
             $expand:false
         );
         margin:0 auto;
+        font-size: $font-up1;
     }
+
+}
+.sr-go-button{
+    @extend %button;
+    @include button-style(
+        $background:$color-primary-1,
+        $background-hover:$color-primary-0 ,
+        $color:#fff,
+        $style:solid
+        );
+    @include button-size(
+        $size:medium,
+        $expand:true
+        );
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    text-transform: uppercase;
+    font-weight:$font-weight-bold;
+    border-radius: 4px;
+    @include breakpoint(medium){
+        @include button-size(
+            $size: large,
+            $expand:true
+        );
+        margin:0 auto;
+        font-size: $font-up1;
+    }
+
 }
 .sr-stop-button{
     @extend %button;
@@ -553,19 +631,24 @@ span.sr-accent{
         );
     @include button-size(
         $size:medium,
-        $expand:false
+        $expand:true
         );
     padding-left: 40px;
     padding-right: 40px;
+    padding-top: 18px;
+    padding-bottom: 18px;
     text-transform: uppercase;
     font-weight:$font-weight-bold;
-    @include breakpoint(large){
+    border-radius: 4px;
+    @include breakpoint(medium){
         @include button-size(
-            $size:medium,
-            $expand:false
+            $size:large,
+            $expand:true
         );
         margin:0 auto;
+        font-size: $font-up1;
     }
+    font-size: $font-default;
 }
 
 //-----------Question View--------------------//
@@ -670,7 +753,7 @@ span.sr-accent{
 //    height:160px;
     width:100%;
     padding: 15px;
-    
+
 }
 .sr-cat-prog-icon{
 //    position: relative;
@@ -758,8 +841,9 @@ progress::-moz-progress-bar {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     margin: 0;
+    height:120px;
     padding:35px 30px 0 30px ;
-    font-size: $font-up4;
+    font-size: 1.8rem;
     line-height: 1.2;
 }
 .sr-sub-quest{
@@ -771,7 +855,7 @@ progress::-moz-progress-bar {
 //    border: 2px solid $color-white ;
     width: 100%;
     z-index:$z5;
-    
+
 }
 .sr-sub-quest span{
 //    position: relative;
@@ -815,8 +899,9 @@ progress::-moz-progress-bar {
     transition: height 0.8s ease;
 }
 .option-wrap{
-//    max-height: 520px;
-//    overflow:hidden;
+   height: 240px;
+   background:#fff;
+   overflow-y:scroll;
 }
 .sr-form-field{
     display: flex;
@@ -848,7 +933,7 @@ progress::-moz-progress-bar {
 //    border-radius: $global-radius;
 //    height: 100%;
 //    width: 100%;
-    
+
 }
 .sr-opt-block label{
     color: $color-primary-1;
@@ -870,7 +955,7 @@ progress::-moz-progress-bar {
 .sr-opt-block label:first-child{
     vertical-align: middle;
 }
-.sr-opt-block input[type=checkbox]:checked ~ label, 
+.sr-opt-block input[type=checkbox]:checked ~ label,
 .sr-opt-block input[type=radio]:checked ~ label{
     color:#fff;
     background: $color-primary-1;
@@ -888,7 +973,7 @@ progress::-moz-progress-bar {
         max-width:60%;
     }
 }
-input[type="checkbox"], 
+input[type="checkbox"],
 input[type="radio"]{
     display: none;
 }
@@ -913,8 +998,8 @@ input[type="radio"]{
     padding-left: 8px;
     padding-right:8px;
     width: 14.285%;
-    
-    @include breakpoint(medium){}      
+
+    @include breakpoint(medium){}
 }
 //Remove padding for the first and last Range list items
 .sr-range li:first-of-type{
@@ -923,7 +1008,7 @@ input[type="radio"]{
 .sr-range li:last-of-type{
     padding-right: 0;
 }
-// Set the core styles of the range buttons 
+// Set the core styles of the range buttons
 .sr-range li figure {
     width: 35px;
     height: 35px;
@@ -931,62 +1016,62 @@ input[type="radio"]{
     margin: auto;
     cursor: pointer;
     border-radius: $global-rounded;
-        
+
     @include breakpoint(medium){
         width: 80px;
         height: 80px;
         border: 8px solid $color-neutral;
         margin: auto;
         cursor: pointer;
-        border-radius: $global-rounded;    
-    }    
+        border-radius: $global-rounded;
+    }
 }
 //set the styles for hover and active states of Range buttons
-.sr-range li figure:hover, 
-.sr-range li figure:checked, 
+.sr-range li figure:hover,
+.sr-range li figure:checked,
 .sr-range-selected {
-    background: $color-primary-1 !important; 
+    background: $color-primary-1 !important;
 }
-// Set the colors of the range buttons 
+// Set the colors of the range buttons
 .sr-range li:last-of-type figure {
-  background: $color-dark-0 ; 
+  background: $color-dark-0 ;
 }
 
 .sr-range li:nth-of-type(6) figure {
   background: $color-dark-1 ; }
 
 .sr-range li:nth-of-type(5) figure {
-  background: $color-dark-2 ; 
+  background: $color-dark-2 ;
 }
 
 .sr-range li:nth-of-type(4) figure {
-  background: $color-dark-3; 
+  background: $color-dark-3;
 }
 
 .sr-range li:nth-of-type(3) figure {
-  background: $color-dark-4 ; 
+  background: $color-dark-4 ;
 }
 
 .sr-range li:nth-of-type(2) figure {
-  background: $color-dark-5 ; 
+  background: $color-dark-5 ;
 }
 
 .sr-range li:first-of-type figure {
-  background: $color-dark-6 ; 
+  background: $color-dark-6 ;
 }
 
 .sr-range li:nth-of-type(2) figcaption,
 .sr-range li:nth-of-type(3) figcaption,
 .sr-range li:nth-of-type(5) figcaption,
 .sr-range li:nth-of-type(6) figcaption {
-  visibility: hidden; 
+  visibility: hidden;
 }
 
 .sr-range figcaption {
     padding-top: 5px;
     font-weight: $font-weight-bold;
     font-size: $font-down1;
-    line-height: 0.7rem; 
+    line-height: 0.7rem;
 }
 .sr-single-select-block{}
 .sr-radio-select-button{}
@@ -1090,25 +1175,25 @@ input[type="radio"]{
     background-position: 80% center;
     background-size: 30px;
 }
-.sr-back:hover, 
-.sr-save:hover, 
+.sr-back:hover,
+.sr-save:hover,
 .sr-forward:hover {
     color:$color-neutral;
 }
-input[type="text"], 
+input[type="text"],
 input[type="password"],
-input[type="date"], 
+input[type="date"],
 input[type="datetime"],
-input[type="datetime-local"], 
+input[type="datetime-local"],
 input[type="month"],
-input[type="week"], 
+input[type="week"],
 input[type="email"],
-input[type="number"], 
+input[type="number"],
 input[type="search"],
-input[type="tel"], 
-input[type="time"], 
+input[type="tel"],
+input[type="time"],
 input[type="url"],
-input[type="color"], 
+input[type="color"],
 textarea{
     border-radius: $global-radius;
     border: 1px solid $color-primary-1;
@@ -1129,7 +1214,7 @@ select {
     line-height: 1.2;
     width: 100%;
 }
-input[type="radio"] + label, 
+input[type="radio"] + label,
 input[type="checkbox"] + label {
     display: inline-flex;
     justify-content: center;
@@ -1145,7 +1230,7 @@ input[type="checkbox"] + label {
 }
 
 .sign-up-block{
-    
+
     margin-left: auto;
     margin-right: auto;
     padding-left:15px;
@@ -1156,7 +1241,7 @@ input[type="checkbox"] + label {
     }
 .sign-up-form{
     position: relative;
-    
+
   @include breakpoint(medium){
 //        height: 50px;
     }
@@ -1168,7 +1253,7 @@ input[type="checkbox"] + label {
     display: inline-block;
     height: auto;
     margin-bottom: 15px;
-    
+
   @include breakpoint(medium){
     width:350px;
     }
@@ -1195,9 +1280,9 @@ input[type="checkbox"] + label {
     bottom: 10px;
     color:#617379;
     pointer-events:none;
-    transition: all 0.3s ease-in-out;    
+    transition: all 0.3s ease-in-out;
 }
-.sign-up-form input[type='email']:focus ~ label, 
+.sign-up-form input[type='email']:focus ~ label,
 .sign-up-form input[type='email']:valid ~ label{
     position: absolute;
     bottom: 83px;
@@ -1226,7 +1311,7 @@ input[type="checkbox"] + label {
     font-weight:$font-weight-bold;
     min-height: 50px;
     border-radius: 4px;
-    
+
   @include breakpoint(medium){
     @include button-size(
         $size:medium,
@@ -1234,7 +1319,7 @@ input[type="checkbox"] + label {
     );
     margin:0 auto;
     position: relative;
-    left:-4px;        
+    left:-4px;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
     border-top-left-radius: 0;

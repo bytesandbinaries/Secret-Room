@@ -75,3 +75,494 @@
 [03-Mar-2016 09:22:05 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 38
 [03-Mar-2016 09:23:09 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 38
 [03-Mar-2016 09:35:19 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 38
+[27-Jun-2016 11:46:39 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/fun_connect2.php on line 7
+[27-Jun-2016 11:46:39 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/wwwbytesandbinar/public_html/secretroom/server/get_c.php on line 11
+[27-Jun-2016 11:46:39 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/wwwbytesandbinar/public_html/secretroom/server/get_c.php on line 12
+[27-Jun-2016 11:46:52 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/fun_connect2.php on line 7
+[27-Jun-2016 11:46:52 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/wwwbytesandbinar/public_html/secretroom/server/get_c.php on line 11
+[27-Jun-2016 11:46:52 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/wwwbytesandbinar/public_html/secretroom/server/get_c.php on line 12
+[27-Jun-2016 11:47:50 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/fun_connect2.php on line 7
+[27-Jun-2016 11:47:50 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/wwwbytesandbinar/public_html/secretroom/server/get_c.php on line 11
+[27-Jun-2016 11:47:50 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/wwwbytesandbinar/public_html/secretroom/server/get_c.php on line 12
+[27-Jun-2016 11:48:09 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/fun_connect2.php on line 7
+[27-Jun-2016 11:48:09 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/wwwbytesandbinar/public_html/secretroom/server/get_c.php on line 11
+[27-Jun-2016 11:48:09 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/wwwbytesandbinar/public_html/secretroom/server/get_c.php on line 12
+[27-Jun-2016 11:54:17 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'wwwbytes_secretr'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/fun_connect2.php on line 7
+[27-Jun-2016 11:54:17 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/wwwbytesandbinar/public_html/secretroom/server/get_c.php on line 11
+[27-Jun-2016 11:54:17 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/wwwbytesandbinar/public_html/secretroom/server/get_c.php on line 12
+[29-Jun-2016 05:49:46 America/Chicago] PHP Warning:  mysql_real_escape_string(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 05:49:46 America/Chicago] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 05:49:46 America/Chicago] PHP Warning:  mysql_query(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 05:49:46 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 06:05:20 America/Chicago] PHP Warning:  mysql_real_escape_string(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 06:05:20 America/Chicago] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 06:05:20 America/Chicago] PHP Warning:  mysql_query(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 06:05:20 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 06:05:55 America/Chicago] PHP Warning:  mysql_real_escape_string(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 06:05:55 America/Chicago] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 06:05:55 America/Chicago] PHP Warning:  mysql_query(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 06:05:55 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 06:12:44 America/Chicago] PHP Warning:  mysql_real_escape_string(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 06:12:44 America/Chicago] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 06:12:44 America/Chicago] PHP Warning:  mysql_query(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 06:12:44 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 06:15:41 America/Chicago] PHP Warning:  mysql_real_escape_string(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 06:15:41 America/Chicago] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 06:15:41 America/Chicago] PHP Warning:  mysql_query(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 06:15:41 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 06:18:05 America/Chicago] PHP Warning:  mysql_real_escape_string(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 06:18:05 America/Chicago] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 06:18:05 America/Chicago] PHP Warning:  mysql_query(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 06:18:05 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 09:29:01 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2005): Unknown MySQL server host 'localhosts' (0) in /home/wwwbytesandbinar/public_html/secretroom/server/fun_connect2.php on line 7
+[29-Jun-2016 09:29:01 America/Chicago] PHP Warning:  mysql_real_escape_string(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 09:29:01 America/Chicago] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 09:29:01 America/Chicago] PHP Warning:  mysql_query(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 09:29:01 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 09:29:09 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2005): Unknown MySQL server host 'localhosts' (0) in /home/wwwbytesandbinar/public_html/secretroom/server/fun_connect2.php on line 7
+[29-Jun-2016 09:29:09 America/Chicago] PHP Warning:  mysql_real_escape_string(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 09:29:09 America/Chicago] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 09:29:09 America/Chicago] PHP Warning:  mysql_query(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 09:29:09 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 09:35:58 America/Chicago] PHP Warning:  mysql_real_escape_string(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 09:35:58 America/Chicago] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 09:35:58 America/Chicago] PHP Warning:  mysql_query(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 09:35:58 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 09:37:32 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'wwwbytes_secretr'@'localhost' (using password: YES) in /home/wwwbytesandbinar/public_html/secretroom/server/fun_connect2.php on line 7
+[29-Jun-2016 09:37:32 America/Chicago] PHP Warning:  mysql_real_escape_string(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 09:37:32 America/Chicago] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 09:37:32 America/Chicago] PHP Warning:  mysql_query(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 09:37:32 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 09:38:26 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'wwwbytes_secretr'@'localhost' (using password: YES) in /home/wwwbytesandbinar/public_html/secretroom/server/fun_connect2.php on line 7
+[29-Jun-2016 09:38:26 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/wwwbytesandbinar/public_html/secretroom/server/get_c.php on line 11
+[29-Jun-2016 09:38:26 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/wwwbytesandbinar/public_html/secretroom/server/get_c.php on line 12
+[29-Jun-2016 09:39:33 America/Chicago] PHP Warning:  mysql_real_escape_string(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 09:39:33 America/Chicago] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 09:39:33 America/Chicago] PHP Warning:  mysql_query(): Access denied for user 'wwwbytesandbinar'@'localhost' (using password: NO) in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 09:39:33 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 10
+[29-Jun-2016 09:42:13 America/Chicago] PHP Warning:  mysql_real_escape_string() expects parameter 1 to be string, object given in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 6
+[29-Jun-2016 09:42:13 America/Chicago] PHP Warning:  mysql_real_escape_string() expects parameter 1 to be string, object given in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 9
+[29-Jun-2016 09:42:13 America/Chicago] PHP Warning:  mysql_num_rows() expects exactly 1 parameter, 2 given in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 11
+[29-Jun-2016 09:42:46 America/Chicago] PHP Warning:  mysql_num_rows() expects exactly 1 parameter, 2 given in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 11
+[29-Jun-2016 09:43:12 America/Chicago] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, object given in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 11
+[30-Jun-2016 09:31:10 America/Chicago] PHP Notice:  Undefined index: callback in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 55
+[30-Jun-2016 09:34:28 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, object given in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 13
+[30-Jun-2016 09:34:28 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, object given in /home/wwwbytesandbinar/public_html/secretroom/server/login.php on line 13
+[30-Jun-2016 11:07:46 America/Chicago] PHP Parse error:  syntax error, unexpected '$_GET' (T_VARIABLE) in /home/wwwbytesandbinar/public_html/secretroom/server/get_status.php on line 10
+[30-Jun-2016 11:17:48 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/wwwbytesandbinar/public_html/secretroom/server/get_status.php on line 12
+[30-Jun-2016 11:24:58 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/wwwbytesandbinar/public_html/secretroom/server/get_status.php on line 12
+[30-Jun-2016 18:31:27 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/wwwbytesandbinar/public_html/secretroom/server/get_status.php on line 12
+[30-Jun-2016 18:34:40 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/wwwbytesandbinar/public_html/secretroom/server/get_status.php on line 12
+[30-Jun-2016 19:15:15 America/Chicago] PHP Notice:  Undefined index: callback in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 55
+[30-Jun-2016 19:27:03 America/Chicago] PHP Notice:  Undefined index: callback in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 55
+[30-Jun-2016 23:09:31 America/Chicago] PHP Notice:  Undefined index: callback in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 55
+[30-Jun-2016 23:09:59 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/wwwbytesandbinar/public_html/secretroom/server/get_status.php on line 12
+[01-Jul-2016 06:11:23 America/Chicago] PHP Notice:  Undefined index: callback in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 55
+[01-Jul-2016 06:12:40 America/Chicago] PHP Notice:  Undefined index: callback in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 55
+[01-Jul-2016 06:23:33 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/wwwbytesandbinar/public_html/secretroom/server/get_status.php on line 12
+[01-Jul-2016 07:24:34 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/wwwbytesandbinar/public_html/secretroom/server/get_status.php on line 12
+[01-Jul-2016 07:33:47 America/Chicago] PHP Notice:  Undefined index: callback in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 55
+[01-Jul-2016 07:56:04 America/Chicago] PHP Notice:  Undefined index: callback in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 55
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:57:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Jul-2016 11:58:17 America/Chicago] PHP Notice:  Undefined property: stdClass::$userID in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 15
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 32
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 33
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 32
+[06-Jul-2016 16:40:21 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 33
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 32
+[06-Jul-2016 16:40:22 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 33
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 32
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 33
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 32
+[06-Jul-2016 16:40:23 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 33
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[19-Jul-2016 04:41:41 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[27-Jul-2016 08:50:16 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[27-Jul-2016 08:50:16 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[27-Jul-2016 08:50:16 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[27-Jul-2016 08:50:16 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[27-Jul-2016 08:50:16 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[27-Jul-2016 08:50:16 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[27-Jul-2016 08:50:16 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[27-Jul-2016 08:50:16 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[27-Jul-2016 08:50:16 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[27-Jul-2016 08:50:16 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[27-Jul-2016 08:50:16 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[27-Jul-2016 08:50:16 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[01-Aug-2016 07:04:37 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 32
+[01-Aug-2016 07:04:37 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 33
+[05-Aug-2016 11:43:57 America/Chicago] PHP Notice:  Trying to get property of non-object in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 15
+[05-Aug-2016 11:43:57 America/Chicago] PHP Notice:  Trying to get property of non-object in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 15
+[05-Aug-2016 11:43:57 America/Chicago] PHP Notice:  Trying to get property of non-object in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 17
+[05-Aug-2016 11:43:57 America/Chicago] PHP Notice:  Trying to get property of non-object in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 17
+[05-Aug-2016 11:43:57 America/Chicago] PHP Notice:  Trying to get property of non-object in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 18
+[05-Aug-2016 11:43:57 America/Chicago] PHP Notice:  Trying to get property of non-object in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 18
+[05-Aug-2016 11:43:57 America/Chicago] PHP Notice:  Trying to get property of non-object in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 18
+[05-Aug-2016 11:43:57 America/Chicago] PHP Notice:  Trying to get property of non-object in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 18
+[05-Aug-2016 11:43:57 America/Chicago] PHP Notice:  Trying to get property of non-object in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 23
+[05-Aug-2016 11:43:57 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 23
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 36
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 32
+[07-Aug-2016 10:23:01 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 33
+[08-Aug-2016 11:11:08 America/Chicago] PHP Notice:  Array to string conversion in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 46
+[08-Aug-2016 11:11:08 America/Chicago] PHP Notice:  Array to string conversion in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 46
+[08-Aug-2016 11:11:08 America/Chicago] PHP Notice:  Array to string conversion in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 46
+[08-Aug-2016 11:11:08 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 32
+[08-Aug-2016 11:11:08 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 33
+[08-Aug-2016 11:13:34 America/Chicago] PHP Notice:  Array to string conversion in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 47
+[08-Aug-2016 11:13:34 America/Chicago] PHP Notice:  Array to string conversion in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 47
+[08-Aug-2016 11:13:34 America/Chicago] PHP Notice:  Array to string conversion in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 47
+[08-Aug-2016 11:13:34 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 32
+[08-Aug-2016 11:13:34 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 33
+[08-Aug-2016 11:13:34 America/Chicago] PHP Notice:  Undefined offset: 2 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 32
+[08-Aug-2016 11:13:34 America/Chicago] PHP Notice:  Undefined offset: 2 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 33
+[08-Aug-2016 11:17:08 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 32
+[08-Aug-2016 11:17:08 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 33
+[08-Aug-2016 11:17:08 America/Chicago] PHP Notice:  Undefined offset: 2 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 32
+[08-Aug-2016 11:17:08 America/Chicago] PHP Notice:  Undefined offset: 2 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 33
+[08-Aug-2016 11:17:08 America/Chicago] PHP Notice:  Undefined offset: 3 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 32
+[08-Aug-2016 11:17:08 America/Chicago] PHP Notice:  Undefined offset: 3 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 33
+[09-Aug-2016 12:05:17 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/wwwbytesandbinar/public_html/secretroom/server/add_response.php on line 30
+[10-Aug-2016 06:40:59 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 32
+[10-Aug-2016 06:40:59 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 33
+[11-Aug-2016 03:22:44 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 32
+[11-Aug-2016 03:22:44 America/Chicago] PHP Notice:  Undefined offset: 1 in /home/wwwbytesandbinar/public_html/secretroom/server/matcher.php on line 33
+[17-Oct-2016 09:32:28 America/Chicago] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'secretro_omAdmin'@'localhost' to database 'secretro_omData' in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[17-Oct-2016 09:32:28 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[17-Oct-2016 09:32:28 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[17-Oct-2016 09:32:28 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[17-Oct-2016 09:32:28 America/Chicago] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[17-Oct-2016 09:32:34 America/Chicago] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'secretro_omAdmin'@'localhost' to database 'secretro_omData' in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[17-Oct-2016 09:32:34 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/get_c.php on line 11
+[17-Oct-2016 09:32:34 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/secretroom/public_html/server/get_c.php on line 12
+[17-Oct-2016 09:36:34 America/Chicago] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'secretro_omAdmin'@'localhost' to database 'secretro_omData' in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[17-Oct-2016 09:36:34 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[17-Oct-2016 09:36:34 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[17-Oct-2016 09:36:34 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[17-Oct-2016 09:36:34 America/Chicago] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[17-Oct-2016 09:36:46 America/Chicago] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'secretro_omAdmin'@'localhost' to database 'secretro_omData' in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[17-Oct-2016 09:36:46 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/get_c.php on line 11
+[17-Oct-2016 09:36:46 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/secretroom/public_html/server/get_c.php on line 12
+[18-Oct-2016 10:32:15 America/Chicago] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'secretro_omAdmin'@'localhost' to database 'secretro_omData' in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 10:32:15 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[18-Oct-2016 10:32:15 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[18-Oct-2016 10:32:15 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[18-Oct-2016 10:32:15 America/Chicago] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[18-Oct-2016 10:32:19 America/Chicago] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'secretro_omAdmin'@'localhost' to database 'secretro_omData' in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 10:32:19 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/get_c.php on line 11
+[18-Oct-2016 10:32:19 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/secretroom/public_html/server/get_c.php on line 12
+[18-Oct-2016 10:39:30 America/Chicago] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'secretro_omAdmin'@'localhost' to database 'secretro_omData' in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 10:39:30 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[18-Oct-2016 10:39:30 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[18-Oct-2016 10:39:30 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[18-Oct-2016 10:39:30 America/Chicago] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[18-Oct-2016 10:39:37 America/Chicago] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'secretro_omAdmin'@'localhost' to database 'secretro_omData' in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 10:39:37 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/get_c.php on line 11
+[18-Oct-2016 10:39:37 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/secretroom/public_html/server/get_c.php on line 12
+[18-Oct-2016 11:16:37 America/Chicago] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'secretro_omAdmin'@'localhost' to database 'secretro_omData' in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 11:16:37 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/get_c.php on line 11
+[18-Oct-2016 11:16:37 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/secretroom/public_html/server/get_c.php on line 12
+[18-Oct-2016 11:21:13 America/Chicago] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'secretro_omAdmin'@'localhost' to database 'secretro_omData' in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 11:21:13 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[18-Oct-2016 11:21:13 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[18-Oct-2016 11:21:13 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[18-Oct-2016 11:21:13 America/Chicago] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[18-Oct-2016 11:21:15 America/Chicago] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'secretro_omAdmin'@'localhost' to database 'secretro_omData' in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 11:21:15 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/get_c.php on line 11
+[18-Oct-2016 11:21:15 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/secretroom/public_html/server/get_c.php on line 12
+[18-Oct-2016 11:23:53 America/Chicago] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'secretro_omAdmin'@'localhost' to database 'secretro_omData' in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 11:23:53 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[18-Oct-2016 11:23:53 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[18-Oct-2016 11:23:53 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[18-Oct-2016 11:23:53 America/Chicago] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[18-Oct-2016 11:23:55 America/Chicago] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'secretro_omAdmin'@'localhost' to database 'secretro_omData' in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 11:23:55 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/get_c.php on line 11
+[18-Oct-2016 11:23:55 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/secretroom/public_html/server/get_c.php on line 12
+[18-Oct-2016 11:26:42 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'secretro_omAdmin'@'localhost' (using password: YES) in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 11:26:42 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[18-Oct-2016 11:26:42 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[18-Oct-2016 11:26:42 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[18-Oct-2016 11:26:42 America/Chicago] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[18-Oct-2016 11:26:44 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'secretro_omAdmin'@'localhost' (using password: YES) in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 11:26:44 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/get_c.php on line 11
+[18-Oct-2016 11:26:44 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/secretroom/public_html/server/get_c.php on line 12
+[18-Oct-2016 23:35:32 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'secretro_oomAdmin'@'localhost' (using password: YES) in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 23:35:32 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[18-Oct-2016 23:35:32 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[18-Oct-2016 23:35:32 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[18-Oct-2016 23:35:32 America/Chicago] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[18-Oct-2016 23:35:34 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'secretro_oomAdmin'@'localhost' (using password: YES) in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 23:35:34 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/get_c.php on line 11
+[18-Oct-2016 23:35:34 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/secretroom/public_html/server/get_c.php on line 12
+[18-Oct-2016 23:37:22 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'secretro_oomAdmin'@'localhost' (using password: YES) in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 23:37:22 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[18-Oct-2016 23:37:22 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[18-Oct-2016 23:37:22 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[18-Oct-2016 23:37:22 America/Chicago] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[18-Oct-2016 23:47:36 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'secretro_omAdmin'@'localhost' (using password: YES) in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 23:47:36 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/login.php on line 6
+[18-Oct-2016 23:47:36 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/login.php on line 9
+[18-Oct-2016 23:47:36 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/login.php on line 10
+[18-Oct-2016 23:47:36 America/Chicago] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/login.php on line 10
+[18-Oct-2016 23:47:42 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'secretro_omAdmin'@'localhost' (using password: YES) in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 23:47:42 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[18-Oct-2016 23:47:42 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 17
+[18-Oct-2016 23:47:42 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[18-Oct-2016 23:47:42 America/Chicago] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/add_response.php on line 18
+[18-Oct-2016 23:47:45 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'secretro_omAdmin'@'localhost' (using password: YES) in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 23:47:45 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/get_c.php on line 11
+[18-Oct-2016 23:47:45 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/secretroom/public_html/server/get_c.php on line 12
+[18-Oct-2016 23:47:55 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'secretro_omAdmin'@'localhost' (using password: YES) in /home/secretroom/public_html/server/fun_connect2.php on line 7
+[18-Oct-2016 23:47:55 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/secretroom/public_html/server/get_c.php on line 11
+[18-Oct-2016 23:47:55 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/secretroom/public_html/server/get_c.php on line 12
+[18-Oct-2016 23:52:43 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/secretroom/public_html/server/get_c.php on line 12
+[31-Oct-2016 06:18:33 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/secretroom/public_html/server/add_response.php on line 41
+[23-Dec-2016 02:21:11 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/secretroom/public_html/server/add_response.php on line 41
+[23-Dec-2016 02:21:11 America/Chicago] PHP Notice:  Undefined property: stdClass::$value in /home/secretroom/public_html/server/add_response.php on line 41

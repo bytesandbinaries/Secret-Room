@@ -33,11 +33,10 @@
         <header class="sr-top-bar">
             <div class="sr-logo-area"><a href="/#/"  class="sr-main-logo"><img src="images/secret_room-logo.png"></a></div>
             <div class="sr-login-area" ng-controller="MainCtrl">
-                <div class="sr-login-content">
-                    <span ng-if="user.status=='new'" class="sr-login-call">Already a member?</span>
+                <div class="sr-login-content" ng-hide = "fetching">
+                    <span ng-if = "user.status == 'new'" class="sr-login-call">Already a member?</span>
                     <zf-action-sheet id="login-action-sheet">
-                        <zf-as-button ng-if="user.status=='new'"><span class="sr-login-button">Login</span></zf-as-button>
-                        <zf-as-content position="bottom">
+                        <zf-as-content position="bottom" class="login-action-sheet">
                            <h5>Great to have you back</h5>
                             <form ng-submit="login()">
                                 <label>
@@ -49,11 +48,13 @@
                                     <input type="password" placeholder="Password" ng-model="user.password" required="">
                                 </label>
                                 <button type="submit" class="sr-go-button">Sign In</button>
-                                <div ng-if="errorL" ng-bind="errorM">Wrong Email or Password, please try again.</div>
+                                <div ng-show="loading" class = "loader"></div>
+                                <div ng-if="errorL" ng-bind="errorM" class = "message-logger"></div>
                             </form>
                         </zf-as-content>
+                        <zf-as-button ng-if="user.status=='new' || !user.status"><span class="sr-login-button">Login</span></zf-as-button>
                     </zf-action-sheet>
-                    <a ng-if="user.status!=='new'" class="sr-login-button" ng-click="saving_response()">Log Out</a>
+                    <a ng-if="user.status!=='new'" class="sr-login-button" ng-click="logout()">Log Out</a>
                 </div>
 <!--
                 <div class="sr-login-content">
@@ -97,7 +98,7 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
@@ -114,12 +115,13 @@
     <script src="bower_components/hammerjs/hammer.js"></script>
     <script src="bower_components/foundation-apps/dist/js/foundation-apps.js"></script>
     <script src="bower_components/foundation-apps/dist/js/foundation-apps-templates.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-
-        <script src="scripts/app.js"></script>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/services.js"></script>
     <script src="scripts/controllers/account.js"></script>
@@ -127,9 +129,8 @@
     <script src="scripts/controllers/configuration.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/moment.js"></script>
-
-
-        <!-- endbuild -->
+    <script src="scripts/fireApp.js"></script>
+    <!-- endbuild -->
 
   </body>
 </html>

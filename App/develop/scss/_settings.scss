@@ -43,6 +43,8 @@ $color-dark-6: #88998f;
 
 $color-neutral: #d8e8e0;
 
+$color-neutral-tint-1: lighten($color-neutral, 8);
+
 $color-primary-0: #00a99d;     // Main Primary color */
 $color-primary-1: #43b5a8;
 
@@ -80,10 +82,10 @@ $z5: 50;
 // Change any value in this map from "true" to "false" to disable that component's CSS class output. You'll still be able to use the component's mixins, but none of our pre-written classes will be in your CSS.
 
  $include-css: (
-   accordion: flase,
-   action-sheet: flase,
-   block-list: flase,
-   button: flase,
+   accordion: false,
+   action-sheet: false,
+   block-list: false,
+   button: false,
    button-group: false,
    card: false,
    coloring: false,
@@ -103,7 +105,7 @@ $z5: 50;
    popup: false,
    switch: false,
    tabs: false,
-   title-bar: fasle,
+   title-bar: false,
    typography: true,
    utilities: true,
  );
@@ -161,7 +163,7 @@ $z5: 50;
 
 // We use this for default spacing
 // $global-padding: 1rem;
-// $global-spacing: rem-calc(15); 
+// $global-spacing: rem-calc(15);
 
 // 3. Breakpoints
 // - - - - - - - - - - - - - - -
@@ -176,7 +178,7 @@ $z5: 50;
 // );
 
 // All of the names in this list will be output as classes in your CSS, like small-12, medium-6, and so on.
-// $breakpoint-classes: (small medium large); 
+// $breakpoint-classes: (small medium large);
 
 // 4. Typography
 // - - - - - - - - - - - - - - -
@@ -275,7 +277,7 @@ $z5: 50;
 // $blockquote-cite-link-color: $blockquote-cite-font-color;
 
 // Acronym styles
-// $acronym-underline: 1px dotted #ddd; 
+// $acronym-underline: 1px dotted #ddd;
 
 // 5. Grid
 // - - - - - - - - - - - - - - -
@@ -283,7 +285,7 @@ $z5: 50;
 // $container-width: rem-calc(900);
 // $block-padding: $global-padding;
 // $total-columns: 12;
-// $block-grid-max-size: 6; 
+// $block-grid-max-size: 6;
 
 // 6. Button
 // - - - - - - - - - - - - - - -
@@ -305,7 +307,7 @@ $z5: 50;
 
  $button-font-size: 1rem;
 // $button-opacity-disabled: 0.5;
-// $button-tag-selector: false; 
+// $button-tag-selector: false;
 
 // 7. Accordion
 // - - - - - - - - - - - - - - -
@@ -319,7 +321,7 @@ $z5: 50;
 // $accordion-title-color-active: isitlight($accordion-title-background);
 
 // $accordion-title-padding: $global-padding;
-// $accordion-content-padding: $global-padding; 
+// $accordion-content-padding: $global-padding;
 
 // 8. Action Sheet
 // - - - - - - - - - - - - - - -
@@ -337,7 +339,7 @@ $z5: 50;
 // $actionsheet-popup-shadow: 0 0 10px rgba(black, 0.25);
 
 // $actionsheet-link-color: #000;
-// $actionsheet-link-background-hover: smartscale($actionsheet-background); 
+// $actionsheet-link-background-hover: smartscale($actionsheet-background);
 
 // 9. Block List
 // - - - - - - - - - - - - - - -
@@ -359,14 +361,14 @@ $z5: 50;
 // $blocklist-header-color: smartscale($blocklist-item-color, 40%);
 // $blocklist-header-uppercase: true;
 
-// $blocklist-check-icons: true; 
+// $blocklist-check-icons: true;
 
 // 10. Button Group
 // - - - - - - - - - - - - - - -
 
 // $btngroup-background: $primary-color;
 // $btngroup-color: #fff;
-// $btngroup-radius: $button-radius; 
+// $btngroup-radius: $button-radius;
 
 // 11. Card
 // - - - - - - - - - - - - - - -
@@ -379,7 +381,7 @@ $z5: 50;
 // $card-padding: $global-padding;
 // $card-margin: 0.5rem;
 
-// $card-divider-background: smartscale($card-background, 7%); 
+// $card-divider-background: smartscale($card-background, 7%);
 
 // 12. Extras
 // - - - - - - - - - - - - - - -
@@ -391,7 +393,7 @@ $z5: 50;
 // $closebutton-color-hover: #333;
 
 // $thumbnail-padding: 0.5rem;
-// $thumbnail-shadow: 0 3px 15px rgba(black, 0.25); 
+// $thumbnail-shadow: 0 3px 15px rgba(black, 0.25);
 
 // 13. Forms
 // - - - - - - - - - - - - - - -
@@ -453,7 +455,7 @@ $z5: 50;
 // $iconic-primary-fill: $primary-color;
 // $iconic-primary-stroke: $primary-color;
 // $iconic-accent-fill: $iconic-primary-fill;
-// $iconic-accent-stroke: $iconic-accent-fill; 
+// $iconic-accent-stroke: $iconic-accent-fill;
 
 // 15. Label
 // - - - - - - - - - - - - - - -
@@ -467,7 +469,7 @@ $z5: 50;
 // $badge-fontsize: 0.8em;
 // $badge-diameter: 1.5rem;
 // $badge-background: $primary-color;
-// $badge-color: #fff; 
+// $badge-color: #fff;
 
 // 16. Menu Bar
 // - - - - - - - - - - - - - - -
@@ -482,7 +484,7 @@ $z5: 50;
 
 // $menubar-item-padding: $global-padding;
 // $menubar-icon-size: 25px;
-// $menubar-icon-spacing: $menubar-item-padding; 
+// $menubar-icon-spacing: $menubar-item-padding;
 
 // 17. Modal
 // - - - - - - - - - - - - - - -
@@ -500,7 +502,7 @@ $z5: 50;
 // );
 
 // $modal-overlay-class: 'modal-overlay';
-// $modal-overlay-background: rgba(#333, 0.7); 
+// $modal-overlay-background: rgba(#333, 0.7);
 
 // 18. Motion UI
 // - - - - - - - - - - - - - - -
@@ -563,7 +565,7 @@ $z5: 50;
 // $motion-delay-default: 0;
 // Short and long delay modifiers
 // $motion-delay-short: 300ms;
-// $motion-delay-long: 700ms; 
+// $motion-delay-long: 700ms;
 
 // 19. Notification
 // - - - - - - - - - - - - - - -
@@ -580,7 +582,7 @@ $z5: 50;
 // $notification-icon-size: 60px;
 // $notification-icon-margin: $global-padding;
 // $notification-icon-align: top;
- 
+
 
 // 20. Off-canvas
 // - - - - - - - - - - - - - - -
@@ -594,7 +596,7 @@ $z5: 50;
 // $offcanvas-shadow: 3px 0 10px rgba(black, 0.25);
 // $offcanvas-animation-speed: 0.25s;
 
-// $offcanvas-frame-selector: '.grid-frame'; 
+// $offcanvas-frame-selector: '.grid-frame';
 
 // 21. Panel
 // - - - - - - - - - - - - - - -
@@ -607,7 +609,7 @@ $z5: 50;
 // $panel-shadow: 3px 0 10px rgba(black, 0.25);
 
 // DEPRECATED: these variables will be removed in a future version.
-// $panel-animation-speed: 0.25s; 
+// $panel-animation-speed: 0.25s;
 
 // 22. Popup
 // - - - - - - - - - - - - - - -
@@ -616,7 +618,7 @@ $z5: 50;
 // $popup-background: #fff;
 // $popup-border: 0;
 // $popup-radius: 0;
-// $popup-shadow: 0 0 10px rgba(#000, 0.25); 
+// $popup-shadow: 0 0 10px rgba(#000, 0.25);
 
 // 23. Switch
 // - - - - - - - - - - - - - - -
@@ -630,7 +632,7 @@ $z5: 50;
 // $switch-animation-speed: 0.15s;
 
 // $switch-paddle-color: white;
-// $switch-paddle-offset: 4px; 
+// $switch-paddle-offset: 4px;
 
 // 24. Tabs
 // - - - - - - - - - - - - - - -
@@ -644,7 +646,7 @@ $z5: 50;
 // $tab-title-color-active: $tab-title-color;
 
 // $tab-title-padding: $global-padding;
-// $tab-content-padding: $global-padding; 
+// $tab-content-padding: $global-padding;
 
 // 25. Title Bar
 // - - - - - - - - - - - - - - -
@@ -660,4 +662,4 @@ $z5: 50;
 //   left: 'left',
 //   right: 'right',
 //   title: 'title',
-// ); 
+// );

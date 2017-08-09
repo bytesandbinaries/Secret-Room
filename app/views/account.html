@@ -1,58 +1,24 @@
-<!--
-<div ng-init="get_status()">
-    <h1>Welcome Back <span ng-bind="user.fname"></span></h1>
-    <div><span ng-bind="user.email"></span></div>
-    <div><span ng-bind="user.gender"></span></div>
-    <div>You've been a member for <span ng-bind="user.joined | posttime"></span>
-
-    <h2 ng-if="continue">Your Profile is not Completed</h2>
-    <div>You have answered <span ng-bind="total_que"></span> questions</div>
-    <div>Your are currently on level <span ng-bind="user.currentlevel"></span> of 4 </div>
-    <div>
-        <input ng-if="continue" type="button" ng-click="loadquestions()" value="Complete Your Profile"/>
-        <div ng-if="!continue">You have successfully completed your profile. Our representative will contact you shortly.</div>
+<div class="sr-view-wrap full-section">
+    <div ng-show = 'loading' class="sr-section full-section" style="text-align:center;">
+        <div class = "loader"></div>
     </div>
-</div>
--->
-<div class="sr-view-wrap">
-    <div class="sr-view-content">
-        <div class="sr-hero">
-            <h2>Hi There! <span ng-bind="user.fname"></span></h2>
+    <div ng-hide = 'loading' class="sr-view-content full-section">
+      <div class="sr-section" style="text-align:center;">
+            <h2>Hello <span ng-bind="user.name"></span>!</h2>
             <div><span ng-bind="user.email"></span></div>
-            <div><span ng-bind="user.gender"></span></div>
-<!--            <div>You've been a member for <span ng-bind="user.joined | posttime"></span></div>-->
-        </div>
-        <div class="sr-section" style="text-align:center;">
-            <h2 ng-if="user.currentlevel < 5">Your Profile is not Complete</h2>
+
+      </div>
+      <div ng-show = "user.status == 'registeredandAccepted' || user.lastquestionId == 56" style = "width:360px; margin: auto;">
+          <div style="text-align:center;">Bravo! You have successfully completed your profile. Our representative will contact you shortly.</div>
+      </div>
+      <div ng-hide = "user.status == 'registeredandAccepted'" class="sr-section full-section" style="text-align:center;">
+
+            <h2 ng-if="user.lastquestionId < 56">Your Profile is not Complete</h2>
 <!--            <div>You have answered <span ng-bind="total_que"></span> questions</div>-->
-            <p ng-if="user.currentlevel < 5">Your are currently on level <span ng-bind="user.currentlevel +1"></span> of 6 </p>
-            <div>
-                <input ng-if="user.currentlevel < 5" type="button" ng-click="loadquestions()" value="Complete Your Profile" class="sr-go-button"/>
-                <div ng-if="user.currentlevel == 5">You have successfully completed your profile. Our representative will contact you shortly.</div>
+            <p ng-if="user.lastquestionId < 56">Your are currently on level <span ng-bind="user.currentlevel"></span> of 5 </p>
+            <div style = "width:360px; margin: auto;">
+                <input ng-if="user.lastquestionId < 56" type="button" ng-click="loadquestions()" value="Complete Your Profile" class="sr-go-button"/>
             </div>
         </div>
     </div>
 </div>
-
-
-
-<!--
-<div class="sr-view-wrap">
-   <scrip>get</scrip>
-    <div class="sr-view-content">
-        <div class="sr-hero">
-            <h2>Welcome Back <span ng-bind="user.fname"></span></h2>
-            <div><span ng-bind="user.email"></span></div>
-            <div><span ng-bind="user.gender"></span></div>
-        </div>
-        <div class="sr-section" style="text-align:center;">
-            <h2 ng-if="continue">Your Profile is not Completed</h2>
-            <p>Your are currently on level <span ng-bind="user.currentlevel +1"></span> of 6 </p>
-            <div>
-                <input ng-if="continue" type="button" ng-click="loadquestions()" value="Complete Your Profile" class="sr-go-button"/>
-                <div ng-if="!continue">You have successfully completed your profile. Our representative will contact you shortly.</div>
-            </div>
-        </div>
-    </div>
-</div>
--->

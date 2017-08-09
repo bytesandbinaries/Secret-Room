@@ -3,77 +3,90 @@
     <div class="sr-quest-status" ng-switch on="question_status">
 
         <div ng-switch-default class="sr-section" >
-            <div class="sr-card" ng-show="user.status=='new'" >
+
+            <div class="sr-card" ng-show="user.status == 'new'" >
                 <h3 class="sr-">Quick Registration</h3>
                 <p class="sr-" >We can't wait to meet you, but you'd need to create an account to get started</p>
-                <form ng-submit="save_response()" >
+                <form ng-submit="registerUser()" >
                    <input type="text" ng-model="user.email" placeholder="Your Email address" required />
                    <input type="password" ng-model="user.password" placeholder="Your Password" required />
                    <input type="submit" value="Create Account" class="sr-go-button"/>
-                   <div ng-bind="status"></div>
+                   <div ng-show="loading" class = "loader"></div>
+                   <div ng-if="errorL" ng-bind="errorM" class = "message-logger" ></div>
                 </form>
             </div>
-            <div  class="sr-card" ng-show="user.status=='registered'">
+
+            <div  class="sr-card" ng-show="user.status =='registered'">
                 <h3 class="sr-">Registration Successful</h3>
-                <p>Glad to have you on board!!! <br> Please, click the button below to continue.</p>
+                <p>Glad to have you on board!!! <br/> Please, click the button below to continue.</p>
                 <button class="sr-go-button" ng-click="get_category()">Continue</button>
             </div>
+
         </div>
+
         <div ng-switch-when="startNewcategory"   class=" sr-section">
+
             <div  class="sr-card">
-               <img class="sr-cat-icon" src="../images/quest_placeholder.png">
+               <img class="sr-cat-icon" src="../images/quest_placeholder.png"/>
                 <h2 class="sr-category-heading" ng-bind="que_data[user.currentlevel].title"></h2>
                 <p class="sr-category-description" ng-bind="que_data[user.currentlevel].description"></p>
                 <button class="sr-go-button" ng-click="get_questions(user.currentlevel)">Start</button>
             </div>
+
         </div>
 
         <div ng-switch-when="getQuestions" class="sr-quest-control">
                 <div class="sr-progress-meta">
+
                    <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='About You'">
-                       <div><img class="sr-cat-prog-icon" src="../images/boy3.png"></div>
+                       <div><img class="sr-cat-prog-icon" src="../images/boy3.png"/></div>
                        <div>
-                           <span class="screamer">We know  your time is valuable</span><br>
-                           <span class="rider">so this won't take long...trust us.</span>
+                           <span class="screamer">We know  your time is valuable</span><br/>
+                           <span class="rider">so this won't take long...trust us!</span>
                        </div>
-                       <div><img class="sr-cat-prog-icon" src="../images/girl3.png"></div>
+                       <div><img class="sr-cat-prog-icon" src="../images/girl3.png"/></div>
                    </div>
+
                    <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Your History'">
-                       <div><img class="sr-cat-prog-icon" src="../images/boy2.png"></div>
+                       <div><img class="sr-cat-prog-icon" src="../images/boy2.png"/></div>
                        <div>
-                           <span class="screamer">Your standards are high</span><br>
-                           <span class="rider">Don't let anyone tell you they are too high, because we beliieve they should be.</span>
+                           <span class="screamer">Your standards are high?</span><br/>
+                           <span class="rider">Yes, we believe they should be.</span>
                        </div>
-                       <div><img class="sr-cat-prog-icon" src="../images/girl2.png"></div>
+                       <div><img class="sr-cat-prog-icon" src="../images/girl2.png"/></div>
                    </div>
+
                    <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Your Qualities'">
-                       <div><img class="sr-cat-prog-icon" src="../images/boy1.png"></div>
+                       <div><img class="sr-cat-prog-icon" src="../images/boy1.png"/></div>
                        <div>
-                           <span class="screamer">Stay Focused</span><br>
+                           <span class="screamer">Stay Focused</span><br/>
                            <span class="rider">You know what they say...nothing good comes easy.</span>
                        </div>
-                       <div><img class="sr-cat-prog-icon" src="../images/girl1.png"></div>
+                       <div><img class="sr-cat-prog-icon" src="../images/girl1.png"/></div>
                    </div>
+
                    <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Some Other Qualities'">
-                        <div><img class="sr-cat-prog-icon" src="../images/boy4.png"></div>
+                        <div><img class="sr-cat-prog-icon" src="../images/boy4.png"/></div>
                        <div>
-                           <span class="screamer">Don't Fret</span><br>
-                           <span class="rider">We said it wont be long and we meant it.</span>
+                           <span class="screamer">Don't Fret</span><br/>
+                           <span class="rider">We said it won't be long and we meant it.</span>
                        </div>
-                       <div><img class="sr-cat-prog-icon" src="../images/girl4.png"></div>
+                       <div><img class="sr-cat-prog-icon" src="../images/girl4.png"/></div>
                    </div>
+
                    <div class="sr-cat-icon-area" ng-if="que_data[user.currentlevel].title=='Other Details'">
-                       <div><img class="sr-cat-prog-icon" src="../images/boy5.png"></div>
+                       <div><img class="sr-cat-prog-icon" src="../images/boy5.png"/></div>
                        <div>
-                           <span class="screamer">Drum Roll Please<br>We are near the the!</span><br>
-                           <span class="rider">t’s been a long day, but sharing it with you made it really worthwhile</span>
+                           <span class="screamer">Drum Roll Please<br/>We are near the end!</span><br/>
+                           <span class="rider">It’s been a long day, but it's definitely worth your while.</span>
                        </div>
-                       <div><img class="sr-cat-prog-icon" src="../images/girl5.png"></div>
+                       <div><img class="sr-cat-prog-icon" src="../images/girl5.png"/></div>
                    </div>
+
                    <div class="sr-progress-bar">
                        <div class="sr-progress-text"></div>
                        <progress class="sr-progress" value="{{currQ+1}}" max="{{ques_data.length}}"></progress>
-    <!--                       <span class="sr-progress-1" ng-bind="currQ+1"></span> of <span class="sr-progress-2" ng-bind="ques_data.length"></span>-->
+    <!--               <span class="sr-progress-1" ng-bind="currQ+1"></span> of <span class="sr-progress-2" ng-bind="ques_data.length"></span>-->
                    </div>
 
                 </div>
@@ -82,14 +95,14 @@
                 <h3 class="sr-quest" ng-bind="ques_data[currQ].q_text"></h3>
 
 
-                <div ng-ifclass="option-wrap">
-                <!--Text option-->
+                <div class="option-wrap">
+
                     <div class="sr-quest-opt" ng-if="ques_data[currQ].q_type=='tb'" ng-repeat="rep in getNumber(ques_data[currQ].q_responseMax)" animation-in="slideInRight" animation-out="slideOutUp">
                        <input type="text" ng-model="ques_data[currQ].resp[$index].value" />
-
                     </div>
 
                     <div class="" ng-if="ques_data[currQ].q_type=='mp'" ng-init="breakoptions(ques_data[currQ])">
+
                         <div class="sr-quest-opt" ng-if="ques_data[currQ].q_responseMax==1" animation-in="slideInRight" animation-out="slideOutUp">
                            <ul class="sr-form-field">
                                <li class="sr-opt-block" ng-repeat="opt in ques_data[currQ].resp" animation-in="slideInRight" animation-out="slideOutUp">
@@ -121,8 +134,6 @@
 
                     </div><!--sr-quest-type-selection-->
 
-
-
                     <div class="sr-quest-type" ng-if="ques_data[currQ].q_type=='s'" ng-init="breakoptions(ques_data[currQ])">
                         <div class="sr-quest-opt">
                            <ul class="sr-range">
@@ -138,8 +149,13 @@
 
 
                     <div class="sr-quest-range-type" ng-if="ques_data[currQ].q_type=='sm'" ng-init="breakoptions(ques_data[currQ])">
-                        <div class="sr-sub-quest"><span ng-bind="ques_data[currQ].resp[attnum].item"></span></div>
+
+                        <div class="sr-sub-quest">
+                          <span ng-bind="ques_data[currQ].resp[attnum].item"></span>
+                        </div>
+
                         <div ng-click="moveattback()"></div>
+
                         <div class="sr-quest-opt">
                            <ul class="sr-range">
                                <li ng-repeat="rang in getNumber((ques_data[currQ].resp[attnum].respScale.length*3)-2) track by $index" >
@@ -148,8 +164,11 @@
                                             <figure ng-click="ques_data[currQ].resp[attnum].respScale.value=$index">
                                            </figure>
                                        </div>
+
                                        <figcaption ng-if="((4+$index) % 3 == 1)" ng-bind="ques_data[currQ].resp[attnum].respScale[($index/3)].item"></figcaption>
-                                       <figcaption ng-if="!((4+$index) % 3 == 1)"> range{{((ques_data[currQ].resp[attnum].respScale.length*3)-2)-$index}}
+
+                                       <figcaption ng-if="!((4+$index) % 3 == 1)">
+                                         range{{((ques_data[currQ].resp[attnum].respScale.length*3)-2)-$index}}
                                        </figcaption>
                                </li>
                            </ul>
@@ -172,38 +191,43 @@
         </div><!--sr-quest-control-->
 
         <div ng-switch-when="save" class="sr-section">
-            <div ng-show="saved" class="sr-save-progress sr-card">
-                <div ng-show="ques_data[currQ].q_no==84">
+            <div class="sr-save-progress sr-card">
+
+                <div ng-show="ques_data[currQ].q_no==56">
                     <h3 class="">Welcome to the Exclusives</h3>
                     <p class="" >
-                       Now we'd love to meet you. It's how we keep all the fakes and creepers out.<br>
+                       Now we'd love to meet you. It's how we keep all the fakes and creepers out.<br/>
                        A member of our staff would contact you shortly...but first </p>
                        <p>
                            Legal wants to make sure you've read and accept our <a href="#/privacy">Privacy Policy </a>and <a href="#terms"> Terms and Conditions</a> of using this service.
                        </p>
                         <p>
                             <input id="terms" type="checkbox" ng-model="terms" style="display:inline-block" />
-                            <label for="terms">I accept</label> 
+                            <label for="terms">I accept</label>
                         </p>
                     <input type="button" ng-click="acceptTerms()" value="Finish" class="sr-go-button"/>
 <!--                    <a ng-click="acceptTerms()" class="sr-go-button">Finish</a>-->
                 </div>
-                <div ng-show="ques_data[currQ].q_no<84">
-                    <h3 class="">Progress Saved</h3>
-                    <h4 class="" >You have to finish the questions to get a match</h4>
+
+                <div ng-show="ques_data[currQ].q_no<56">
+                    <h3 class="">Save Progress</h3>
+                    <h4 class="" >Saving Now means you will start at the last checkpoint when you return.</h4>
                     <p><a  class="sr-go-button" ng-click="changefromsave()">Continue</a></p>
-                    <p><a href="#/account" class="sr-stop-button">Exit</a></p>
+                    <input type="button" ng-click="saveExit()" value="Save & Exit" class="sr-stop-button" />
                 </div>
+
             </div>
         </div>
+
         <div ng-switch-when="endMessage"   class=" sr-section">
             <div  class="sr-card">
                <h3 class="">Thank's for Trusting us with your search!</h3>
                     <p class="" >We would be contacting you soon enough! in the mean time... </p>
-                        
+
                     <a href="#/account" class="sr-go-button">View Your Account</a>
             </div>
         </div>
+
     </div><!--sr-quest-status-->
 
 

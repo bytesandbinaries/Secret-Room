@@ -191,3 +191,21 @@ angular.module('Admin')
       });
     }
   }])
+  .controller('userProfileCtrl', ['$scope','appService', '$location', function ($scope, appService, $location ) {
+    $scope.view='search';
+    $scope.user={};
+    $scope.userP;
+
+    $scope.search=function(){
+    var query=$scope.user
+      appService.request_data('searchUser', query).then(function(response){
+        $scope.view='found';
+        $scope.userP=response.profile;
+        $scope.matches=response.matches;
+        // console.log($scope.userP);
+      },
+      function(error){
+        console.log('error this '.error)
+      });
+    }
+  }])
